@@ -22,8 +22,8 @@ const Footer = ({
           {/* Company Info */}
           <div className="md:col-span-1">
             <div className="flex items-center mb-4">
-              <span className="text-xl font-bold text-primary">BREW</span>
-              <span className="text-xl font-light text-primary">HOUSE</span>
+              <span className="text-xl font-bold text-primary">NOUVARIA</span>
+              {/* <span className="text-xl font-light text-primary">HOUSE</span> */}
             </div>
             <p className="text-muted-foreground mb-4">{companyDescription}</p>
             <div className="flex space-x-4">

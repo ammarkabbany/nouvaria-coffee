@@ -29,8 +29,8 @@ export default function Header({ onSearchClick, onCartClick }: HeaderProps) {
       <div className="container mx-auto px-4 h-20 flex items-center justify-between">
         {/* Logo */}
         <Link href="/" className="flex items-center">
-          <span className="text-xl font-bold text-primary">BREW</span>
-          <span className="text-xl font-light text-primary">HOUSE</span>
+          <span className="text-xl font-bold text-primary">NOUVARIA</span>
+          {/* <span className="text-xl font-light text-primary">COFFEE</span> */}
         </Link>
 
         {/* Desktop Navigation */}
