@@ -3,11 +3,13 @@
 import { useState } from "react";
 import Header from "@/components/Header";
 import HeroSection from "@/components/HeroSection";
-import ProductGrid from "@/components/ProductGrid";
-import FilterBar from "@/components/FilterBar";
 import SearchOverlay from "@/components/SearchOverlay";
 import CartSidebar from "@/components/CartSidebar";
 import Footer from "@/components/Footer";
+import About from "@/components/About";
+import Services from "@/components/Services";
+import InstagramFeed from "@/components/InstagramFeed";
+import Contact from "@/components/Contact";
 
 export default function Home() {
   // State for search overlay and cart sidebar visibility
@@ -57,35 +59,31 @@ export default function Home() {
       />
 
       {/* Hero Section */}
-      <HeroSection onCtaClick={() => console.log("CTA clicked")} />
+      <HeroSection />
 
       {/* Filter Bar */}
-      <div className="container mx-auto px-4 py-8">
+      {/* <div className="container mx-auto px-4 py-8">
         <FilterBar onFilterChange={handleFilterChange} />
-      </div>
+      </div> */}
 
       {/* Featured Products */}
-      <ProductGrid
+      {/* <ProductGrid
         title="Our Featured Coffee"
         onAddToCart={handleAddToCart}
         onViewDetails={handleViewDetails}
-      />
+      /> */}
 
-      {/* Best Sellers */}
-      <div className="bg-muted/30 py-12">
-        <ProductGrid
-          title="Best Sellers"
-          onAddToCart={handleAddToCart}
-          onViewDetails={handleViewDetails}
-        />
-      </div>
+      {/* InstagramFeed */}
+      <InstagramFeed />
 
-      {/* New Arrivals */}
-      <ProductGrid
-        title="New Arrivals"
-        onAddToCart={handleAddToCart}
-        onViewDetails={handleViewDetails}
-      />
+      {/* Services */}
+      <Services />
+
+      {/* About */}
+      <About />
+
+      {/* Contact */}
+      <Contact />
 
       {/* Footer */}
       <Footer />

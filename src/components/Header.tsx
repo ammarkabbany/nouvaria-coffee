@@ -7,6 +7,7 @@ import { Input } from "@/components/ui/input";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { Search, ShoppingBag, Menu, X } from "lucide-react";
 import Link from "next/link";
+import Image from "next/image";
 
 interface HeaderProps {
   onSearchClick?: () => void;
@@ -17,10 +18,8 @@ export default function Header({ onSearchClick, onCartClick }: HeaderProps) {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   const navItems = [
-    { label: "Home", href: "/" },
     { label: "Shop", href: "/shop" },
-    { label: "About", href: "/about" },
-    { label: "Blog", href: "/blog" },
+    { label: "Menu", href: "/menus" },
     { label: "Contact", href: "/contact" },
   ];
 
@@ -29,7 +28,13 @@ export default function Header({ onSearchClick, onCartClick }: HeaderProps) {
       <div className="container mx-auto px-4 h-20 flex items-center justify-between">
         {/* Logo */}
         <Link href="/" className="flex items-center">
-          <span className="text-xl font-bold text-primary">NOUVARIA</span>
+          <Image
+            src="/logo-green.png"
+            alt="Nouvaria Logo"
+            width={150}
+            height={150}
+            className="pt-8 size-[120px] md:size-[150px] object-cover"
+          />
           {/* <span className="text-xl font-light text-primary">COFFEE</span> */}
         </Link>
 
@@ -51,7 +56,7 @@ export default function Header({ onSearchClick, onCartClick }: HeaderProps) {
           <Button
             variant="ghost"
             size="icon"
-            onClick={onSearchClick}
+            // onClick={onSearchClick}
             className="text-muted-foreground hover:text-primary"
           >
             <Search className="h-5 w-5" />

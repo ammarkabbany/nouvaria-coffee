@@ -5,6 +5,7 @@ import { Button } from "./ui/button";
 import { Input } from "./ui/input";
 import { Facebook, Instagram, Twitter } from "lucide-react";
 import Link from "next/link";
+import Image from "next/image";
 
 interface FooterProps {
   companyName?: string;
@@ -12,19 +13,22 @@ interface FooterProps {
 }
 
 const Footer = ({
-  companyName = "BREWHOUSE",
-  companyDescription = "Exceptional coffee, ethically sourced and expertly roasted for the perfect cup every time.",
+  companyName = "NOVARIA",
+  companyDescription = "Fresh Coffee, Exceptional Hospitality.",
 }: FooterProps) => {
   return (
     <footer className="bg-muted/30 border-t border-border">
       <div className="container mx-auto px-4 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* Company Info */}
           <div className="md:col-span-1">
-            <div className="flex items-center mb-4">
-              <span className="text-xl font-bold text-primary">NOUVARIA</span>
-              {/* <span className="text-xl font-light text-primary">HOUSE</span> */}
-            </div>
+            <Image
+              src="/logo-green.png"
+              alt="Nouvaria Logo"
+              width={128}
+              height={128}
+              className="object-cover"
+            />
             <p className="text-muted-foreground mb-4">{companyDescription}</p>
             <div className="flex space-x-4">
               <Button
@@ -32,24 +36,20 @@ const Footer = ({
                 size="icon"
                 className="h-8 w-8 rounded-full bg-background hover:bg-primary hover:text-primary-foreground"
               >
-                <Facebook className="h-4 w-4" />
-                <span className="sr-only">Facebook</span>
+                <a target="_blank" href={'https://www.facebook.com/people/Novaria-Coffee-Co/61553352248158/'} rel="noopener noreferrer">
+                  <Facebook className="h-4 w-4" />
+                  <span className="sr-only">Facebook</span>
+                </a>
               </Button>
               <Button
                 variant="ghost"
                 size="icon"
                 className="h-8 w-8 rounded-full bg-background hover:bg-primary hover:text-primary-foreground"
               >
-                <Instagram className="h-4 w-4" />
-                <span className="sr-only">Instagram</span>
-              </Button>
-              <Button
-                variant="ghost"
-                size="icon"
-                className="h-8 w-8 rounded-full bg-background hover:bg-primary hover:text-primary-foreground"
-              >
-                <Twitter className="h-4 w-4" />
-                <span className="sr-only">Twitter</span>
+                <a target="_blank" href={'https://instagram.com/novaria_coffee'} rel="noopener noreferrer">
+                  <Instagram className="h-4 w-4" />
+                  <span className="sr-only">Instagram</span>
+                </a>
               </Button>
             </div>
           </div>
@@ -64,22 +64,6 @@ const Footer = ({
                   className="text-muted-foreground hover:text-primary transition-colors"
                 >
                   Shop
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/about"
-                  className="text-muted-foreground hover:text-primary transition-colors"
-                >
-                  About Us
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/blog"
-                  className="text-muted-foreground hover:text-primary transition-colors"
-                >
-                  Blog
                 </Link>
               </li>
               <li>
@@ -129,27 +113,11 @@ const Footer = ({
                   Terms & Conditions
                 </Link>
               </li>
-              <li>
-                <Link
-                  href="/track-order"
-                  className="text-muted-foreground hover:text-primary transition-colors"
-                >
-                  Track Your Order
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/loyalty"
-                  className="text-muted-foreground hover:text-primary transition-colors"
-                >
-                  Loyalty Program
-                </Link>
-              </li>
             </ul>
           </div>
 
           {/* Newsletter */}
-          <div className="md:col-span-1">
+          {/* <div className="md:col-span-1">
             <h3 className="font-medium text-lg mb-4">Stay Updated</h3>
             <p className="text-muted-foreground mb-4">
               Subscribe to our newsletter for exclusive offers and coffee tips.
@@ -158,7 +126,7 @@ const Footer = ({
               <Input type="email" placeholder="Your email" className="flex-1" />
               <Button>Subscribe</Button>
             </div>
-          </div>
+          </div> */}
         </div>
 
         {/* Bottom Bar */}
@@ -172,9 +140,6 @@ const Footer = ({
             </Link>
             <Link href="/terms" className="hover:text-primary">
               Terms
-            </Link>
-            <Link href="/sitemap" className="hover:text-primary">
-              Sitemap
             </Link>
           </div>
         </div>
