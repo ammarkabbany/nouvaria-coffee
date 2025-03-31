@@ -33,6 +33,7 @@ const Footer = ({
             <div className="flex space-x-4">
               <Button
                 variant="ghost"
+                asChild
                 size="icon"
                 className="h-8 w-8 rounded-full bg-background hover:bg-primary hover:text-primary-foreground"
               >
@@ -43,6 +44,7 @@ const Footer = ({
               </Button>
               <Button
                 variant="ghost"
+                asChild
                 size="icon"
                 className="h-8 w-8 rounded-full bg-background hover:bg-primary hover:text-primary-foreground"
               >

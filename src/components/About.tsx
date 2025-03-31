@@ -7,13 +7,13 @@ import { motion } from "framer-motion";
 
 const About = () => {
   return (
-    <section className="container mx-auto px-4 py-16">
+    <section className="pt-16">
       <motion.div 
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
-        transition={{ duration: 0.6 }}
-        className="grid grid-cols-1 md:grid-cols-2 items-stretch overflow-hidden rounded-lg"
+        transition={{ duration: 0.3 }}
+        className="grid grid-cols-1 md:grid-cols-2 items-stretch overflow-hidden"
       >
         {/* Image Half */}
         <motion.div 

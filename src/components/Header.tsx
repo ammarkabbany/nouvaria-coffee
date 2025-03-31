@@ -24,12 +24,12 @@ export default function Header({ onSearchClick, onCartClick }: HeaderProps) {
   ];
 
   return (
-    <header className="sticky top-0 z-50 w-full bg-background border-b border-border">
-      <div className="container mx-auto px-4 h-20 flex items-center justify-between">
+    <header className="sticky top-0 z-50 w-full from-primary via-[#3c6962] to-[#336162] bg-gradient-to-b border-b border-[#7aa492]">
+      <div className="px-8 h-20 flex items-center justify-between">
         {/* Logo */}
         <Link href="/" className="flex items-center">
           <Image
-            src="/logo-green.png"
+            src="/logo-creamy.png"
             alt="Nouvaria Logo"
             width={150}
             height={150}
@@ -39,12 +39,12 @@ export default function Header({ onSearchClick, onCartClick }: HeaderProps) {
         </Link>
 
         {/* Desktop Navigation */}
-        <nav className="hidden md:flex items-center space-x-8">
+        <nav className="hidden md:flex items-center space-x-8 mr-16">
           {navItems.map((item) => (
             <Link
               key={item.label}
               href={item.href}
-              className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors"
+              className="text-sm font-medium text-primary-foreground transition-colors"
             >
               {item.label}
             </Link>
@@ -57,7 +57,7 @@ export default function Header({ onSearchClick, onCartClick }: HeaderProps) {
             variant="ghost"
             size="icon"
             // onClick={onSearchClick}
-            className="text-muted-foreground hover:text-primary"
+            className="text-primary-foreground hover:text-primary"
           >
             <Search className="h-5 w-5" />
             <span className="sr-only">Search</span>
@@ -67,10 +67,10 @@ export default function Header({ onSearchClick, onCartClick }: HeaderProps) {
             variant="ghost"
             size="icon"
             onClick={onCartClick}
-            className="text-muted-foreground hover:text-primary relative"
+            className="hover:text-primary relative text-primary-foreground"
           >
             <ShoppingBag className="h-5 w-5" />
-            <span className="absolute -top-1 -right-1 bg-primary text-primary-foreground text-xs rounded-full h-4 w-4 flex items-center justify-center">
+            <span className="absolute -top-1 -right-1 bg-accent text-primary text-xs rounded-full h-4 w-4 flex items-center justify-center">
               3
             </span>
             <span className="sr-only">Cart</span>
@@ -82,7 +82,7 @@ export default function Header({ onSearchClick, onCartClick }: HeaderProps) {
               <Button
                 variant="ghost"
                 size="icon"
-                className="md:hidden text-muted-foreground hover:text-primary"
+                className="md:hidden hover:text-primary text-primary-foreground"
               >
                 <Menu className="h-5 w-5" />
                 <span className="sr-only">Menu</span>
@@ -91,20 +91,16 @@ export default function Header({ onSearchClick, onCartClick }: HeaderProps) {
             <SheetContent side="right" className="w-[300px] sm:w-[400px]">
               <div className="flex flex-col h-full">
                 <div className="flex items-center justify-between mb-8">
-                  <Link href="/" className="flex items-center">
-                    <span className="text-xl font-bold text-primary">BREW</span>
-                    <span className="text-xl font-light text-primary">
-                      HOUSE
-                    </span>
-                  </Link>
-                  <Button
-                    variant="ghost"
-                    size="icon"
-                    onClick={() => setIsMobileMenuOpen(false)}
-                  >
-                    <X className="h-5 w-5" />
-                    <span className="sr-only">Close</span>
-                  </Button>
+                <Link href="/" className="flex items-center">
+                  <Image
+                    src="/logo-green.png"
+                    alt="Novaria Logo"
+                    width={150}
+                    height={150}
+                    className="pt-8 w-[120px] object-cover"
+                  />
+                  {/* <span className="text-xl font-light text-primary">COFFEE</span> */}
+                </Link>
                 </div>
                 <nav className="flex flex-col space-y-6">
                   {navItems.map((item) => (

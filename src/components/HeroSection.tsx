@@ -11,17 +11,17 @@ interface HeroSectionProps {
 }
 
 const HeroSection = ({
-  title = "Fresh Coffee, Exceptional Hospitality",
-  subtitle = "Discover Our Story.",
+  title = "Novaria",
+  subtitle = "Fresh Coffee, Exceptional Hospitality.",
   backgroundImage = "/hero-image.jpg",
 }: HeroSectionProps) => {
   return (
-    <div className="relative w-full h-[600px] bg-amber-950 overflow-hidden">
+    <div className="relative w-full min-h-screen flex items-center bg-amber-950 overflow-hidden">
       <motion.div
         initial={{ scale: 1.1 }}
         animate={{ scale: 1 }}
         transition={{ duration: 1.5 }}
-        className="absolute inset-0 bg-cover bg-center"
+        className="absolute inset-0 bg-cover bg-center overflow-hidden"
         style={{ backgroundImage: `url(${backgroundImage})` }}
       >
         <motion.div 
@@ -32,8 +32,8 @@ const HeroSection = ({
         />
       </motion.div>
 
-      <div className="relative h-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col justify-center items-start">
-        <div className="max-w-2xl">
+      <div className="relative w-full text-center">
+        <div className="">
           <motion.h1
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -54,9 +54,9 @@ const HeroSection = ({
       </div>
 
       {/* Decorative Elements */}
-      <div className="absolute bottom-0 left-0 w-full h-10 bg-gradient-to-t from-background to-transparent" />
+      {/* <div className="absolute bottom-0 left-0 w-full h-10 bg-gradient-to-t from-background to-transparent" />
       <div className="absolute -bottom-6 -right-6 w-14 h-14 rounded-full bg-amber-600/20 blur-xl" />
-      <div className="absolute top-1/4 -left-8 w-10 h-10 rounded-full bg-amber-500/20 blur-lg" />
+      <div className="absolute top-1/4 -left-8 w-10 h-10 rounded-full bg-amber-500/20 blur-lg" /> */}
     </div>
   );
 };

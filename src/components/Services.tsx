@@ -45,13 +45,13 @@ const Services = () => {
   };
 
   return (
-    <section className="container mx-auto px-4 py-16">
+    <section className="px-4 py-16 bg-muted/50">
       <motion.h2 
         initial={{ opacity: 0, y: -20 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.6 }}
-        className="text-4xl font-bold text-center mb-12 text-primary"
+        className="text-4xl font-bold text-center mb-16 text-primary"
       >
         Our Services
       </motion.h2>
@@ -60,28 +60,31 @@ const Services = () => {
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true }}
-        className="grid grid-cols-1 md:grid-cols-3 gap-8"
+        className="grid grid-cols-1 md:grid-cols-3 gap-12 max-w-7xl mx-auto"
       >
         {services.map((service, index) => (
           <motion.div 
             key={index}
             variants={itemVariants}
-            whileHover={{ scale: 1.02 }}
-            className="bg-accent rounded-lg p-8 flex flex-col items-center text-center transition-transform"
+            whileHover={{ 
+              scale: 1.02,
+              boxShadow: "0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)"
+            }}
+            className="bg-background rounded-xl p-8 flex flex-col items-center text-center transition-all duration-300 shadow-lg hover:shadow-xl"
           >
             <motion.div 
               initial={{ scale: 0 }}
               whileInView={{ scale: 1 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.2, duration: 0.4 }}
-              className="bg-muted p-4 rounded-full mb-6"
+              className="bg-primary/10 p-6 rounded-full mb-8 ring-1 ring-primary/20"
             >
               {service.icon}
             </motion.div>
-            <h3 className="text-2xl font-semibold mb-4 text-primary">
+            <h3 className="text-2xl font-semibold mb-6 text-primary">
               {service.title}
             </h3>
-            <p className="text-primary">
+            <p className="text-primary/80 leading-relaxed">
               {service.description}
             </p>
           </motion.div>
