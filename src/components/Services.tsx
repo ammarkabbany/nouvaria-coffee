@@ -1,8 +1,9 @@
 "use client";
 
 import React from "react";
-import { Coffee, Users, Store } from "lucide-react";
+import { Coffee, Users, Store, Utensils, Calendar } from "lucide-react";
 import { motion } from "framer-motion";
+import { Card, CardContent } from "./ui/card";
 
 const Services = () => {
   const services = [
@@ -45,52 +46,68 @@ const Services = () => {
   };
 
   return (
-    <section className="px-4 py-16 bg-muted/50">
-      <motion.h2 
-        initial={{ opacity: 0, y: -20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.6 }}
-        className="text-4xl font-bold text-center mb-16 text-primary"
-      >
-        Our Services
-      </motion.h2>
-      <motion.div 
-        variants={containerVariants}
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true }}
-        className="grid grid-cols-1 md:grid-cols-3 gap-12 max-w-7xl mx-auto"
-      >
-        {services.map((service, index) => (
-          <motion.div 
-            key={index}
-            variants={itemVariants}
-            whileHover={{ 
-              scale: 1.02,
-              boxShadow: "0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)"
-            }}
-            className="bg-background rounded-xl p-8 flex flex-col items-center text-center transition-all duration-300 shadow-lg hover:shadow-xl"
-          >
-            <motion.div 
-              initial={{ scale: 0 }}
-              whileInView={{ scale: 1 }}
-              viewport={{ once: true }}
-              transition={{ delay: index * 0.2, duration: 0.4 }}
-              className="bg-primary/10 p-6 rounded-full mb-8 ring-1 ring-primary/20"
-            >
-              {service.icon}
-            </motion.div>
-            <h3 className="text-2xl font-semibold mb-6 text-primary">
-              {service.title}
-            </h3>
-            <p className="text-primary/80 leading-relaxed">
-              {service.description}
+    <section className="py-16 bg-coffee-100 syrian-pattern">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12 animate-slideUp">
+            <h2 className="text-3xl md:text-4xl font-bold text-coffee-800 mb-4">Experience Novaria</h2>
+            <p className="text-coffee-700 max-w-2xl mx-auto">
+              With a decade of experience in the coffee industry, we bring great hospitality, cozy ambiance, and
+              delicious drinks to Pittsburgh's Strip District.
             </p>
-          </motion.div>
-        ))}
-      </motion.div>
-    </section>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <Card className="border-none shadow-md hover:shadow-xl transition-all duration-300 ease-in-out hover:-translate-y-1 bg-white/90">
+              <CardContent className="p-6 text-center">
+                <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-coffee-600 flex items-center justify-center">
+                  <Coffee className="h-8 w-8 text-white" />
+                </div>
+                <h3 className="text-xl font-bold text-coffee-800 mb-2">Specialty Coffee</h3>
+                <p className="text-coffee-600">
+                  Indulge in our signature Syrian-inspired coffee blends, crafted with passion and tradition.
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card className="border-none shadow-md hover:shadow-xl transition-all duration-300 ease-in-out hover:-translate-y-1 bg-white/90">
+              <CardContent className="p-6 text-center">
+                <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-coffee-600 flex items-center justify-center">
+                  <Utensils className="h-8 w-8 text-white" />
+                </div>
+                <h3 className="text-xl font-bold text-coffee-800 mb-2">Catering</h3>
+                <p className="text-coffee-600">
+                  Enhance your event with our catering, featuring Syrian coffee flavors and delicious pastries like
+                  baklava.
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card className="border-none shadow-md hover:shadow-xl transition-all duration-300 ease-in-out hover:-translate-y-1 bg-white/90">
+              <CardContent className="p-6 text-center">
+                <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-coffee-600 flex items-center justify-center">
+                  <Calendar className="h-8 w-8 text-white" />
+                </div>
+                <h3 className="text-xl font-bold text-coffee-800 mb-2">Event Hosting</h3>
+                <p className="text-coffee-600">
+                  Host your next gathering in our welcoming space with a unique atmosphere and friendly service.
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card className="border-none shadow-md hover:shadow-xl transition-all duration-300 ease-in-out hover:-translate-y-1 bg-white/90">
+              <CardContent className="p-6 text-center">
+                <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-coffee-600 flex items-center justify-center">
+                  <Store className="h-8 w-8 text-white" />
+                </div>
+                <h3 className="text-xl font-bold text-coffee-800 mb-2">Wholesale</h3>
+                <p className="text-coffee-600">
+                  We provide high-quality coffee beans for cafés and businesses looking to expand their offerings.
+                </p>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </section>
   );
 };
 

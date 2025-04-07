@@ -20,20 +20,21 @@ export default function Header({ onSearchClick, onCartClick }: HeaderProps) {
   const navItems = [
     { label: "Shop", href: "/shop" },
     { label: "Menu", href: "/menus" },
+    { label: "Services", href: "/services" },
     { label: "Contact", href: "/contact" },
   ];
 
   return (
     <header className="sticky top-0 z-50 w-full from-primary via-[#3c6962] to-[#336162] bg-gradient-to-b border-b border-[#7aa492]">
-      <div className="px-8 h-20 flex items-center justify-between">
+      <div className="container mx-auto px-8 h-16 flex items-center justify-between">
         {/* Logo */}
         <Link href="/" className="flex items-center">
           <Image
             src="/logo-creamy.png"
             alt="Nouvaria Logo"
-            width={150}
-            height={150}
-            className="pt-8 size-[120px] md:size-[150px] object-cover"
+            width={120}
+            height={120}
+            className="pt-8 pb-2 size-[120px] md:size-[115px] object-cover"
           />
           {/* <span className="text-xl font-light text-primary">COFFEE</span> */}
         </Link>
@@ -44,7 +45,7 @@ export default function Header({ onSearchClick, onCartClick }: HeaderProps) {
             <Link
               key={item.label}
               href={item.href}
-              className="text-sm font-medium text-primary-foreground transition-colors"
+              className="text-sm font-medium text-primary-foreground hover:text-accent transition-colors"
             >
               {item.label}
             </Link>
@@ -114,7 +115,7 @@ export default function Header({ onSearchClick, onCartClick }: HeaderProps) {
                     </Link>
                   ))}
                 </nav>
-                <div className="mt-auto pt-8">
+                {/* <div className="mt-auto pt-8">
                   <div className="space-y-4">
                     <p className="text-sm text-muted-foreground">
                       Search for products
@@ -126,7 +127,7 @@ export default function Header({ onSearchClick, onCartClick }: HeaderProps) {
                       </Button>
                     </div>
                   </div>
-                </div>
+                </div> */}
               </div>
             </SheetContent>
           </Sheet>

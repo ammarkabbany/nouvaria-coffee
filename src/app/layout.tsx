@@ -13,7 +13,8 @@ export const metadata: Metadata = {
   title: "Novaria Coffee | Speciality Coffee",
   description: "Fresh Coffee, Exceptional Hospitality",
   icons: {
-    icon: '/favicon.png'
+    icon: '/favicon.png',
+    apple: "/favicon.png",
   }
 };
 

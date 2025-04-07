@@ -12,6 +12,7 @@ import InstagramFeed from "@/components/InstagramFeed";
 import Contact from "@/components/Contact";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
+import TestimonialsSection from "@/components/TestimonialsSection";
 
 export default function Home() {
   // State for search overlay and cart sidebar visibility
@@ -53,7 +54,7 @@ export default function Home() {
   };
 
   return (
-    <main className="min-h-screen bg-background">
+    <div className="flex min-h-screen flex-col">
       {/* Header */}
       <Header />
 
@@ -72,12 +73,14 @@ export default function Home() {
         onViewDetails={handleViewDetails}
       /> */}
 
+      {/* Services */}
+      <Services />
 
       {/* About */}
       <About />
-      
-      {/* Services */}
-      <Services />
+
+      {/* Testimonials */}
+      <TestimonialsSection />
 
       {/* InstagramFeed */}
       <InstagramFeed />
@@ -93,7 +96,7 @@ export default function Home() {
             hosting, and wholesale services.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" variant="secondary" asChild>
+            <Button size={"lg"} variant={"secondary"} asChild>
               <Link href="/contact">Contact Us</Link>
             </Button>
           </div>
@@ -121,6 +124,6 @@ export default function Home() {
           onCheckout={() => console.log("Proceed to checkout")}
         />
       )}
-    </main>
+    </div>
   );
 }

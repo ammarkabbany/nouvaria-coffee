@@ -87,16 +87,16 @@ const Footer = ({
             </ul>
           </div>
 
-          {/* Customer Service */}
+          {/* Services */}
           <div className="md:col-span-1">
-            <h3 className="font-medium text-lg mb-4">Customer Service</h3>
+            <h3 className="font-medium text-lg mb-4">Services</h3>
             <ul className="space-y-2">
               <li>
                 <Link
                   href="/shipping"
                   className="text-muted-foreground hover:text-primary transition-colors"
                 >
-                  Shipping & Returns
+                  Catering
                 </Link>
               </li>
               <li>
@@ -104,7 +104,7 @@ const Footer = ({
                   href="/privacy"
                   className="text-muted-foreground hover:text-primary transition-colors"
                 >
-                  Privacy Policy
+                  Event Hosting
                 </Link>
               </li>
               <li>
@@ -112,7 +112,7 @@ const Footer = ({
                   href="/terms"
                   className="text-muted-foreground hover:text-primary transition-colors"
                 >
-                  Terms & Conditions
+                  Wholesale
                 </Link>
               </li>
             </ul>
