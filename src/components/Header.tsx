@@ -19,7 +19,7 @@ export default function Header({ onSearchClick, onCartClick }: HeaderProps) {
 
   const navItems = [
     { label: "Shop", href: "/shop" },
-    { label: "Menu", href: "/menus" },
+    { label: "Menu", href: "/menu" },
     { label: "Services", href: "/services" },
     { label: "Contact", href: "/contact" },
   ];
