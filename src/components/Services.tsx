@@ -31,7 +31,7 @@ const Services = () => {
       transition: {
         staggerChildren: 0.2
       }
-    }
+    } 
   };
 
   const itemVariants = {
