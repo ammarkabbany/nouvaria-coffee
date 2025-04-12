@@ -1,6 +1,4 @@
-import Image from "next/image";
-import { Badge } from "./Badge";
-import Card from "./Card";
+import MenuCard from "./MenuCard";
 import { coffee, tea, pastries, desserts, specials } from "./menuData";
 
 const Menu = () => {
@@ -53,7 +51,7 @@ const Menu = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {coffee.map((coffee, index) => (
-              <Card category={coffee} index={index}/>
+              <MenuCard category={coffee} index={index}/>
             ))}
           </div>
         </section>
@@ -67,7 +65,7 @@ const Menu = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {tea.map((tea, index) => (
-              <Card category={tea} index={index} />
+              <MenuCard category={tea} index={index} />
             ))}
           </div>
         </section>
@@ -81,7 +79,7 @@ const Menu = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {pastries.map((pastries, index) => (
-              <Card category={pastries} index={index} />
+              <MenuCard category={pastries} index={index} />
             ))}
           </div>
         </section>
@@ -95,7 +93,7 @@ const Menu = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {desserts.map((desserts, index) => (
-              <Card category={desserts} index={index} />
+              <MenuCard category={desserts} index={index} />
             ))}
           </div>
         </section>
@@ -114,7 +112,7 @@ const Menu = () => {
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {specials.map((specials, index) => (
-                <Card category={specials} index={index} />
+                <MenuCard category={specials} index={index} />
               ))}
             </div>
           </div>

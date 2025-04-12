@@ -20,7 +20,7 @@ type CardProps = {
   index: number;
 };
 
-const Card = ({ category, index }: CardProps) => {
+const MenuCard = ({ category, index }: CardProps) => {
   return (
     <div key={index} className="bg-coffee-50 h-[450px] rounded-lg overflow-hidden shadow-md transition-transform duration-300 hover:scale-105 hover:shadow-lg">
       <div className="relative h-60">
@@ -51,10 +51,10 @@ const Card = ({ category, index }: CardProps) => {
         <div className="flex flex-wrap gap-2">
           {category.sizes.map((sizeOption, sizeIndex) => (
             <div key={sizeIndex} className="flex flex-col items-center">
-              <span className="bg-spice-400 text-primary-foreground text-xs font-medium px-3 py-1 rounded-full">
+              <span className="bg-coffee-700 text-primary-foreground text-xs font-medium px-3 py-1 rounded-full">
                 {sizeOption.size}
               </span>
-              <span className="text-sm text-coffee-700  mt-1">
+              <span className="text-sm text-coffee-900 mt-1">
                 {sizeOption.price}
               </span>
             </div>
@@ -65,4 +65,4 @@ const Card = ({ category, index }: CardProps) => {
   );
 };
 
-export default Card;
+export default MenuCard;
