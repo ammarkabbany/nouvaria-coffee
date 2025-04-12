@@ -1,11 +1,11 @@
 "use client";
 
 import { useState } from "react";
-import Header from "@/components/Header";
+import Header from "@/components/layout/Header";
 import HeroSection from "@/components/HeroSection";
 import SearchOverlay from "@/components/SearchOverlay";
 import CartSidebar from "@/components/CartSidebar";
-import Footer from "@/components/Footer";
+import Footer from "@/components/layout/Footer";
 import About from "@/components/About";
 import Services from "@/components/Services";
 import InstagramFeed from "@/components/InstagramFeed";

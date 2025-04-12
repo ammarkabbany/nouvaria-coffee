@@ -51,7 +51,7 @@ const Menu = () => {
             <div className="h-[2px] bg-coffee-800 flex-grow ml-4"></div>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6  ">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {coffee.map((coffee, index) => (
               <Card category={coffee} index={index}/>
             ))}

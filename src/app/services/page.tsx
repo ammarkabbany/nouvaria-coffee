@@ -5,9 +5,9 @@ import { Utensils, Calendar, Store, ArrowRight, Check } from 'lucide-react'
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
-import ServiceInquiryForm from "@/components/service-inquiry-form"
-import Header from "@/components/Header"
-import Footer from "@/components/Footer"
+import ServiceInquiryForm from "@/components/forms/service-inquiry-form"
+import Header from "@/components/layout/Header"
+import Footer from "@/components/layout/Footer"
 
 export default function ServicesPage() {
   return (
