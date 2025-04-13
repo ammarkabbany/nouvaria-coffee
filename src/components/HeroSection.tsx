@@ -5,20 +5,17 @@ import { Button } from "./ui/button";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { ArrowRight } from "lucide-react";
+import Link from "next/link";
 
 interface HeroSectionProps {
-  title?: string;
-  subtitle?: string;
   backgroundImage?: string;
 }
 
 const HeroSection = ({
-  title = "Novaria",
-  subtitle = "Fresh Coffee, Exceptional Hospitality.",
   backgroundImage = "/hero-image.jpg",
 }: HeroSectionProps) => {
   return (
-    <section className="relative h-dvh w-full overflow-hidden">
+    <section className="relative h-dvh w-full overflow-hidden select-none">
         <div className="absolute inset-0 bg-gradient-to-r from-black/70 to-black/40 z-10" />
         <Image
           src={backgroundImage}
@@ -40,11 +37,10 @@ const HeroSection = ({
               pastries in a cozy, welcoming atmosphere.
             </p>
             <div className="mt-8 flex flex-wrap gap-4 animate-slideUp" style={{ animationDelay: "0.4s" }}>
-              <Button size="lg">
-                Our Menu <ArrowRight className="ml-2 h-4 w-4" />
-              </Button>
-              <Button size="lg" variant="outline">
-                Visit Us
+              <Button size="lg" asChild>
+                <Link href={"/menu"}>
+                  Our Menu <ArrowRight className="ml-2 h-4 w-4" />
+                </Link>
               </Button>
             </div>
           </div>

@@ -5,6 +5,7 @@ import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
+import useCartStore from '@/store/cart-store'
 import { Search, ShoppingBag, Menu, X } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
@@ -14,8 +15,9 @@ interface HeaderProps {
   onCartClick?: () => void;
 }
 
-export default function Header({ onSearchClick, onCartClick }: HeaderProps) {
+  export default function Header({ onSearchClick, onCartClick }: HeaderProps) {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const {getTotalItems} = useCartStore()
 
   const navItems = [
     { label: "Shop", href: "/shop" },
@@ -72,7 +74,7 @@ export default function Header({ onSearchClick, onCartClick }: HeaderProps) {
           >
             <ShoppingBag className="h-5 w-5" />
             <span className="absolute -top-1 -right-1 bg-accent text-primary text-xs rounded-full h-4 w-4 flex items-center justify-center">
-              3
+              {getTotalItems()}
             </span>
             <span className="sr-only">Cart</span>
           </Button>
