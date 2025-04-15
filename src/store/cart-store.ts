@@ -2,12 +2,18 @@ import { toast } from 'sonner';
 import { create } from 'zustand'
 import { persist } from 'zustand/middleware'
 
-interface CartItem {
-  id: string;
-  name: string;
-  price: number;
-  variation_name: string;
-  quantity: number;
+export interface CartItem {
+  catalog_object_id: string,
+  uid: string,
+  quantity: number,
+  name: string,
+  base_price_money: {
+    amount: number,
+    currency: string
+  }
+  item_type: 'ITEM',
+  note: string,
+  variation_name: string
 }
 
 interface CartStore {
@@ -17,7 +23,6 @@ interface CartStore {
   updateQuantity: (id: string, quantity: number) => void;
   clearCart: () => void;
   getSubtotal: () => number;
-  getTax: () => number;
   getTotal: () => number;
   getTotalItems: () => number;
 }
@@ -29,11 +34,11 @@ const useCartStore = create<CartStore>()(
       
       addItem: (newItem) => set((state) => {
         toast.success('Item Added')
-        const existingItem = state.items.find(item => item.id === newItem.id);
+        const existingItem = state.items.find(item => item.uid === newItem.uid);
         if (existingItem) {
           return {
             items: state.items.map(item =>
-              item.id === newItem.id
+              item.uid === newItem.uid
                 ? { ...item, quantity: item.quantity + 1 }
                 : item
             ),
@@ -43,12 +48,12 @@ const useCartStore = create<CartStore>()(
       }),
 
       removeItem: (id) => set((state) => ({
-        items: state.items.filter(item => item.id !== id)
+        items: state.items.filter(item => item.uid !== id)
       })),
 
       updateQuantity: (id, quantity) => set((state) => ({
         items: state.items.map(item =>
-          item.id === id ? { ...item, quantity } : item
+          item.uid === id ? { ...item, quantity } : item
         )
       })),
 
@@ -56,18 +61,12 @@ const useCartStore = create<CartStore>()(
 
       getSubtotal: () => {
         const { items } = get();
-        return items.reduce((sum, item) => sum + item.price * item.quantity, 0);
-      },
-
-      getTax: () => {
-        const subtotal = get().getSubtotal();
-        return subtotal >= 50 ? 0 : 5.99;
+        return items.reduce((sum, item) => sum + item.base_price_money.amount * item.quantity, 0);
       },
 
       getTotal: () => {
         const subtotal = get().getSubtotal();
-        const shipping = get().getTax();
-        return subtotal + shipping;
+        return subtotal;
       },
 
       getTotalItems: () => {

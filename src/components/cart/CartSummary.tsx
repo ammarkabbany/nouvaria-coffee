@@ -5,22 +5,16 @@ import { Separator } from "../ui/separator";
 
 interface CartSummaryProps {
   subtotal: number;
-  tax: number;
   total: number;
   onCheckout: () => void;
 }
 
-export const CartSummary = ({ subtotal, tax, total, onCheckout }: CartSummaryProps) => (
+export const CartSummary = ({ subtotal, total, onCheckout }: CartSummaryProps) => (
   <motion.div className="border-t border-border p-4 space-y-4 bg-muted/10">
     <div className="space-y-2">
       <div className="flex justify-between text-sm">
         <span className="text-muted-foreground">Subtotal</span>
         <span>${subtotal.toFixed(2)}</span>
-      </div>
-
-      <div className="flex justify-between text-sm">
-        <span className="text-muted-foreground">Tax</span>
-        <span>{tax === 0 ? "Free" : `$${tax.toFixed(2)}`}</span>
       </div>
 
       <Separator className="my-2" />

@@ -1,113 +1,4885 @@
-export const mockCatalogObjects = [];
+import { SquareCatalogCategory, SquareItem } from "@/types/CatalogTypes";
 
-export const mockCatalogCategories = [
+export const CatalogProducts: SquareItem[] = [
   {
-    type: "CATEGORY",
+    type: "ITEM",
+    id: "5U5YAPP5TFFXDG63YSFO5Z34",
+    updated_at: "2024-07-01T14:45:05.378Z",
+    created_at: "2024-05-23T20:44:40.095Z",
+    version: 1719845105378,
+    is_deleted: false,
+    catalog_v1_ids: [
+      {
+        catalog_v1_id: "FWPT4L44B7PNE3ISFB6Z43KZ",
+        location_id: "LFDBM4Y1NPV7R",
+      },
+    ],
+    present_at_all_locations: false,
+    present_at_location_ids: ["LFDBM4Y1NPV7R"],
+    item_data: {
+      name: "Affogato",
+      label_color: "0B8000",
+      is_taxable: true,
+      tax_ids: ["B4GOWNZ5FF5W6OSPL7LOAYNP"],
+      variations: [
+        {
+          type: "ITEM_VARIATION",
+          id: "HVRMBUBAOODHFN6JHHHEBFAQ",
+          updated_at: "2024-07-01T14:45:05.378Z",
+          created_at: "2024-05-23T20:44:40.095Z",
+          version: 1719845105378,
+          is_deleted: false,
+          catalog_v1_ids: [
+            {
+              catalog_v1_id: "4TRAPKZGUTIVQELGX5WIFEPO",
+              location_id: "LFDBM4Y1NPV7R",
+            },
+          ],
+          present_at_all_locations: false,
+          present_at_location_ids: ["LFDBM4Y1NPV7R"],
+          item_variation_data: {
+            item_id: "5U5YAPP5TFFXDG63YSFO5Z34",
+            name: "Regular",
+            ordinal: 1,
+            pricing_type: "FIXED_PRICING",
+            price_money: {
+              amount: 650,
+              currency: "USD",
+            },
+            location_overrides: [
+              {
+                location_id: "LFDBM4Y1NPV7R",
+                track_inventory: false,
+              },
+              {
+                location_id: "LT0BWZMSV5PAZ",
+                track_inventory: true,
+              },
+            ],
+            track_inventory: true,
+            sellable: true,
+            stockable: true,
+            channels: ["CH_wgZwHcodjGhLl42K7jg9fxPbw9UAV6zVWHsfYRlQuYC"],
+          },
+        },
+      ],
+      product_type: "FOOD_AND_BEV",
+      skip_modifier_screen: false,
+      ecom_uri: "https://novariacoffee.square.site/product/affogato/93",
+      ecom_available: true,
+      ecom_visibility: "VISIBLE",
+      categories: [
+        {
+          id: "QDJKYB6DOONI3BOSKSUSNXQZ",
+          ordinal: -2250150546243584,
+        },
+      ],
+      channels: ["CH_wgZwHcodjGhLl42K7jg9fxPbw9UAV6zVWHsfYRlQuYC"],
+      is_archived: false,
+      reporting_category: {
+        id: "QDJKYB6DOONI3BOSKSUSNXQZ",
+        ordinal: -2250150546243584,
+      },
+    },
+  },
+  {
+    type: "ITEM",
+    id: "2Z6RM6T2TV3IQK7EZ3SAH6E2",
+    updated_at: "2024-07-01T14:54:22.172Z",
+    created_at: "2023-11-08T14:06:23.615Z",
+    version: 1719845662172,
+    is_deleted: false,
+    catalog_v1_ids: [
+      {
+        catalog_v1_id: "Q35JNU7ZBGVWOKNKT3S4M7EN",
+        location_id: "LFDBM4Y1NPV7R",
+      },
+    ],
+    present_at_all_locations: false,
+    present_at_location_ids: ["LFDBM4Y1NPV7R"],
+    item_data: {
+      name: "Almond Danish",
+      label_color: "4AB200",
+      is_taxable: true,
+      tax_ids: ["B4GOWNZ5FF5W6OSPL7LOAYNP"],
+      variations: [
+        {
+          type: "ITEM_VARIATION",
+          id: "P2S3I2XQF6C3BSL4BYTWFQ7I",
+          updated_at: "2024-07-01T14:54:22.172Z",
+          created_at: "2023-11-08T14:06:23.615Z",
+          version: 1719845662172,
+          is_deleted: false,
+          catalog_v1_ids: [
+            {
+              catalog_v1_id: "ORVZ5GTJWE4ZGTDYN3CHV7LJ",
+              location_id: "LFDBM4Y1NPV7R",
+            },
+          ],
+          present_at_all_locations: false,
+          present_at_location_ids: ["LFDBM4Y1NPV7R"],
+          item_variation_data: {
+            item_id: "2Z6RM6T2TV3IQK7EZ3SAH6E2",
+            name: "Regular",
+            ordinal: 1,
+            pricing_type: "FIXED_PRICING",
+            price_money: {
+              amount: 500,
+              currency: "USD",
+            },
+            location_overrides: [
+              {
+                location_id: "LFDBM4Y1NPV7R",
+                track_inventory: false,
+              },
+              {
+                location_id: "LT0BWZMSV5PAZ",
+                track_inventory: true,
+              },
+            ],
+            track_inventory: true,
+            sellable: true,
+            stockable: true,
+            channels: ["CH_wgZwHcodjGhLl42K7jg9fxPbw9UAV6zVWHsfYRlQuYC"],
+          },
+        },
+      ],
+      product_type: "FOOD_AND_BEV",
+      skip_modifier_screen: false,
+      ecom_uri: "https://novariacoffee.square.site/product/almond-danish/18",
+      ecom_available: true,
+      ecom_visibility: "VISIBLE",
+      categories: [
+        {
+          id: "27GG2MFWHT7ECDNN4MZB4LQ7",
+          ordinal: -2251043899441152,
+        },
+      ],
+      channels: ["CH_wgZwHcodjGhLl42K7jg9fxPbw9UAV6zVWHsfYRlQuYC"],
+      is_archived: false,
+      reporting_category: {
+        id: "27GG2MFWHT7ECDNN4MZB4LQ7",
+        ordinal: -2251043899441152,
+      },
+    },
+  },
+  {
+    type: "ITEM",
+    id: "3YPZEGAWWADQ3HI67FQ3ZQZU",
+    updated_at: "2025-02-28T16:33:53.67Z",
+    created_at: "2023-10-19T02:39:03.608Z",
+    version: 1740760433670,
+    is_deleted: false,
+    catalog_v1_ids: [
+      {
+        catalog_v1_id: "TVAQNPWUYBXS46FUF4D7YTKV",
+        location_id: "LFDBM4Y1NPV7R",
+      },
+    ],
+    present_at_all_locations: false,
+    present_at_location_ids: ["LFDBM4Y1NPV7R"],
+    item_data: {
+      name: "Americano",
+      is_taxable: true,
+      tax_ids: ["B4GOWNZ5FF5W6OSPL7LOAYNP"],
+      modifier_list_info: [
+        {
+          modifier_list_id: "CCVH6QBVVNSIUZ375S7YVOOF",
+          min_selected_modifiers: -1,
+          max_selected_modifiers: -1,
+          enabled: true,
+          hidden_from_customer: false,
+          ordinal: 0,
+        },
+        {
+          modifier_list_id: "J36EXIF3EICZGVMLXEKO4D5S",
+          min_selected_modifiers: -1,
+          max_selected_modifiers: -1,
+          enabled: true,
+          hidden_from_customer: false,
+          ordinal: 1,
+        },
+        {
+          modifier_list_id: "PBONGZLR3FBEVVHP63RPSI4S",
+          min_selected_modifiers: -1,
+          max_selected_modifiers: -1,
+          enabled: true,
+          hidden_from_customer: false,
+          ordinal: 9,
+        },
+        {
+          modifier_list_id: "JT43H56K57LW4D7QDOUPS7R2",
+          min_selected_modifiers: -1,
+          max_selected_modifiers: -1,
+          enabled: true,
+          hidden_from_customer: false,
+          ordinal: 6,
+        },
+        {
+          modifier_list_id: "POU7HQT7SENSWDDK3SCNXHDK",
+          min_selected_modifiers: -1,
+          max_selected_modifiers: -1,
+          enabled: true,
+          hidden_from_customer: false,
+          ordinal: 8,
+        },
+      ],
+      variations: [
+        {
+          type: "ITEM_VARIATION",
+          id: "ZJ4RSU7LQL6J3WJK3EXQYU5M",
+          updated_at: "2025-02-28T16:31:34.812Z",
+          created_at: "2023-12-06T14:19:50.388Z",
+          version: 1740760294812,
+          is_deleted: false,
+          catalog_v1_ids: [
+            {
+              catalog_v1_id: "J5OXXT4YFHSBIBYVQSIVMNZB",
+              location_id: "LFDBM4Y1NPV7R",
+            },
+          ],
+          present_at_all_locations: false,
+          present_at_location_ids: ["LFDBM4Y1NPV7R"],
+          item_variation_data: {
+            item_id: "3YPZEGAWWADQ3HI67FQ3ZQZU",
+            name: "Regular",
+            ordinal: 0,
+            pricing_type: "FIXED_PRICING",
+            price_money: {
+              amount: 415,
+              currency: "USD",
+            },
+            location_overrides: [
+              {
+                location_id: "LFDBM4Y1NPV7R",
+                track_inventory: false,
+              },
+              {
+                location_id: "LT0BWZMSV5PAZ",
+                track_inventory: true,
+              },
+            ],
+            track_inventory: true,
+            sellable: true,
+            stockable: true,
+            channels: ["CH_wgZwHcodjGhLl42K7jg9fxPbw9UAV6zVWHsfYRlQuYC"],
+            item_variation_vendor_info_ids: ["Y6B4Q6KZFUI2UMD2YBJENERV"],
+            item_variation_vendor_infos: [
+              {
+                type: "ITEM_VARIATION_VENDOR_INFO",
+                id: "Y6B4Q6KZFUI2UMD2YBJENERV",
+                updated_at: "2025-02-28T16:31:34.812Z",
+                created_at: "2025-02-28T16:31:34.991Z",
+                version: 1740760294812,
+                is_deleted: false,
+                present_at_all_locations: false,
+                present_at_location_ids: ["LFDBM4Y1NPV7R"],
+                item_variation_vendor_info_data: {
+                  ordinal: 0,
+                  item_variation_id: "ZJ4RSU7LQL6J3WJK3EXQYU5M",
+                },
+              },
+            ],
+          },
+        },
+      ],
+      product_type: "FOOD_AND_BEV",
+      skip_modifier_screen: false,
+      ecom_uri: "https://novariacoffee.square.site/product/americano/4",
+      ecom_available: true,
+      ecom_visibility: "VISIBLE",
+      categories: [
+        {
+          id: "QDJKYB6DOONI3BOSKSUSNXQZ",
+          ordinal: -2251524935778304,
+        },
+      ],
+      channels: ["CH_wgZwHcodjGhLl42K7jg9fxPbw9UAV6zVWHsfYRlQuYC"],
+      is_archived: false,
+      reporting_category: {
+        id: "QDJKYB6DOONI3BOSKSUSNXQZ",
+        ordinal: -2251524935778304,
+      },
+    },
+  },
+  {
+    type: "ITEM",
+    id: "PM6NMTTALMMPBQCROCJGLSJB",
+    updated_at: "2025-03-07T18:17:59.599Z",
+    created_at: "2024-07-05T17:44:53.194Z",
+    version: 1741371479599,
+    is_deleted: false,
+    catalog_v1_ids: [
+      {
+        catalog_v1_id: "AIMJG6D6T357B36ZCXNYHTZ6",
+        location_id: "LFDBM4Y1NPV7R",
+      },
+    ],
+    present_at_all_locations: false,
+    present_at_location_ids: ["LFDBM4Y1NPV7R"],
+    item_data: {
+      name: "Bagel",
+      is_taxable: true,
+      tax_ids: ["B4GOWNZ5FF5W6OSPL7LOAYNP"],
+      variations: [
+        {
+          type: "ITEM_VARIATION",
+          id: "OQWY5TGYCX64WY3ONKU5PVNU",
+          updated_at: "2025-03-07T18:17:30.841Z",
+          created_at: "2024-07-05T17:44:53.194Z",
+          version: 1741371450841,
+          is_deleted: false,
+          catalog_v1_ids: [
+            {
+              catalog_v1_id: "SKOEXD2GJ3SFFX6ZB3TOSRK4",
+              location_id: "LFDBM4Y1NPV7R",
+            },
+          ],
+          present_at_all_locations: false,
+          present_at_location_ids: ["LFDBM4Y1NPV7R"],
+          item_variation_data: {
+            item_id: "PM6NMTTALMMPBQCROCJGLSJB",
+            name: "Regular",
+            ordinal: 1,
+            pricing_type: "FIXED_PRICING",
+            price_money: {
+              amount: 500,
+              currency: "USD",
+            },
+            location_overrides: [
+              {
+                location_id: "LFDBM4Y1NPV7R",
+                track_inventory: false,
+              },
+              {
+                location_id: "LT0BWZMSV5PAZ",
+                track_inventory: true,
+              },
+            ],
+            track_inventory: true,
+            sellable: true,
+            stockable: true,
+            channels: ["CH_wgZwHcodjGhLl42K7jg9fxPbw9UAV6zVWHsfYRlQuYC"],
+            item_variation_vendor_info_ids: ["BOTHRMKPSS2CR2J476R5HA5V"],
+            item_variation_vendor_infos: [
+              {
+                type: "ITEM_VARIATION_VENDOR_INFO",
+                id: "BOTHRMKPSS2CR2J476R5HA5V",
+                updated_at: "2025-03-07T18:17:30.841Z",
+                created_at: "2025-03-07T18:17:31.026Z",
+                version: 1741371450841,
+                is_deleted: false,
+                present_at_all_locations: false,
+                present_at_location_ids: ["LFDBM4Y1NPV7R"],
+                item_variation_vendor_info_data: {
+                  ordinal: 0,
+                  item_variation_id: "OQWY5TGYCX64WY3ONKU5PVNU",
+                },
+              },
+            ],
+          },
+        },
+      ],
+      product_type: "FOOD_AND_BEV",
+      skip_modifier_screen: false,
+      ecom_uri: "https://novariacoffee.square.site/product/bagel/104",
+      ecom_available: true,
+      ecom_visibility: "VISIBLE",
+      categories: [
+        {
+          id: "2LQITKCLIBKRUJ5UUE2BVYVI",
+          ordinal: -2251524935778304,
+        },
+      ],
+      channels: ["CH_wgZwHcodjGhLl42K7jg9fxPbw9UAV6zVWHsfYRlQuYC"],
+      is_archived: false,
+      reporting_category: {
+        id: "2LQITKCLIBKRUJ5UUE2BVYVI",
+        ordinal: -2251524935778304,
+      },
+    },
+  },
+  {
+    type: "ITEM",
+    id: "3DI44RC4D3F67ICLVABTDMWV",
+    updated_at: "2025-03-05T14:42:12.866Z",
+    created_at: "2023-11-14T13:40:14.625Z",
+    version: 1741185732866,
+    is_deleted: false,
+    catalog_v1_ids: [
+      {
+        catalog_v1_id: "REPWJFYSOUFDERIYK56XATTT",
+        location_id: "LFDBM4Y1NPV7R",
+      },
+    ],
+    present_at_all_locations: false,
+    present_at_location_ids: ["LFDBM4Y1NPV7R"],
+    item_data: {
+      name: "Cafe Au Lait",
+      is_taxable: true,
+      tax_ids: ["B4GOWNZ5FF5W6OSPL7LOAYNP"],
+      modifier_list_info: [
+        {
+          modifier_list_id: "CCVH6QBVVNSIUZ375S7YVOOF",
+          min_selected_modifiers: -1,
+          max_selected_modifiers: -1,
+          enabled: true,
+          ordinal: 7,
+        },
+        {
+          modifier_list_id: "PBONGZLR3FBEVVHP63RPSI4S",
+          min_selected_modifiers: -1,
+          max_selected_modifiers: -1,
+          enabled: true,
+          ordinal: 4,
+        },
+        {
+          modifier_list_id: "POU7HQT7SENSWDDK3SCNXHDK",
+          min_selected_modifiers: -1,
+          max_selected_modifiers: -1,
+          enabled: true,
+          ordinal: 6,
+        },
+        {
+          modifier_list_id: "J36EXIF3EICZGVMLXEKO4D5S",
+          min_selected_modifiers: -1,
+          max_selected_modifiers: -1,
+          enabled: true,
+          ordinal: 1,
+        },
+      ],
+      variations: [
+        {
+          type: "ITEM_VARIATION",
+          id: "4U6FW3KPQMNBZ7U2SOENRT2L",
+          updated_at: "2025-03-05T14:41:24.311Z",
+          created_at: "2023-11-14T13:40:14.625Z",
+          version: 1741185684311,
+          is_deleted: false,
+          catalog_v1_ids: [
+            {
+              catalog_v1_id: "2GVDIXIUT4MXDPZOK2KXLHVU",
+              location_id: "LFDBM4Y1NPV7R",
+            },
+          ],
+          present_at_all_locations: false,
+          present_at_location_ids: ["LFDBM4Y1NPV7R"],
+          item_variation_data: {
+            item_id: "3DI44RC4D3F67ICLVABTDMWV",
+            name: "12oz",
+            ordinal: 0,
+            pricing_type: "FIXED_PRICING",
+            price_money: {
+              amount: 425,
+              currency: "USD",
+            },
+            location_overrides: [
+              {
+                location_id: "LFDBM4Y1NPV7R",
+                track_inventory: false,
+              },
+              {
+                location_id: "LT0BWZMSV5PAZ",
+                track_inventory: true,
+              },
+            ],
+            track_inventory: true,
+            item_option_values: [
+              {
+                item_option_id: "FJGUSHIVHXME3KUS55NLGIXJ",
+                item_option_value_id: "IL2FMIV4RHMCHY7WGALOHUWJ",
+              },
+            ],
+            sellable: true,
+            stockable: true,
+            channels: ["CH_wgZwHcodjGhLl42K7jg9fxPbw9UAV6zVWHsfYRlQuYC"],
+          },
+        },
+        {
+          type: "ITEM_VARIATION",
+          id: "J54LSIZJOGPC5WFPEEFQJZGW",
+          updated_at: "2025-03-05T14:41:24.508Z",
+          created_at: "2023-11-14T13:40:14.625Z",
+          version: 1741185684508,
+          is_deleted: false,
+          catalog_v1_ids: [
+            {
+              catalog_v1_id: "A59DE506-1D6E-4747-A088-3239D08FEBAA",
+              location_id: "LFDBM4Y1NPV7R",
+            },
+          ],
+          present_at_all_locations: false,
+          present_at_location_ids: ["LFDBM4Y1NPV7R"],
+          item_variation_data: {
+            item_id: "3DI44RC4D3F67ICLVABTDMWV",
+            name: "16oz",
+            ordinal: 1,
+            pricing_type: "FIXED_PRICING",
+            price_money: {
+              amount: 475,
+              currency: "USD",
+            },
+            location_overrides: [
+              {
+                location_id: "LFDBM4Y1NPV7R",
+                track_inventory: false,
+              },
+              {
+                location_id: "LT0BWZMSV5PAZ",
+                track_inventory: true,
+              },
+            ],
+            track_inventory: true,
+            item_option_values: [
+              {
+                item_option_id: "FJGUSHIVHXME3KUS55NLGIXJ",
+                item_option_value_id: "IW5PNVEKTIJ3IRXSP5SSUXQ4",
+              },
+            ],
+            sellable: true,
+            stockable: true,
+            channels: ["CH_wgZwHcodjGhLl42K7jg9fxPbw9UAV6zVWHsfYRlQuYC"],
+          },
+        },
+      ],
+      product_type: "FOOD_AND_BEV",
+      skip_modifier_screen: false,
+      item_options: [
+        {
+          item_option_id: "FJGUSHIVHXME3KUS55NLGIXJ",
+        },
+      ],
+      ecom_uri: "https://novariacoffee.square.site/product/cafe-au-lait/23",
+      ecom_available: true,
+      ecom_visibility: "VISIBLE",
+      categories: [
+        {
+          id: "QDJKYB6DOONI3BOSKSUSNXQZ",
+          ordinal: -2250975179964416,
+        },
+      ],
+      channels: ["CH_wgZwHcodjGhLl42K7jg9fxPbw9UAV6zVWHsfYRlQuYC"],
+      is_archived: false,
+      reporting_category: {
+        id: "QDJKYB6DOONI3BOSKSUSNXQZ",
+        ordinal: -2250975179964416,
+      },
+    },
+  },
+  {
+    type: "ITEM",
+    id: "5IBXFPUZMOA5CU2Q47RH673E",
+    updated_at: "2025-02-28T16:31:35.56Z",
+    created_at: "2023-10-19T02:40:04.353Z",
+    version: 1740760295560,
+    is_deleted: false,
+    catalog_v1_ids: [
+      {
+        catalog_v1_id: "ZJ64AJVGJQU4GCNROIVINDE3",
+        location_id: "LFDBM4Y1NPV7R",
+      },
+    ],
+    present_at_all_locations: false,
+    present_at_location_ids: ["LFDBM4Y1NPV7R"],
+    item_data: {
+      name: "Cappuccino",
+      is_taxable: true,
+      tax_ids: ["B4GOWNZ5FF5W6OSPL7LOAYNP"],
+      modifier_list_info: [
+        {
+          modifier_list_id: "KNOBRKUMSI77KRIBHQCOUEJO",
+          min_selected_modifiers: -1,
+          max_selected_modifiers: -1,
+          enabled: true,
+          hidden_from_customer: false,
+          ordinal: 0,
+        },
+        {
+          modifier_list_id: "CCVH6QBVVNSIUZ375S7YVOOF",
+          min_selected_modifiers: -1,
+          max_selected_modifiers: -1,
+          enabled: true,
+          hidden_from_customer: false,
+          ordinal: 1,
+        },
+        {
+          modifier_list_id: "PBONGZLR3FBEVVHP63RPSI4S",
+          min_selected_modifiers: -1,
+          max_selected_modifiers: -1,
+          enabled: true,
+          hidden_from_customer: false,
+          ordinal: 4,
+        },
+        {
+          modifier_list_id: "POU7HQT7SENSWDDK3SCNXHDK",
+          min_selected_modifiers: -1,
+          max_selected_modifiers: -1,
+          enabled: true,
+          hidden_from_customer: false,
+          ordinal: 6,
+        },
+      ],
+      variations: [
+        {
+          type: "ITEM_VARIATION",
+          id: "F4KB4SJKH4YDAIDFG3LOWVGG",
+          updated_at: "2025-02-28T16:31:35.56Z",
+          created_at: "2023-12-06T14:20:16.645Z",
+          version: 1740760295560,
+          is_deleted: false,
+          catalog_v1_ids: [
+            {
+              catalog_v1_id: "GRKOXLMAMMKO2FI35WBYYQ5X",
+              location_id: "LFDBM4Y1NPV7R",
+            },
+          ],
+          present_at_all_locations: false,
+          present_at_location_ids: ["LFDBM4Y1NPV7R"],
+          item_variation_data: {
+            item_id: "5IBXFPUZMOA5CU2Q47RH673E",
+            name: "Regular",
+            ordinal: 0,
+            pricing_type: "FIXED_PRICING",
+            price_money: {
+              amount: 485,
+              currency: "USD",
+            },
+            location_overrides: [
+              {
+                location_id: "LFDBM4Y1NPV7R",
+                track_inventory: false,
+              },
+              {
+                location_id: "LT0BWZMSV5PAZ",
+                track_inventory: true,
+              },
+            ],
+            track_inventory: true,
+            sellable: true,
+            stockable: true,
+            channels: ["CH_wgZwHcodjGhLl42K7jg9fxPbw9UAV6zVWHsfYRlQuYC"],
+            item_variation_vendor_info_ids: ["XYUPH3A3KKALT57NPEF6NN4E"],
+            item_variation_vendor_infos: [
+              {
+                type: "ITEM_VARIATION_VENDOR_INFO",
+                id: "XYUPH3A3KKALT57NPEF6NN4E",
+                updated_at: "2025-02-28T16:31:35.56Z",
+                created_at: "2025-02-28T16:31:35.705Z",
+                version: 1740760295560,
+                is_deleted: false,
+                present_at_all_locations: false,
+                present_at_location_ids: ["LFDBM4Y1NPV7R"],
+                item_variation_vendor_info_data: {
+                  ordinal: 0,
+                  item_variation_id: "F4KB4SJKH4YDAIDFG3LOWVGG",
+                },
+              },
+            ],
+          },
+        },
+      ],
+      product_type: "FOOD_AND_BEV",
+      skip_modifier_screen: false,
+      ecom_uri: "",
+      ecom_available: false,
+      ecom_visibility: "UNINDEXED",
+      categories: [
+        {
+          id: "QDJKYB6DOONI3BOSKSUSNXQZ",
+          ordinal: -2251387496824832,
+        },
+      ],
+      channels: ["CH_wgZwHcodjGhLl42K7jg9fxPbw9UAV6zVWHsfYRlQuYC"],
+      is_archived: false,
+      reporting_category: {
+        id: "QDJKYB6DOONI3BOSKSUSNXQZ",
+        ordinal: -2251387496824832,
+      },
+    },
+  },
+  {
+    type: "ITEM",
+    id: "TPVUOIZ3VR25V373RHMPIXIE",
+    updated_at: "2025-03-03T15:24:11.878Z",
+    created_at: "2023-10-19T02:45:01.772Z",
+    version: 1741015451878,
+    is_deleted: false,
+    catalog_v1_ids: [
+      {
+        catalog_v1_id: "VSI57AEPO2DCRFR2IPPS4RIN",
+        location_id: "LFDBM4Y1NPV7R",
+      },
+    ],
+    present_at_all_locations: false,
+    present_at_location_ids: ["LFDBM4Y1NPV7R"],
+    item_data: {
+      name: "Chai Latte",
+      label_color: "E5BF00",
+      is_taxable: true,
+      tax_ids: ["B4GOWNZ5FF5W6OSPL7LOAYNP"],
+      modifier_list_info: [
+        {
+          modifier_list_id: "KNOBRKUMSI77KRIBHQCOUEJO",
+          min_selected_modifiers: -1,
+          max_selected_modifiers: -1,
+          enabled: true,
+          hidden_from_customer: false,
+          ordinal: 0,
+        },
+        {
+          modifier_list_id: "CCVH6QBVVNSIUZ375S7YVOOF",
+          min_selected_modifiers: -1,
+          max_selected_modifiers: -1,
+          enabled: true,
+          hidden_from_customer: false,
+          ordinal: 7,
+        },
+        {
+          modifier_list_id: "PBONGZLR3FBEVVHP63RPSI4S",
+          min_selected_modifiers: -1,
+          max_selected_modifiers: -1,
+          enabled: true,
+          hidden_from_customer: false,
+          ordinal: 4,
+        },
+        {
+          modifier_list_id: "POU7HQT7SENSWDDK3SCNXHDK",
+          min_selected_modifiers: -1,
+          max_selected_modifiers: -1,
+          enabled: true,
+          hidden_from_customer: false,
+          ordinal: 6,
+        },
+        {
+          modifier_list_id: "6WTCRAHHO4IN2BJGOFSI5THQ",
+          min_selected_modifiers: -1,
+          max_selected_modifiers: -1,
+          enabled: true,
+          hidden_from_customer: false,
+          ordinal: 1,
+        },
+      ],
+      variations: [
+        {
+          type: "ITEM_VARIATION",
+          id: "7C47UBEQFANWYD3OVTJCKRLU",
+          updated_at: "2025-03-03T15:23:10.724Z",
+          created_at: "2023-10-19T02:45:01.772Z",
+          version: 1741015390724,
+          is_deleted: false,
+          catalog_v1_ids: [
+            {
+              catalog_v1_id: "G5D2EF7NT372Y5DMBVOXF7J2",
+              location_id: "LFDBM4Y1NPV7R",
+            },
+          ],
+          present_at_all_locations: false,
+          present_at_location_ids: ["LFDBM4Y1NPV7R"],
+          item_variation_data: {
+            item_id: "TPVUOIZ3VR25V373RHMPIXIE",
+            name: "12oz, To Go",
+            ordinal: 0,
+            pricing_type: "FIXED_PRICING",
+            price_money: {
+              amount: 550,
+              currency: "USD",
+            },
+            location_overrides: [
+              {
+                location_id: "LFDBM4Y1NPV7R",
+                track_inventory: false,
+              },
+              {
+                location_id: "LT0BWZMSV5PAZ",
+                track_inventory: true,
+              },
+            ],
+            track_inventory: true,
+            item_option_values: [
+              {
+                item_option_id: "FJGUSHIVHXME3KUS55NLGIXJ",
+                item_option_value_id: "IL2FMIV4RHMCHY7WGALOHUWJ",
+              },
+              {
+                item_option_id: "SWQI44D7RYOBHULSU3OIEAL5",
+                item_option_value_id: "7EFWDOAVD7FKOBHMUXZUVLWA",
+              },
+            ],
+            sellable: true,
+            stockable: true,
+            channels: ["CH_wgZwHcodjGhLl42K7jg9fxPbw9UAV6zVWHsfYRlQuYC"],
+          },
+        },
+        {
+          type: "ITEM_VARIATION",
+          id: "DS2CC7NVH5U6JMHXOTDIXE7U",
+          updated_at: "2025-03-03T15:23:10.724Z",
+          created_at: "2023-10-19T02:45:01.772Z",
+          version: 1741015390724,
+          is_deleted: false,
+          catalog_v1_ids: [
+            {
+              catalog_v1_id: "3822FA0A-8E04-4835-80C2-6AD5DF428258",
+              location_id: "LFDBM4Y1NPV7R",
+            },
+          ],
+          present_at_all_locations: false,
+          present_at_location_ids: ["LFDBM4Y1NPV7R"],
+          item_variation_data: {
+            item_id: "TPVUOIZ3VR25V373RHMPIXIE",
+            name: "16oz, To Go",
+            ordinal: 1,
+            pricing_type: "FIXED_PRICING",
+            price_money: {
+              amount: 625,
+              currency: "USD",
+            },
+            location_overrides: [
+              {
+                location_id: "LFDBM4Y1NPV7R",
+                track_inventory: false,
+              },
+              {
+                location_id: "LT0BWZMSV5PAZ",
+                track_inventory: true,
+              },
+            ],
+            track_inventory: true,
+            item_option_values: [
+              {
+                item_option_id: "FJGUSHIVHXME3KUS55NLGIXJ",
+                item_option_value_id: "IW5PNVEKTIJ3IRXSP5SSUXQ4",
+              },
+              {
+                item_option_id: "SWQI44D7RYOBHULSU3OIEAL5",
+                item_option_value_id: "7EFWDOAVD7FKOBHMUXZUVLWA",
+              },
+            ],
+            sellable: true,
+            stockable: true,
+            channels: ["CH_wgZwHcodjGhLl42K7jg9fxPbw9UAV6zVWHsfYRlQuYC"],
+          },
+        },
+      ],
+      product_type: "FOOD_AND_BEV",
+      skip_modifier_screen: false,
+      item_options: [
+        {
+          item_option_id: "FJGUSHIVHXME3KUS55NLGIXJ",
+        },
+        {
+          item_option_id: "SWQI44D7RYOBHULSU3OIEAL5",
+        },
+      ],
+      ecom_uri: "https://novariacoffee.square.site/product/chai-latte/11",
+      ecom_available: true,
+      ecom_visibility: "VISIBLE",
+      categories: [
+        {
+          id: "QDJKYB6DOONI3BOSKSUSNXQZ",
+          ordinal: -2251043899441152,
+        },
+      ],
+      channels: ["CH_wgZwHcodjGhLl42K7jg9fxPbw9UAV6zVWHsfYRlQuYC"],
+      is_archived: false,
+      reporting_category: {
+        id: "QDJKYB6DOONI3BOSKSUSNXQZ",
+        ordinal: -2251043899441152,
+      },
+    },
+  },
+  {
+    type: "ITEM",
+    id: "MHOGMQBLUL574KAIHZSLA276",
+    updated_at: "2025-01-18T18:29:16.284Z",
+    created_at: "2023-11-08T14:03:57.9Z",
+    version: 1737224956284,
+    is_deleted: false,
+    catalog_v1_ids: [
+      {
+        catalog_v1_id: "YD3QGHMBVVOEK5MLH26A67Q7",
+        location_id: "LFDBM4Y1NPV7R",
+      },
+    ],
+    present_at_all_locations: false,
+    present_at_location_ids: ["LFDBM4Y1NPV7R"],
+    item_data: {
+      name: "Cheese Danish",
+      label_color: "4AB200",
+      is_taxable: true,
+      tax_ids: ["B4GOWNZ5FF5W6OSPL7LOAYNP"],
+      variations: [
+        {
+          type: "ITEM_VARIATION",
+          id: "BYUO5JQZELXZJLPPIWXIGHWB",
+          updated_at: "2025-01-18T18:29:16.284Z",
+          created_at: "2023-11-08T14:03:57.9Z",
+          version: 1737224956284,
+          is_deleted: false,
+          catalog_v1_ids: [
+            {
+              catalog_v1_id: "W3WHATESTMKYPREKLJ45EIUI",
+              location_id: "LFDBM4Y1NPV7R",
+            },
+          ],
+          present_at_all_locations: false,
+          present_at_location_ids: ["LFDBM4Y1NPV7R"],
+          item_variation_data: {
+            item_id: "MHOGMQBLUL574KAIHZSLA276",
+            name: "Regular",
+            ordinal: 1,
+            pricing_type: "FIXED_PRICING",
+            price_money: {
+              amount: 550,
+              currency: "USD",
+            },
+            location_overrides: [
+              {
+                location_id: "LFDBM4Y1NPV7R",
+                track_inventory: true,
+                sold_out: true,
+              },
+              {
+                location_id: "LT0BWZMSV5PAZ",
+                track_inventory: true,
+              },
+            ],
+            track_inventory: true,
+            sellable: true,
+            stockable: true,
+            channels: ["CH_wgZwHcodjGhLl42K7jg9fxPbw9UAV6zVWHsfYRlQuYC"],
+          },
+        },
+      ],
+      product_type: "FOOD_AND_BEV",
+      skip_modifier_screen: false,
+      ecom_uri: "https://novariacoffee.square.site/product/cheese-danish/14",
+      ecom_available: true,
+      ecom_visibility: "VISIBLE",
+      categories: [
+        {
+          id: "27GG2MFWHT7ECDNN4MZB4LQ7",
+          ordinal: -2251731094208512,
+        },
+      ],
+      channels: ["CH_wgZwHcodjGhLl42K7jg9fxPbw9UAV6zVWHsfYRlQuYC"],
+      is_archived: false,
+      reporting_category: {
+        id: "27GG2MFWHT7ECDNN4MZB4LQ7",
+        ordinal: -2251731094208512,
+      },
+    },
+  },
+  {
+    type: "ITEM",
+    id: "QAILQ4EIPLKINMPIRNN3YFS3",
+    updated_at: "2024-10-01T16:19:33.751Z",
+    created_at: "2023-12-09T17:21:43.69Z",
+    version: 1727799573751,
+    is_deleted: false,
+    catalog_v1_ids: [
+      {
+        catalog_v1_id: "JZA4O2FP2EJUFAUWXTK4NLQR",
+        location_id: "LFDBM4Y1NPV7R",
+      },
+    ],
+    present_at_all_locations: false,
+    present_at_location_ids: ["LFDBM4Y1NPV7R"],
+    item_data: {
+      name: "Cheesecake",
+      is_taxable: true,
+      tax_ids: ["B4GOWNZ5FF5W6OSPL7LOAYNP"],
+      modifier_list_info: [
+        {
+          modifier_list_id: "POU7HQT7SENSWDDK3SCNXHDK",
+          min_selected_modifiers: -1,
+          max_selected_modifiers: -1,
+          enabled: true,
+          hidden_from_customer: false,
+          ordinal: 0,
+        },
+      ],
+      variations: [
+        {
+          type: "ITEM_VARIATION",
+          id: "55NGVY7JJVZEOHUMK3H5PSN5",
+          updated_at: "2024-02-01T21:37:10.826Z",
+          created_at: "2023-12-09T17:21:43.69Z",
+          version: 1706823430826,
+          is_deleted: false,
+          catalog_v1_ids: [
+            {
+              catalog_v1_id: "ZTEWPN6VBEKDU5UUJCQM6SPF",
+              location_id: "LFDBM4Y1NPV7R",
+            },
+          ],
+          present_at_all_locations: false,
+          present_at_location_ids: ["LFDBM4Y1NPV7R"],
+          item_variation_data: {
+            item_id: "QAILQ4EIPLKINMPIRNN3YFS3",
+            name: "Regular",
+            ordinal: 1,
+            pricing_type: "FIXED_PRICING",
+            price_money: {
+              amount: 550,
+              currency: "USD",
+            },
+            location_overrides: [
+              {
+                location_id: "LFDBM4Y1NPV7R",
+                track_inventory: false,
+              },
+              {
+                location_id: "LT0BWZMSV5PAZ",
+                track_inventory: true,
+              },
+            ],
+            track_inventory: true,
+            sellable: true,
+            stockable: true,
+          },
+        },
+      ],
+      product_type: "FOOD_AND_BEV",
+      skip_modifier_screen: false,
+      ecom_uri: "https://767686265435139058.square.site/product/cheesecake/32",
+      ecom_available: true,
+      ecom_visibility: "VISIBLE",
+      categories: [
+        {
+          id: "27GG2MFWHT7ECDNN4MZB4LQ7",
+          ordinal: -2251112618917888,
+        },
+      ],
+      is_archived: false,
+      reporting_category: {
+        id: "27GG2MFWHT7ECDNN4MZB4LQ7",
+        ordinal: -2251112618917888,
+      },
+    },
+  },
+  {
+    type: "ITEM",
+    id: "NO62KBT26FP5ZINAKQ42MJ2W",
+    updated_at: "2024-10-01T16:19:41.77Z",
+    created_at: "2024-02-23T14:23:40.081Z",
+    version: 1727799581770,
+    is_deleted: false,
+    catalog_v1_ids: [
+      {
+        catalog_v1_id: "6VVBJDU7K6QODSZG5OTATWWQ",
+        location_id: "LFDBM4Y1NPV7R",
+      },
+    ],
+    present_at_all_locations: false,
+    present_at_location_ids: ["LFDBM4Y1NPV7R"],
+    item_data: {
+      name: "Cherry Cheese Danish",
+      label_color: "4AB200",
+      is_taxable: true,
+      tax_ids: ["B4GOWNZ5FF5W6OSPL7LOAYNP"],
+      variations: [
+        {
+          type: "ITEM_VARIATION",
+          id: "F47PDEW7Y6FLPPYON2WN54N7",
+          updated_at: "2024-04-28T14:23:17.377Z",
+          created_at: "2024-02-23T14:23:40.081Z",
+          version: 1714314197377,
+          is_deleted: false,
+          catalog_v1_ids: [
+            {
+              catalog_v1_id: "QYGBANYGNHCZUHXSK6D35KLZ",
+              location_id: "LFDBM4Y1NPV7R",
+            },
+          ],
+          present_at_all_locations: false,
+          present_at_location_ids: ["LFDBM4Y1NPV7R"],
+          item_variation_data: {
+            item_id: "NO62KBT26FP5ZINAKQ42MJ2W",
+            name: "Regular",
+            ordinal: 1,
+            pricing_type: "FIXED_PRICING",
+            price_money: {
+              amount: 525,
+              currency: "USD",
+            },
+            location_overrides: [
+              {
+                location_id: "LFDBM4Y1NPV7R",
+                track_inventory: false,
+              },
+              {
+                location_id: "LT0BWZMSV5PAZ",
+                track_inventory: true,
+              },
+            ],
+            track_inventory: true,
+            sellable: true,
+            stockable: true,
+          },
+        },
+      ],
+      product_type: "REGULAR",
+      skip_modifier_screen: false,
+      ecom_uri:
+        "https://767686265435139058.square.site/product/cherry-cheese-danish/76",
+      ecom_available: true,
+      ecom_visibility: "VISIBLE",
+      categories: [
+        {
+          id: "27GG2MFWHT7ECDNN4MZB4LQ7",
+          ordinal: -2250700302057472,
+        },
+      ],
+      is_archived: false,
+      reporting_category: {
+        id: "27GG2MFWHT7ECDNN4MZB4LQ7",
+        ordinal: -2250700302057472,
+      },
+    },
+  },
+  {
+    type: "ITEM",
+    id: "7LLPCZDTMJG4QA3HG3L63K5P",
+    updated_at: "2025-03-29T14:48:33.284Z",
+    created_at: "2023-12-16T15:39:23.611Z",
+    version: 1743259713284,
+    is_deleted: false,
+    catalog_v1_ids: [
+      {
+        catalog_v1_id: "MQXOXFBS3VKICG7PM7MOW4AD",
+        location_id: "LFDBM4Y1NPV7R",
+      },
+    ],
+    present_at_all_locations: false,
+    present_at_location_ids: ["LFDBM4Y1NPV7R"],
+    item_data: {
+      name: "Chia pudding",
+      is_taxable: true,
+      tax_ids: ["B4GOWNZ5FF5W6OSPL7LOAYNP"],
+      variations: [
+        {
+          type: "ITEM_VARIATION",
+          id: "HZ4HTM5XQBCE5XRW7JIG5WSH",
+          updated_at: "2024-01-06T12:47:05.262Z",
+          created_at: "2023-12-16T15:39:23.611Z",
+          version: 1704545225262,
+          is_deleted: false,
+          catalog_v1_ids: [
+            {
+              catalog_v1_id: "WZZZNQMVN3KBBRXHQDYE6PLZ",
+              location_id: "LFDBM4Y1NPV7R",
+            },
+          ],
+          present_at_all_locations: false,
+          present_at_location_ids: ["LFDBM4Y1NPV7R"],
+          item_variation_data: {
+            item_id: "7LLPCZDTMJG4QA3HG3L63K5P",
+            name: "Regular",
+            ordinal: 1,
+            pricing_type: "FIXED_PRICING",
+            price_money: {
+              amount: 500,
+              currency: "USD",
+            },
+            location_overrides: [
+              {
+                location_id: "LFDBM4Y1NPV7R",
+                track_inventory: false,
+              },
+              {
+                location_id: "LT0BWZMSV5PAZ",
+                track_inventory: true,
+              },
+            ],
+            track_inventory: true,
+            sellable: true,
+            stockable: true,
+          },
+        },
+      ],
+      product_type: "FOOD_AND_BEV",
+      skip_modifier_screen: false,
+      ecom_uri:
+        "https://767686265435139058.square.site/product/chia-pudding/35",
+      ecom_available: true,
+      ecom_visibility: "VISIBLE",
+      categories: [
+        {
+          id: "2LQITKCLIBKRUJ5UUE2BVYVI",
+          ordinal: -2251662374731776,
+        },
+      ],
+      is_archived: false,
+      reporting_category: {
+        id: "2LQITKCLIBKRUJ5UUE2BVYVI",
+        ordinal: -2251662374731776,
+      },
+    },
+  },
+  {
+    type: "ITEM",
+    id: "7KU7FYHTA3NYRBH5QAG5GR5L",
+    updated_at: "2025-03-02T13:16:51.398Z",
+    created_at: "2023-10-19T02:43:12.4Z",
+    version: 1740921411398,
+    is_deleted: false,
+    catalog_v1_ids: [
+      {
+        catalog_v1_id: "7RS2QW3PPATNMQH2654XDB7Q",
+        location_id: "LFDBM4Y1NPV7R",
+      },
+    ],
+    present_at_all_locations: false,
+    present_at_location_ids: ["LFDBM4Y1NPV7R"],
+    item_data: {
+      name: "Cold Brew",
+      is_taxable: true,
+      tax_ids: ["B4GOWNZ5FF5W6OSPL7LOAYNP"],
+      modifier_list_info: [
+        {
+          modifier_list_id: "J36EXIF3EICZGVMLXEKO4D5S",
+          min_selected_modifiers: -1,
+          max_selected_modifiers: -1,
+          enabled: true,
+          hidden_from_customer: false,
+          ordinal: 0,
+        },
+        {
+          modifier_list_id: "CCVH6QBVVNSIUZ375S7YVOOF",
+          min_selected_modifiers: -1,
+          max_selected_modifiers: -1,
+          enabled: true,
+          hidden_from_customer: false,
+          ordinal: 1,
+        },
+        {
+          modifier_list_id: "POU7HQT7SENSWDDK3SCNXHDK",
+          min_selected_modifiers: -1,
+          max_selected_modifiers: -1,
+          enabled: true,
+          hidden_from_customer: false,
+          ordinal: 4,
+        },
+        {
+          modifier_list_id: "PBONGZLR3FBEVVHP63RPSI4S",
+          min_selected_modifiers: -1,
+          max_selected_modifiers: -1,
+          enabled: true,
+          hidden_from_customer: false,
+          ordinal: 5,
+        },
+      ],
+      variations: [
+        {
+          type: "ITEM_VARIATION",
+          id: "7UGVVLZCIN55MWTYJBSA4UUY",
+          updated_at: "2025-03-02T13:15:46.211Z",
+          created_at: "2023-10-19T02:43:12.4Z",
+          version: 1740921346211,
+          is_deleted: false,
+          catalog_v1_ids: [
+            {
+              catalog_v1_id: "2CKRD33BFJ4NBFETF7XI6WEY",
+              location_id: "LFDBM4Y1NPV7R",
+            },
+          ],
+          present_at_all_locations: false,
+          present_at_location_ids: ["LFDBM4Y1NPV7R"],
+          item_variation_data: {
+            item_id: "7KU7FYHTA3NYRBH5QAG5GR5L",
+            name: "12oz",
+            ordinal: 0,
+            pricing_type: "FIXED_PRICING",
+            price_money: {
+              amount: 525,
+              currency: "USD",
+            },
+            location_overrides: [
+              {
+                location_id: "LFDBM4Y1NPV7R",
+                track_inventory: false,
+              },
+              {
+                location_id: "LT0BWZMSV5PAZ",
+                track_inventory: true,
+              },
+            ],
+            track_inventory: true,
+            item_option_values: [
+              {
+                item_option_id: "FJGUSHIVHXME3KUS55NLGIXJ",
+                item_option_value_id: "IL2FMIV4RHMCHY7WGALOHUWJ",
+              },
+            ],
+            sellable: true,
+            stockable: true,
+            channels: ["CH_wgZwHcodjGhLl42K7jg9fxPbw9UAV6zVWHsfYRlQuYC"],
+          },
+        },
+        {
+          type: "ITEM_VARIATION",
+          id: "SUGCOQBWZGI73TTCO7AJRWFT",
+          updated_at: "2025-03-02T13:15:46.211Z",
+          created_at: "2023-10-19T02:43:12.4Z",
+          version: 1740921346211,
+          is_deleted: false,
+          catalog_v1_ids: [
+            {
+              catalog_v1_id: "7FCF7862-12F9-4716-A5A1-6A65276C9C49",
+              location_id: "LFDBM4Y1NPV7R",
+            },
+          ],
+          present_at_all_locations: false,
+          present_at_location_ids: ["LFDBM4Y1NPV7R"],
+          item_variation_data: {
+            item_id: "7KU7FYHTA3NYRBH5QAG5GR5L",
+            name: "16oz",
+            ordinal: 1,
+            pricing_type: "FIXED_PRICING",
+            price_money: {
+              amount: 590,
+              currency: "USD",
+            },
+            location_overrides: [
+              {
+                location_id: "LFDBM4Y1NPV7R",
+                track_inventory: false,
+              },
+              {
+                location_id: "LT0BWZMSV5PAZ",
+                track_inventory: true,
+              },
+            ],
+            track_inventory: true,
+            item_option_values: [
+              {
+                item_option_id: "FJGUSHIVHXME3KUS55NLGIXJ",
+                item_option_value_id: "IW5PNVEKTIJ3IRXSP5SSUXQ4",
+              },
+            ],
+            sellable: true,
+            stockable: true,
+            channels: ["CH_wgZwHcodjGhLl42K7jg9fxPbw9UAV6zVWHsfYRlQuYC"],
+          },
+        },
+      ],
+      product_type: "FOOD_AND_BEV",
+      skip_modifier_screen: false,
+      item_options: [
+        {
+          item_option_id: "FJGUSHIVHXME3KUS55NLGIXJ",
+        },
+      ],
+      ecom_uri: "https://novariacoffee.square.site/product/cold-brew/9",
+      ecom_available: true,
+      ecom_visibility: "VISIBLE",
+      categories: [
+        {
+          id: "QDJKYB6DOONI3BOSKSUSNXQZ",
+          ordinal: -2251181338394624,
+        },
+      ],
+      channels: ["CH_wgZwHcodjGhLl42K7jg9fxPbw9UAV6zVWHsfYRlQuYC"],
+      is_archived: false,
+      reporting_category: {
+        id: "QDJKYB6DOONI3BOSKSUSNXQZ",
+        ordinal: -2251181338394624,
+      },
+    },
+  },
+  {
+    type: "ITEM",
+    id: "ILFRDYDVCYQAE5SXPJSPOJSI",
+    updated_at: "2025-02-28T16:32:23.548Z",
+    created_at: "2023-10-19T02:39:29.385Z",
+    version: 1740760343548,
+    is_deleted: false,
+    catalog_v1_ids: [
+      {
+        catalog_v1_id: "4ILKQGQEIN6GDR7SCBWIC7BJ",
+        location_id: "LFDBM4Y1NPV7R",
+      },
+    ],
+    present_at_all_locations: false,
+    present_at_location_ids: ["LFDBM4Y1NPV7R"],
+    item_data: {
+      name: "Cortado",
+      is_taxable: true,
+      tax_ids: ["B4GOWNZ5FF5W6OSPL7LOAYNP"],
+      modifier_list_info: [
+        {
+          modifier_list_id: "CCVH6QBVVNSIUZ375S7YVOOF",
+          min_selected_modifiers: -1,
+          max_selected_modifiers: -1,
+          enabled: true,
+          hidden_from_customer: false,
+          ordinal: 1,
+        },
+        {
+          modifier_list_id: "PBONGZLR3FBEVVHP63RPSI4S",
+          min_selected_modifiers: -1,
+          max_selected_modifiers: -1,
+          enabled: true,
+          hidden_from_customer: false,
+          ordinal: 4,
+        },
+        {
+          modifier_list_id: "POU7HQT7SENSWDDK3SCNXHDK",
+          min_selected_modifiers: -1,
+          max_selected_modifiers: -1,
+          enabled: true,
+          hidden_from_customer: false,
+          ordinal: 6,
+        },
+        {
+          modifier_list_id: "J36EXIF3EICZGVMLXEKO4D5S",
+          min_selected_modifiers: -1,
+          max_selected_modifiers: -1,
+          enabled: true,
+          hidden_from_customer: false,
+          ordinal: 7,
+        },
+        {
+          modifier_list_id: "JT43H56K57LW4D7QDOUPS7R2",
+          min_selected_modifiers: -1,
+          max_selected_modifiers: -1,
+          enabled: true,
+          hidden_from_customer: false,
+          ordinal: 8,
+        },
+        {
+          modifier_list_id: "KNOBRKUMSI77KRIBHQCOUEJO",
+          min_selected_modifiers: -1,
+          max_selected_modifiers: -1,
+          enabled: true,
+          hidden_from_customer: false,
+          ordinal: 9,
+        },
+      ],
+      variations: [
+        {
+          type: "ITEM_VARIATION",
+          id: "IRG76DAVG3KCYOMQTQWLFHJK",
+          updated_at: "2025-02-28T16:31:35.793Z",
+          created_at: "2023-10-19T02:39:29.385Z",
+          version: 1740760295793,
+          is_deleted: false,
+          catalog_v1_ids: [
+            {
+              catalog_v1_id: "PF5B5JTEZ3IFJZCIOGJCWLQ2",
+              location_id: "LFDBM4Y1NPV7R",
+            },
+          ],
+          present_at_all_locations: false,
+          present_at_location_ids: ["LFDBM4Y1NPV7R"],
+          item_variation_data: {
+            item_id: "ILFRDYDVCYQAE5SXPJSPOJSI",
+            name: "For here",
+            ordinal: 0,
+            pricing_type: "FIXED_PRICING",
+            price_money: {
+              amount: 475,
+              currency: "USD",
+            },
+            location_overrides: [
+              {
+                location_id: "LFDBM4Y1NPV7R",
+                track_inventory: false,
+              },
+              {
+                location_id: "LT0BWZMSV5PAZ",
+                track_inventory: true,
+              },
+            ],
+            track_inventory: true,
+            sellable: true,
+            stockable: true,
+            channels: ["CH_wgZwHcodjGhLl42K7jg9fxPbw9UAV6zVWHsfYRlQuYC"],
+          },
+        },
+        {
+          type: "ITEM_VARIATION",
+          id: "6U5S5KOOLUY2QSSODNSJL476",
+          updated_at: "2025-02-28T16:31:35.793Z",
+          created_at: "2023-10-19T02:39:29.385Z",
+          version: 1740760295793,
+          is_deleted: false,
+          catalog_v1_ids: [
+            {
+              catalog_v1_id: "17CACCFC-6F82-4198-A3A8-6356D865E9FB",
+              location_id: "LFDBM4Y1NPV7R",
+            },
+          ],
+          present_at_all_locations: false,
+          present_at_location_ids: ["LFDBM4Y1NPV7R"],
+          item_variation_data: {
+            item_id: "ILFRDYDVCYQAE5SXPJSPOJSI",
+            name: "To Go",
+            ordinal: 1,
+            pricing_type: "FIXED_PRICING",
+            price_money: {
+              amount: 475,
+              currency: "USD",
+            },
+            location_overrides: [
+              {
+                location_id: "LFDBM4Y1NPV7R",
+                track_inventory: false,
+              },
+              {
+                location_id: "LT0BWZMSV5PAZ",
+                track_inventory: true,
+              },
+            ],
+            track_inventory: true,
+            sellable: true,
+            stockable: true,
+            channels: ["CH_wgZwHcodjGhLl42K7jg9fxPbw9UAV6zVWHsfYRlQuYC"],
+          },
+        },
+      ],
+      product_type: "FOOD_AND_BEV",
+      skip_modifier_screen: false,
+      ecom_uri: "https://novariacoffee.square.site/product/cortado/5",
+      ecom_available: true,
+      ecom_visibility: "VISIBLE",
+      categories: [
+        {
+          id: "QDJKYB6DOONI3BOSKSUSNXQZ",
+          ordinal: -2251456216301568,
+        },
+      ],
+      channels: ["CH_wgZwHcodjGhLl42K7jg9fxPbw9UAV6zVWHsfYRlQuYC"],
+      is_archived: false,
+      reporting_category: {
+        id: "QDJKYB6DOONI3BOSKSUSNXQZ",
+        ordinal: -2251456216301568,
+      },
+    },
+  },
+  {
+    type: "ITEM",
+    id: "T7PHMYGGSJ5YGKCTFB2DMWNN",
+    updated_at: "2024-10-01T16:19:26.71Z",
+    created_at: "2023-11-08T14:05:49.141Z",
+    version: 1727799566710,
+    is_deleted: false,
+    catalog_v1_ids: [
+      {
+        catalog_v1_id: "WZRYDB6HKG2O2S63V3KKAGMH",
+        location_id: "LFDBM4Y1NPV7R",
+      },
+    ],
+    present_at_all_locations: false,
+    present_at_location_ids: ["LFDBM4Y1NPV7R"],
+    item_data: {
+      name: "Croissant",
+      is_taxable: true,
+      tax_ids: ["B4GOWNZ5FF5W6OSPL7LOAYNP"],
+      variations: [
+        {
+          type: "ITEM_VARIATION",
+          id: "SOWX73HU3MK7TS3BQDRY6F42",
+          updated_at: "2023-12-25T16:38:30.508Z",
+          created_at: "2023-11-08T14:05:49.141Z",
+          version: 1703522310508,
+          is_deleted: false,
+          catalog_v1_ids: [
+            {
+              catalog_v1_id: "4WBZX4KBEL3D426RY65TUA62",
+              location_id: "LFDBM4Y1NPV7R",
+            },
+          ],
+          present_at_all_locations: false,
+          present_at_location_ids: ["LFDBM4Y1NPV7R"],
+          item_variation_data: {
+            item_id: "T7PHMYGGSJ5YGKCTFB2DMWNN",
+            name: "Regular",
+            ordinal: 1,
+            pricing_type: "FIXED_PRICING",
+            price_money: {
+              amount: 375,
+              currency: "USD",
+            },
+            location_overrides: [
+              {
+                location_id: "LFDBM4Y1NPV7R",
+                track_inventory: false,
+              },
+              {
+                location_id: "LT0BWZMSV5PAZ",
+                track_inventory: true,
+              },
+            ],
+            track_inventory: true,
+            sellable: true,
+            stockable: true,
+          },
+        },
+      ],
+      product_type: "FOOD_AND_BEV",
+      skip_modifier_screen: false,
+      ecom_uri: "https://767686265435139058.square.site/product/croissant/17",
+      ecom_available: true,
+      ecom_visibility: "VISIBLE",
+      categories: [
+        {
+          id: "27GG2MFWHT7ECDNN4MZB4LQ7",
+          ordinal: -2251593655255040,
+        },
+      ],
+      is_archived: false,
+      reporting_category: {
+        id: "27GG2MFWHT7ECDNN4MZB4LQ7",
+        ordinal: -2251593655255040,
+      },
+    },
+  },
+  {
+    type: "ITEM",
+    id: "ZDPSIHNLREQ3XALYMQXQVBQM",
+    updated_at: "2024-10-01T16:17:28.886Z",
+    created_at: "2024-05-24T15:52:43.115Z",
+    version: 1727799448886,
+    is_deleted: false,
+    catalog_v1_ids: [
+      {
+        catalog_v1_id: "7SBBYZ5MOBLUHKC7ZOU5DE55",
+        location_id: "LFDBM4Y1NPV7R",
+      },
+    ],
+    present_at_all_locations: false,
+    present_at_location_ids: ["LFDBM4Y1NPV7R"],
+    item_data: {
+      name: "Date Night",
+      is_taxable: true,
+      tax_ids: ["B4GOWNZ5FF5W6OSPL7LOAYNP"],
+      modifier_list_info: [
+        {
+          modifier_list_id: "OHFWTB2AAFNOQEDCBRYIJSFE",
+          min_selected_modifiers: -1,
+          max_selected_modifiers: -1,
+          enabled: true,
+          hidden_from_customer: false,
+          ordinal: 0,
+        },
+      ],
+      variations: [
+        {
+          type: "ITEM_VARIATION",
+          id: "JVHOPXTCJ2TAAOZEE2362NAB",
+          updated_at: "2024-07-01T14:46:04.531Z",
+          created_at: "2024-05-24T15:52:43.115Z",
+          version: 1719845164531,
+          is_deleted: false,
+          catalog_v1_ids: [
+            {
+              catalog_v1_id: "ZQBTPH7P564PKH5QTCAUJICM",
+              location_id: "LFDBM4Y1NPV7R",
+            },
+          ],
+          present_at_all_locations: false,
+          present_at_location_ids: ["LFDBM4Y1NPV7R"],
+          item_variation_data: {
+            item_id: "ZDPSIHNLREQ3XALYMQXQVBQM",
+            name: "Regular",
+            ordinal: 1,
+            pricing_type: "FIXED_PRICING",
+            price_money: {
+              amount: 1050,
+              currency: "USD",
+            },
+            location_overrides: [
+              {
+                location_id: "LFDBM4Y1NPV7R",
+                track_inventory: false,
+              },
+              {
+                location_id: "LT0BWZMSV5PAZ",
+                track_inventory: true,
+              },
+            ],
+            track_inventory: true,
+            sellable: true,
+            stockable: true,
+            channels: ["CH_wgZwHcodjGhLl42K7jg9fxPbw9UAV6zVWHsfYRlQuYC"],
+          },
+        },
+      ],
+      product_type: "FOOD_AND_BEV",
+      skip_modifier_screen: false,
+      ecom_uri: "https://novariacoffee.square.site/product/date-night/96",
+      ecom_available: true,
+      ecom_visibility: "VISIBLE",
+      categories: [
+        {
+          id: "NCAM3RK7DWQGW67XV6GNZTHH",
+          ordinal: -2251731094208512,
+        },
+      ],
+      channels: ["CH_wgZwHcodjGhLl42K7jg9fxPbw9UAV6zVWHsfYRlQuYC"],
+      is_archived: false,
+      reporting_category: {
+        id: "NCAM3RK7DWQGW67XV6GNZTHH",
+        ordinal: -2251731094208512,
+      },
+    },
+  },
+  {
+    type: "ITEM",
+    id: "LC54OQQPIWA5MN6TYPHRNFRD",
+    updated_at: "2025-02-28T16:34:15.922Z",
+    created_at: "2023-10-18T14:21:19.665Z",
+    version: 1740760455922,
+    is_deleted: false,
+    catalog_v1_ids: [
+      {
+        catalog_v1_id: "QLEY5LBCPPCEHSVTEYDDC7JF",
+        location_id: "LFDBM4Y1NPV7R",
+      },
+    ],
+    present_at_all_locations: false,
+    present_at_location_ids: ["LFDBM4Y1NPV7R"],
+    item_data: {
+      name: "Double Espresso",
+      is_taxable: true,
+      tax_ids: ["B4GOWNZ5FF5W6OSPL7LOAYNP"],
+      modifier_list_info: [
+        {
+          modifier_list_id: "PBONGZLR3FBEVVHP63RPSI4S",
+          min_selected_modifiers: -1,
+          max_selected_modifiers: -1,
+          enabled: true,
+          hidden_from_customer: false,
+          ordinal: 0,
+        },
+        {
+          modifier_list_id: "JT43H56K57LW4D7QDOUPS7R2",
+          min_selected_modifiers: -1,
+          max_selected_modifiers: -1,
+          enabled: true,
+          hidden_from_customer: false,
+          ordinal: 2,
+        },
+        {
+          modifier_list_id: "POU7HQT7SENSWDDK3SCNXHDK",
+          min_selected_modifiers: -1,
+          max_selected_modifiers: -1,
+          enabled: true,
+          hidden_from_customer: false,
+          ordinal: 4,
+        },
+        {
+          modifier_list_id: "J36EXIF3EICZGVMLXEKO4D5S",
+          min_selected_modifiers: -1,
+          max_selected_modifiers: -1,
+          enabled: true,
+          hidden_from_customer: false,
+          ordinal: 1,
+        },
+      ],
+      variations: [
+        {
+          type: "ITEM_VARIATION",
+          id: "BOGAZIJDRRLGZ3DADMT6RLVE",
+          updated_at: "2025-02-28T16:31:34.546Z",
+          created_at: "2023-10-18T14:21:19.665Z",
+          version: 1740760294546,
+          is_deleted: false,
+          catalog_v1_ids: [
+            {
+              catalog_v1_id: "44KOHPWJNTCQ34HQBGLWYBPQ",
+              location_id: "LFDBM4Y1NPV7R",
+            },
+          ],
+          present_at_all_locations: false,
+          present_at_location_ids: ["LFDBM4Y1NPV7R"],
+          item_variation_data: {
+            item_id: "LC54OQQPIWA5MN6TYPHRNFRD",
+            name: "For here",
+            ordinal: 0,
+            pricing_type: "FIXED_PRICING",
+            price_money: {
+              amount: 365,
+              currency: "USD",
+            },
+            location_overrides: [
+              {
+                location_id: "LFDBM4Y1NPV7R",
+                track_inventory: false,
+              },
+              {
+                location_id: "LT0BWZMSV5PAZ",
+                track_inventory: true,
+              },
+            ],
+            track_inventory: true,
+            item_option_values: [
+              {
+                item_option_id: "SWQI44D7RYOBHULSU3OIEAL5",
+                item_option_value_id: "73APSJCUKUPFOAIZETPHYNDS",
+              },
+            ],
+            sellable: true,
+            stockable: true,
+            channels: ["CH_wgZwHcodjGhLl42K7jg9fxPbw9UAV6zVWHsfYRlQuYC"],
+          },
+        },
+        {
+          type: "ITEM_VARIATION",
+          id: "MNORU6WY5STYLXJTGUBZLF6P",
+          updated_at: "2025-02-28T16:31:34.546Z",
+          created_at: "2023-10-18T14:21:19.665Z",
+          version: 1740760294546,
+          is_deleted: false,
+          catalog_v1_ids: [
+            {
+              catalog_v1_id: "13B79532-1CD2-49C0-8AFB-A7211BF9236C",
+              location_id: "LFDBM4Y1NPV7R",
+            },
+          ],
+          present_at_all_locations: false,
+          present_at_location_ids: ["LFDBM4Y1NPV7R"],
+          item_variation_data: {
+            item_id: "LC54OQQPIWA5MN6TYPHRNFRD",
+            name: "To Go",
+            ordinal: 1,
+            pricing_type: "FIXED_PRICING",
+            price_money: {
+              amount: 365,
+              currency: "USD",
+            },
+            location_overrides: [
+              {
+                location_id: "LFDBM4Y1NPV7R",
+                track_inventory: false,
+              },
+              {
+                location_id: "LT0BWZMSV5PAZ",
+                track_inventory: true,
+              },
+            ],
+            track_inventory: true,
+            item_option_values: [
+              {
+                item_option_id: "SWQI44D7RYOBHULSU3OIEAL5",
+                item_option_value_id: "7EFWDOAVD7FKOBHMUXZUVLWA",
+              },
+            ],
+            sellable: true,
+            stockable: true,
+            channels: ["CH_wgZwHcodjGhLl42K7jg9fxPbw9UAV6zVWHsfYRlQuYC"],
+          },
+        },
+      ],
+      product_type: "FOOD_AND_BEV",
+      skip_modifier_screen: false,
+      item_options: [
+        {
+          item_option_id: "SWQI44D7RYOBHULSU3OIEAL5",
+        },
+      ],
+      ecom_uri: "https://novariacoffee.square.site/product/double-espresso/3",
+      ecom_image_uris: [
+        "https://novariacoffee.square.site/uploads/1/4/7/3/147360026/s224410070495611172_p3_i1_w1832.jpeg",
+      ],
+      ecom_available: true,
+      ecom_visibility: "VISIBLE",
+      image_ids: ["JXS6ZNP3FSE7RITKFB7MUD65"],
+      categories: [
+        {
+          id: "QDJKYB6DOONI3BOSKSUSNXQZ",
+          ordinal: -2251628014993408,
+        },
+      ],
+      channels: ["CH_wgZwHcodjGhLl42K7jg9fxPbw9UAV6zVWHsfYRlQuYC"],
+      is_archived: false,
+      reporting_category: {
+        id: "QDJKYB6DOONI3BOSKSUSNXQZ",
+        ordinal: -2251628014993408,
+      },
+    },
+  },
+  {
+    type: "ITEM",
+    id: "ZIRSPTWR6SV5BYGIKJVMMWQ4",
+    updated_at: "2025-02-28T16:31:33.982Z",
+    created_at: "2023-10-18T01:29:39.259Z",
+    version: 1740760293982,
+    is_deleted: false,
+    catalog_v1_ids: [
+      {
+        catalog_v1_id: "NHQNQTRXSOC3V3RIVK4ONRIX",
+        location_id: "LFDBM4Y1NPV7R",
+      },
+    ],
+    present_at_all_locations: false,
+    present_at_location_ids: ["LFDBM4Y1NPV7R"],
+    item_data: {
+      name: "Drip Coffee",
+      is_taxable: true,
+      tax_ids: ["B4GOWNZ5FF5W6OSPL7LOAYNP"],
+      modifier_list_info: [
+        {
+          modifier_list_id: "CCVH6QBVVNSIUZ375S7YVOOF",
+          min_selected_modifiers: -1,
+          max_selected_modifiers: -1,
+          enabled: true,
+          hidden_from_customer: false,
+          ordinal: 0,
+        },
+        {
+          modifier_list_id: "J36EXIF3EICZGVMLXEKO4D5S",
+          min_selected_modifiers: -1,
+          max_selected_modifiers: -1,
+          enabled: true,
+          hidden_from_customer: false,
+          ordinal: 3,
+        },
+        {
+          modifier_list_id: "PBONGZLR3FBEVVHP63RPSI4S",
+          min_selected_modifiers: -1,
+          max_selected_modifiers: -1,
+          enabled: true,
+          hidden_from_customer: false,
+          ordinal: 4,
+        },
+        {
+          modifier_list_id: "POU7HQT7SENSWDDK3SCNXHDK",
+          min_selected_modifiers: -1,
+          max_selected_modifiers: -1,
+          enabled: true,
+          hidden_from_customer: false,
+          ordinal: 6,
+        },
+      ],
+      variations: [
+        {
+          type: "ITEM_VARIATION",
+          id: "TUIJ43PMQ5SSFAV7IMICC7AS",
+          updated_at: "2025-02-28T16:31:33.982Z",
+          created_at: "2023-10-18T01:29:39.259Z",
+          version: 1740760293982,
+          is_deleted: false,
+          catalog_v1_ids: [
+            {
+              catalog_v1_id: "YXXQOK2WY7P3DXRJO7MAIIYC",
+              location_id: "LFDBM4Y1NPV7R",
+            },
+          ],
+          present_at_all_locations: false,
+          present_at_location_ids: ["LFDBM4Y1NPV7R"],
+          item_variation_data: {
+            item_id: "ZIRSPTWR6SV5BYGIKJVMMWQ4",
+            name: "8oz",
+            ordinal: 0,
+            pricing_type: "FIXED_PRICING",
+            price_money: {
+              amount: 350,
+              currency: "USD",
+            },
+            location_overrides: [
+              {
+                location_id: "LFDBM4Y1NPV7R",
+                track_inventory: false,
+              },
+              {
+                location_id: "LT0BWZMSV5PAZ",
+                track_inventory: true,
+              },
+            ],
+            track_inventory: true,
+            item_option_values: [
+              {
+                item_option_id: "FJGUSHIVHXME3KUS55NLGIXJ",
+                item_option_value_id: "TJYDMVB56PXD6H6E77UJKNLI",
+              },
+            ],
+            sellable: true,
+            stockable: true,
+            channels: ["CH_wgZwHcodjGhLl42K7jg9fxPbw9UAV6zVWHsfYRlQuYC"],
+          },
+        },
+        {
+          type: "ITEM_VARIATION",
+          id: "KOOQ4AXJN7OE2ZNWU27W5HY6",
+          updated_at: "2025-02-28T16:31:33.982Z",
+          created_at: "2023-10-18T01:29:39.259Z",
+          version: 1740760293982,
+          is_deleted: false,
+          catalog_v1_ids: [
+            {
+              catalog_v1_id: "3A74E08F-7431-412F-A3EB-E0A1BF5969CB",
+              location_id: "LFDBM4Y1NPV7R",
+            },
+          ],
+          present_at_all_locations: false,
+          present_at_location_ids: ["LFDBM4Y1NPV7R"],
+          item_variation_data: {
+            item_id: "ZIRSPTWR6SV5BYGIKJVMMWQ4",
+            name: "12oz",
+            ordinal: 1,
+            pricing_type: "FIXED_PRICING",
+            price_money: {
+              amount: 365,
+              currency: "USD",
+            },
+            location_overrides: [
+              {
+                location_id: "LFDBM4Y1NPV7R",
+                track_inventory: false,
+              },
+              {
+                location_id: "LT0BWZMSV5PAZ",
+                track_inventory: true,
+              },
+            ],
+            track_inventory: true,
+            item_option_values: [
+              {
+                item_option_id: "FJGUSHIVHXME3KUS55NLGIXJ",
+                item_option_value_id: "IL2FMIV4RHMCHY7WGALOHUWJ",
+              },
+            ],
+            sellable: true,
+            stockable: true,
+            channels: ["CH_wgZwHcodjGhLl42K7jg9fxPbw9UAV6zVWHsfYRlQuYC"],
+          },
+        },
+        {
+          type: "ITEM_VARIATION",
+          id: "JJY4BM47TKE4UJDHZV56PCYZ",
+          updated_at: "2025-02-28T16:31:33.982Z",
+          created_at: "2023-10-18T01:29:39.259Z",
+          version: 1740760293982,
+          is_deleted: false,
+          catalog_v1_ids: [
+            {
+              catalog_v1_id: "BCB0F478-D945-4303-AFC7-3279E0D7BA92",
+              location_id: "LFDBM4Y1NPV7R",
+            },
+          ],
+          present_at_all_locations: false,
+          present_at_location_ids: ["LFDBM4Y1NPV7R"],
+          item_variation_data: {
+            item_id: "ZIRSPTWR6SV5BYGIKJVMMWQ4",
+            name: "16oz",
+            ordinal: 2,
+            pricing_type: "FIXED_PRICING",
+            price_money: {
+              amount: 435,
+              currency: "USD",
+            },
+            location_overrides: [
+              {
+                location_id: "LFDBM4Y1NPV7R",
+                track_inventory: false,
+              },
+              {
+                location_id: "LT0BWZMSV5PAZ",
+                track_inventory: true,
+              },
+            ],
+            track_inventory: true,
+            item_option_values: [
+              {
+                item_option_id: "FJGUSHIVHXME3KUS55NLGIXJ",
+                item_option_value_id: "IW5PNVEKTIJ3IRXSP5SSUXQ4",
+              },
+            ],
+            sellable: true,
+            stockable: true,
+            channels: ["CH_wgZwHcodjGhLl42K7jg9fxPbw9UAV6zVWHsfYRlQuYC"],
+          },
+        },
+      ],
+      product_type: "FOOD_AND_BEV",
+      skip_modifier_screen: false,
+      item_options: [
+        {
+          item_option_id: "FJGUSHIVHXME3KUS55NLGIXJ",
+        },
+      ],
+      ecom_uri: "",
+      ecom_available: false,
+      ecom_visibility: "UNAVAILABLE",
+      categories: [
+        {
+          id: "QDJKYB6DOONI3BOSKSUSNXQZ",
+          ordinal: -2251662374731776,
+        },
+      ],
+      channels: ["CH_wgZwHcodjGhLl42K7jg9fxPbw9UAV6zVWHsfYRlQuYC"],
+      is_archived: false,
+      reporting_category: {
+        id: "QDJKYB6DOONI3BOSKSUSNXQZ",
+        ordinal: -2251662374731776,
+      },
+    },
+  },
+  {
+    type: "ITEM",
+    id: "EBPE4FSWPYFWA7LLXT27HCB6",
+    updated_at: "2025-02-28T16:37:12.821Z",
+    created_at: "2023-10-19T02:41:29.028Z",
+    version: 1740760632821,
+    is_deleted: false,
+    catalog_v1_ids: [
+      {
+        catalog_v1_id: "FKI7Z4MV2Z57L7RHFKBX7FR4",
+        location_id: "LFDBM4Y1NPV7R",
+      },
+    ],
+    present_at_all_locations: false,
+    present_at_location_ids: ["LFDBM4Y1NPV7R"],
+    item_data: {
+      name: "Hot Chocolate",
+      label_color: "E5BF00",
+      is_taxable: true,
+      tax_ids: ["B4GOWNZ5FF5W6OSPL7LOAYNP"],
+      modifier_list_info: [
+        {
+          modifier_list_id: "KNOBRKUMSI77KRIBHQCOUEJO",
+          min_selected_modifiers: -1,
+          max_selected_modifiers: -1,
+          enabled: true,
+          hidden_from_customer: false,
+          ordinal: 0,
+        },
+        {
+          modifier_list_id: "CCVH6QBVVNSIUZ375S7YVOOF",
+          min_selected_modifiers: -1,
+          max_selected_modifiers: -1,
+          enabled: true,
+          hidden_from_customer: false,
+          ordinal: 1,
+        },
+        {
+          modifier_list_id: "POU7HQT7SENSWDDK3SCNXHDK",
+          min_selected_modifiers: -1,
+          max_selected_modifiers: -1,
+          enabled: true,
+          hidden_from_customer: false,
+          ordinal: 4,
+        },
+      ],
+      variations: [
+        {
+          type: "ITEM_VARIATION",
+          id: "MWOLR5C6UHZWS24P33KILFQA",
+          updated_at: "2025-02-28T16:34:09.169Z",
+          created_at: "2023-10-19T02:41:29.028Z",
+          version: 1740760449169,
+          is_deleted: false,
+          catalog_v1_ids: [
+            {
+              catalog_v1_id: "CSZUNIHD46DO6ACD57TRHPEP",
+              location_id: "LFDBM4Y1NPV7R",
+            },
+          ],
+          present_at_all_locations: false,
+          present_at_location_ids: ["LFDBM4Y1NPV7R"],
+          item_variation_data: {
+            item_id: "EBPE4FSWPYFWA7LLXT27HCB6",
+            name: "8oz",
+            ordinal: 0,
+            pricing_type: "FIXED_PRICING",
+            price_money: {
+              amount: 485,
+              currency: "USD",
+            },
+            location_overrides: [
+              {
+                location_id: "LFDBM4Y1NPV7R",
+                track_inventory: false,
+              },
+              {
+                location_id: "LT0BWZMSV5PAZ",
+                track_inventory: true,
+              },
+            ],
+            track_inventory: true,
+            item_option_values: [
+              {
+                item_option_id: "FJGUSHIVHXME3KUS55NLGIXJ",
+                item_option_value_id: "TJYDMVB56PXD6H6E77UJKNLI",
+              },
+            ],
+            sellable: true,
+            stockable: true,
+            channels: ["CH_wgZwHcodjGhLl42K7jg9fxPbw9UAV6zVWHsfYRlQuYC"],
+          },
+        },
+        {
+          type: "ITEM_VARIATION",
+          id: "MMKX2RN4WRUDI3BI2SFJCUIP",
+          updated_at: "2025-02-28T16:34:09.169Z",
+          created_at: "2023-10-19T02:41:29.028Z",
+          version: 1740760449169,
+          is_deleted: false,
+          catalog_v1_ids: [
+            {
+              catalog_v1_id: "BBBA1ED1-45E7-4C02-A87E-872E83E8C5CB",
+              location_id: "LFDBM4Y1NPV7R",
+            },
+          ],
+          present_at_all_locations: false,
+          present_at_location_ids: ["LFDBM4Y1NPV7R"],
+          item_variation_data: {
+            item_id: "EBPE4FSWPYFWA7LLXT27HCB6",
+            name: "12oz",
+            ordinal: 1,
+            pricing_type: "FIXED_PRICING",
+            price_money: {
+              amount: 525,
+              currency: "USD",
+            },
+            location_overrides: [
+              {
+                location_id: "LFDBM4Y1NPV7R",
+                track_inventory: false,
+              },
+              {
+                location_id: "LT0BWZMSV5PAZ",
+                track_inventory: true,
+              },
+            ],
+            track_inventory: true,
+            item_option_values: [
+              {
+                item_option_id: "FJGUSHIVHXME3KUS55NLGIXJ",
+                item_option_value_id: "IL2FMIV4RHMCHY7WGALOHUWJ",
+              },
+            ],
+            sellable: true,
+            stockable: true,
+            channels: ["CH_wgZwHcodjGhLl42K7jg9fxPbw9UAV6zVWHsfYRlQuYC"],
+          },
+        },
+        {
+          type: "ITEM_VARIATION",
+          id: "CGSN4NUHNICAT4EIAMSK4RTI",
+          updated_at: "2025-02-28T16:34:09.169Z",
+          created_at: "2023-10-19T02:41:29.028Z",
+          version: 1740760449169,
+          is_deleted: false,
+          catalog_v1_ids: [
+            {
+              catalog_v1_id: "C0545075-05A5-4E6A-B248-4C12C76DABAF",
+              location_id: "LFDBM4Y1NPV7R",
+            },
+          ],
+          present_at_all_locations: false,
+          present_at_location_ids: ["LFDBM4Y1NPV7R"],
+          item_variation_data: {
+            item_id: "EBPE4FSWPYFWA7LLXT27HCB6",
+            name: "16oz",
+            ordinal: 2,
+            pricing_type: "FIXED_PRICING",
+            price_money: {
+              amount: 585,
+              currency: "USD",
+            },
+            location_overrides: [
+              {
+                location_id: "LFDBM4Y1NPV7R",
+                track_inventory: false,
+              },
+              {
+                location_id: "LT0BWZMSV5PAZ",
+                track_inventory: true,
+              },
+            ],
+            track_inventory: true,
+            item_option_values: [
+              {
+                item_option_id: "FJGUSHIVHXME3KUS55NLGIXJ",
+                item_option_value_id: "IW5PNVEKTIJ3IRXSP5SSUXQ4",
+              },
+            ],
+            sellable: true,
+            stockable: true,
+            channels: ["CH_wgZwHcodjGhLl42K7jg9fxPbw9UAV6zVWHsfYRlQuYC"],
+          },
+        },
+      ],
+      product_type: "FOOD_AND_BEV",
+      skip_modifier_screen: false,
+      item_options: [
+        {
+          item_option_id: "FJGUSHIVHXME3KUS55NLGIXJ",
+        },
+      ],
+      ecom_uri: "https://novariacoffee.square.site/product/hot-chocolate/7",
+      ecom_available: true,
+      ecom_visibility: "VISIBLE",
+      categories: [
+        {
+          id: "QDJKYB6DOONI3BOSKSUSNXQZ",
+          ordinal: -2251353137086464,
+        },
+      ],
+      channels: ["CH_wgZwHcodjGhLl42K7jg9fxPbw9UAV6zVWHsfYRlQuYC"],
+      is_archived: false,
+      reporting_category: {
+        id: "QDJKYB6DOONI3BOSKSUSNXQZ",
+        ordinal: -2251353137086464,
+      },
+    },
+  },
+  {
+    type: "ITEM",
+    id: "W22YK7LRNPTWA7RBDZ6WLV65",
+    updated_at: "2025-02-28T16:33:06.963Z",
+    created_at: "2023-12-17T19:02:22.73Z",
+    version: 1740760386963,
+    is_deleted: false,
+    catalog_v1_ids: [
+      {
+        catalog_v1_id: "KKDQUNYKNXYGZG35BOBVBDQS",
+        location_id: "LFDBM4Y1NPV7R",
+      },
+    ],
+    present_at_all_locations: false,
+    present_at_location_ids: ["LFDBM4Y1NPV7R"],
+    item_data: {
+      name: "Iced tea",
+      label_color: "E5BF00",
+      is_taxable: true,
+      tax_ids: ["B4GOWNZ5FF5W6OSPL7LOAYNP"],
+      modifier_list_info: [
+        {
+          modifier_list_id: "POU7HQT7SENSWDDK3SCNXHDK",
+          min_selected_modifiers: -1,
+          max_selected_modifiers: -1,
+          enabled: true,
+          hidden_from_customer: false,
+          ordinal: 0,
+        },
+        {
+          modifier_list_id: "CCVH6QBVVNSIUZ375S7YVOOF",
+          min_selected_modifiers: -1,
+          max_selected_modifiers: -1,
+          enabled: true,
+          hidden_from_customer: false,
+          ordinal: 2,
+        },
+        {
+          modifier_list_id: "PBONGZLR3FBEVVHP63RPSI4S",
+          min_selected_modifiers: -1,
+          max_selected_modifiers: -1,
+          enabled: true,
+          hidden_from_customer: false,
+          ordinal: 3,
+        },
+        {
+          modifier_list_id: "J36EXIF3EICZGVMLXEKO4D5S",
+          min_selected_modifiers: -1,
+          max_selected_modifiers: -1,
+          enabled: true,
+          hidden_from_customer: false,
+          ordinal: 1,
+        },
+      ],
+      variations: [
+        {
+          type: "ITEM_VARIATION",
+          id: "QXG35J5KVFAHJIIO27ZR2HFM",
+          updated_at: "2025-02-28T16:31:36.195Z",
+          created_at: "2023-12-17T19:02:22.73Z",
+          version: 1740760296195,
+          is_deleted: false,
+          catalog_v1_ids: [
+            {
+              catalog_v1_id: "HPIS5S4QCUK7BYD5DQ6P3F5D",
+              location_id: "LFDBM4Y1NPV7R",
+            },
+          ],
+          present_at_all_locations: false,
+          present_at_location_ids: ["LFDBM4Y1NPV7R"],
+          item_variation_data: {
+            item_id: "W22YK7LRNPTWA7RBDZ6WLV65",
+            name: "12oz",
+            ordinal: 0,
+            pricing_type: "FIXED_PRICING",
+            price_money: {
+              amount: 450,
+              currency: "USD",
+            },
+            location_overrides: [
+              {
+                location_id: "LFDBM4Y1NPV7R",
+                track_inventory: false,
+              },
+              {
+                location_id: "LT0BWZMSV5PAZ",
+                track_inventory: true,
+              },
+            ],
+            track_inventory: true,
+            sellable: true,
+            stockable: true,
+            channels: ["CH_wgZwHcodjGhLl42K7jg9fxPbw9UAV6zVWHsfYRlQuYC"],
+          },
+        },
+        {
+          type: "ITEM_VARIATION",
+          id: "7EUUZKCU7LA66JUGRDI3CBZ7",
+          updated_at: "2025-02-28T16:31:36.195Z",
+          created_at: "2023-12-28T20:02:37.443Z",
+          version: 1740760296195,
+          is_deleted: false,
+          catalog_v1_ids: [
+            {
+              catalog_v1_id: "AEBA7DE1-EA90-4EEB-8AC4-80C5E8857B55",
+              location_id: "LFDBM4Y1NPV7R",
+            },
+          ],
+          present_at_all_locations: false,
+          present_at_location_ids: ["LFDBM4Y1NPV7R"],
+          item_variation_data: {
+            item_id: "W22YK7LRNPTWA7RBDZ6WLV65",
+            name: "16oz",
+            ordinal: 1,
+            pricing_type: "FIXED_PRICING",
+            price_money: {
+              amount: 500,
+              currency: "USD",
+            },
+            location_overrides: [
+              {
+                location_id: "LFDBM4Y1NPV7R",
+                track_inventory: false,
+              },
+              {
+                location_id: "LT0BWZMSV5PAZ",
+                track_inventory: true,
+              },
+            ],
+            track_inventory: true,
+            sellable: true,
+            stockable: true,
+            channels: ["CH_wgZwHcodjGhLl42K7jg9fxPbw9UAV6zVWHsfYRlQuYC"],
+          },
+        },
+      ],
+      product_type: "FOOD_AND_BEV",
+      skip_modifier_screen: false,
+      ecom_uri: "https://novariacoffee.square.site/product/iced-tea/39",
+      ecom_available: true,
+      ecom_visibility: "VISIBLE",
+      categories: [
+        {
+          id: "QDJKYB6DOONI3BOSKSUSNXQZ",
+          ordinal: -2250287985197056,
+        },
+      ],
+      channels: ["CH_wgZwHcodjGhLl42K7jg9fxPbw9UAV6zVWHsfYRlQuYC"],
+      is_archived: false,
+      reporting_category: {
+        id: "QDJKYB6DOONI3BOSKSUSNXQZ",
+        ordinal: -2250287985197056,
+      },
+    },
+  },
+  {
+    type: "ITEM",
+    id: "GQDYWVLJF3IHUJSLCL5YF3LC",
+    updated_at: "2024-10-01T16:09:30.84Z",
+    created_at: "2024-05-24T15:52:43.468Z",
+    version: 1727798970840,
+    is_deleted: false,
+    catalog_v1_ids: [
+      {
+        catalog_v1_id: "QCYSMIK7TS56VM6YXDKGZBW6",
+        location_id: "LFDBM4Y1NPV7R",
+      },
+    ],
+    present_at_all_locations: false,
+    present_at_location_ids: ["LFDBM4Y1NPV7R"],
+    item_data: {
+      name: "Island Fruit Boost",
+      is_taxable: true,
+      tax_ids: ["B4GOWNZ5FF5W6OSPL7LOAYNP"],
+      modifier_list_info: [
+        {
+          modifier_list_id: "OHFWTB2AAFNOQEDCBRYIJSFE",
+          min_selected_modifiers: -1,
+          max_selected_modifiers: -1,
+          enabled: true,
+          hidden_from_customer: false,
+          ordinal: 0,
+        },
+      ],
+      variations: [
+        {
+          type: "ITEM_VARIATION",
+          id: "A4J4JVEUZLXVGPCTWPEEY3T3",
+          updated_at: "2024-07-01T14:44:03.04Z",
+          created_at: "2024-05-24T15:52:43.468Z",
+          version: 1719845043040,
+          is_deleted: false,
+          catalog_v1_ids: [
+            {
+              catalog_v1_id: "VEB6VHDN4F57RAMGIQJMEBAJ",
+              location_id: "LFDBM4Y1NPV7R",
+            },
+          ],
+          present_at_all_locations: false,
+          present_at_location_ids: ["LFDBM4Y1NPV7R"],
+          item_variation_data: {
+            item_id: "GQDYWVLJF3IHUJSLCL5YF3LC",
+            name: "Regular",
+            ordinal: 1,
+            pricing_type: "FIXED_PRICING",
+            price_money: {
+              amount: 1000,
+              currency: "USD",
+            },
+            location_overrides: [
+              {
+                location_id: "LFDBM4Y1NPV7R",
+                track_inventory: false,
+              },
+              {
+                location_id: "LT0BWZMSV5PAZ",
+                track_inventory: true,
+              },
+            ],
+            track_inventory: true,
+            sellable: true,
+            stockable: true,
+            channels: ["CH_wgZwHcodjGhLl42K7jg9fxPbw9UAV6zVWHsfYRlQuYC"],
+          },
+        },
+      ],
+      product_type: "FOOD_AND_BEV",
+      skip_modifier_screen: false,
+      ecom_uri:
+        "https://novariacoffee.square.site/product/island-fruit-boost/95",
+      ecom_available: true,
+      ecom_visibility: "VISIBLE",
+      categories: [
+        {
+          id: "NCAM3RK7DWQGW67XV6GNZTHH",
+          ordinal: -2251593655255040,
+        },
+      ],
+      channels: ["CH_wgZwHcodjGhLl42K7jg9fxPbw9UAV6zVWHsfYRlQuYC"],
+      is_archived: false,
+      reporting_category: {
+        id: "NCAM3RK7DWQGW67XV6GNZTHH",
+        ordinal: -2251593655255040,
+      },
+    },
+  },
+  {
+    type: "ITEM",
+    id: "VFG3ON3CVZBGPNVW54KGDXLS",
+    updated_at: "2025-02-28T16:31:35.31Z",
+    created_at: "2023-10-16T01:40:02.76Z",
+    version: 1740760295310,
+    is_deleted: false,
+    present_at_all_locations: true,
+    item_data: {
+      name: "Latte",
+      description:
+        "Indulge in the smooth and flavorful experience of our delicious Latte. Savor every sip and treat yourself to the perfect blend of rich espresso and creamy milk.",
+      is_taxable: true,
+      tax_ids: ["B4GOWNZ5FF5W6OSPL7LOAYNP"],
+      modifier_list_info: [
+        {
+          modifier_list_id: "KNOBRKUMSI77KRIBHQCOUEJO",
+          min_selected_modifiers: -1,
+          max_selected_modifiers: -1,
+          enabled: true,
+          hidden_from_customer: false,
+          ordinal: 0,
+        },
+        {
+          modifier_list_id: "CCVH6QBVVNSIUZ375S7YVOOF",
+          min_selected_modifiers: -1,
+          max_selected_modifiers: -1,
+          enabled: true,
+          hidden_from_customer: false,
+          ordinal: 1,
+        },
+        {
+          modifier_list_id: "PBONGZLR3FBEVVHP63RPSI4S",
+          min_selected_modifiers: -1,
+          max_selected_modifiers: -1,
+          enabled: true,
+          hidden_from_customer: false,
+          ordinal: 4,
+        },
+        {
+          modifier_list_id: "POU7HQT7SENSWDDK3SCNXHDK",
+          min_selected_modifiers: -1,
+          max_selected_modifiers: -1,
+          enabled: true,
+          hidden_from_customer: false,
+          ordinal: 6,
+        },
+        {
+          modifier_list_id: "6WTCRAHHO4IN2BJGOFSI5THQ",
+          min_selected_modifiers: -1,
+          max_selected_modifiers: -1,
+          enabled: true,
+          hidden_from_customer: false,
+          ordinal: 7,
+        },
+      ],
+      variations: [
+        {
+          type: "ITEM_VARIATION",
+          id: "KXHTZ3UNPV4MF2P7BDVEPWCB",
+          updated_at: "2023-12-11T21:32:37.616Z",
+          created_at: "2023-10-16T01:40:02.76Z",
+          version: 1702330357616,
+          is_deleted: false,
+          present_at_all_locations: true,
+          absent_at_location_ids: ["LFDBM4Y1NPV7R"],
+          item_variation_data: {
+            item_id: "VFG3ON3CVZBGPNVW54KGDXLS",
+            name: "8oz",
+            sku: "6623486",
+            ordinal: 0,
+            pricing_type: "FIXED_PRICING",
+            price_money: {
+              amount: 450,
+              currency: "USD",
+            },
+            location_overrides: [
+              {
+                location_id: "LFDBM4Y1NPV7R",
+                track_inventory: false,
+              },
+              {
+                location_id: "LT0BWZMSV5PAZ",
+                track_inventory: true,
+              },
+            ],
+            track_inventory: true,
+            inventory_alert_type: "NONE",
+            item_option_values: [
+              {
+                item_option_id: "FJGUSHIVHXME3KUS55NLGIXJ",
+                item_option_value_id: "TJYDMVB56PXD6H6E77UJKNLI",
+              },
+            ],
+            sellable: true,
+            stockable: true,
+            channels: ["CH_wgZwHcodjGhLl42K7jg9fxPbw9UAV6zVWHsfYRlQuYC"],
+          },
+        },
+        {
+          type: "ITEM_VARIATION",
+          id: "GHWHFSMEFA6JA55BMPTKK65I",
+          updated_at: "2025-02-28T16:31:35.31Z",
+          created_at: "2023-10-16T01:40:02.76Z",
+          version: 1740760295310,
+          is_deleted: false,
+          present_at_all_locations: true,
+          item_variation_data: {
+            item_id: "VFG3ON3CVZBGPNVW54KGDXLS",
+            name: "12oz",
+            sku: "3980776",
+            ordinal: 1,
+            pricing_type: "FIXED_PRICING",
+            price_money: {
+              amount: 535,
+              currency: "USD",
+            },
+            location_overrides: [
+              {
+                location_id: "LFDBM4Y1NPV7R",
+                track_inventory: false,
+              },
+              {
+                location_id: "LT0BWZMSV5PAZ",
+                track_inventory: true,
+              },
+            ],
+            track_inventory: true,
+            inventory_alert_type: "NONE",
+            item_option_values: [
+              {
+                item_option_id: "FJGUSHIVHXME3KUS55NLGIXJ",
+                item_option_value_id: "IL2FMIV4RHMCHY7WGALOHUWJ",
+              },
+            ],
+            sellable: true,
+            stockable: true,
+            channels: ["CH_wgZwHcodjGhLl42K7jg9fxPbw9UAV6zVWHsfYRlQuYC"],
+          },
+        },
+        {
+          type: "ITEM_VARIATION",
+          id: "CF6F4WT4RD2EEYSUDZWBK2RV",
+          updated_at: "2025-02-28T16:31:35.31Z",
+          created_at: "2023-10-16T01:40:02.76Z",
+          version: 1740760295310,
+          is_deleted: false,
+          present_at_all_locations: true,
+          item_variation_data: {
+            item_id: "VFG3ON3CVZBGPNVW54KGDXLS",
+            name: "16oz",
+            sku: "A376096",
+            ordinal: 2,
+            pricing_type: "FIXED_PRICING",
+            price_money: {
+              amount: 590,
+              currency: "USD",
+            },
+            location_overrides: [
+              {
+                location_id: "LFDBM4Y1NPV7R",
+                track_inventory: false,
+              },
+              {
+                location_id: "LT0BWZMSV5PAZ",
+                track_inventory: true,
+              },
+            ],
+            track_inventory: true,
+            inventory_alert_type: "NONE",
+            item_option_values: [
+              {
+                item_option_id: "FJGUSHIVHXME3KUS55NLGIXJ",
+                item_option_value_id: "IW5PNVEKTIJ3IRXSP5SSUXQ4",
+              },
+            ],
+            sellable: true,
+            stockable: true,
+            channels: ["CH_wgZwHcodjGhLl42K7jg9fxPbw9UAV6zVWHsfYRlQuYC"],
+          },
+        },
+      ],
+      product_type: "FOOD_AND_BEV",
+      skip_modifier_screen: false,
+      item_options: [
+        {
+          item_option_id: "FJGUSHIVHXME3KUS55NLGIXJ",
+        },
+      ],
+      ecom_uri: "https://novariacoffee.square.site/product/latte/1",
+      ecom_available: true,
+      ecom_visibility: "VISIBLE",
+      categories: [
+        {
+          id: "QDJKYB6DOONI3BOSKSUSNXQZ",
+          ordinal: -2251731094208512,
+        },
+      ],
+      description_html:
+        "Indulge in the smooth and flavorful experience of our delicious Latte. Savor every sip and treat yourself to the perfect blend of rich espresso and creamy milk.",
+      description_plaintext:
+        "Indulge in the smooth and flavorful experience of our delicious Latte. Savor every sip and treat yourself to the perfect blend of rich espresso and creamy milk.",
+      channels: ["CH_wgZwHcodjGhLl42K7jg9fxPbw9UAV6zVWHsfYRlQuYC"],
+      is_archived: false,
+      reporting_category: {
+        id: "QDJKYB6DOONI3BOSKSUSNXQZ",
+        ordinal: -2251731094208512,
+      },
+    },
+  },
+  {
+    type: "ITEM",
+    id: "OQBPHRJF4PCX5M4JKLSNF7SA",
+    updated_at: "2024-10-24T12:04:38.2Z",
+    created_at: "2023-12-22T20:23:11.896Z",
+    version: 1729771478200,
+    is_deleted: false,
+    catalog_v1_ids: [
+      {
+        catalog_v1_id: "3OJRLRGZSV5LOJSMGMT3ESHR",
+        location_id: "LFDBM4Y1NPV7R",
+      },
+    ],
+    present_at_all_locations: false,
+    present_at_location_ids: ["LFDBM4Y1NPV7R"],
+    item_data: {
+      name: "London fog",
+      label_color: "E5BF00",
+      is_taxable: true,
+      tax_ids: ["B4GOWNZ5FF5W6OSPL7LOAYNP"],
+      modifier_list_info: [
+        {
+          modifier_list_id: "CCVH6QBVVNSIUZ375S7YVOOF",
+          min_selected_modifiers: -1,
+          max_selected_modifiers: -1,
+          enabled: true,
+          hidden_from_customer: false,
+          ordinal: 0,
+        },
+        {
+          modifier_list_id: "KNOBRKUMSI77KRIBHQCOUEJO",
+          min_selected_modifiers: -1,
+          max_selected_modifiers: -1,
+          enabled: false,
+          hidden_from_customer: false,
+          ordinal: 1,
+        },
+        {
+          modifier_list_id: "POU7HQT7SENSWDDK3SCNXHDK",
+          min_selected_modifiers: -1,
+          max_selected_modifiers: -1,
+          enabled: true,
+          hidden_from_customer: false,
+          ordinal: 4,
+        },
+        {
+          modifier_list_id: "J36EXIF3EICZGVMLXEKO4D5S",
+          min_selected_modifiers: -1,
+          max_selected_modifiers: -1,
+          enabled: true,
+          hidden_from_customer: false,
+          ordinal: 2,
+        },
+        {
+          modifier_list_id: "PBONGZLR3FBEVVHP63RPSI4S",
+          min_selected_modifiers: -1,
+          max_selected_modifiers: -1,
+          enabled: true,
+          hidden_from_customer: false,
+          ordinal: 3,
+        },
+      ],
+      variations: [
+        {
+          type: "ITEM_VARIATION",
+          id: "57WBKAPVI3JIFQFBVR5GXUSV",
+          updated_at: "2024-10-24T12:04:38.2Z",
+          created_at: "2023-12-28T20:02:37.078Z",
+          version: 1729771478200,
+          is_deleted: false,
+          catalog_v1_ids: [
+            {
+              catalog_v1_id: "CC8F671D-7E86-465A-A506-786B1644C291",
+              location_id: "LFDBM4Y1NPV7R",
+            },
+          ],
+          present_at_all_locations: false,
+          present_at_location_ids: ["LFDBM4Y1NPV7R"],
+          item_variation_data: {
+            item_id: "OQBPHRJF4PCX5M4JKLSNF7SA",
+            name: "12oz",
+            ordinal: 0,
+            pricing_type: "FIXED_PRICING",
+            price_money: {
+              amount: 450,
+              currency: "USD",
+            },
+            location_overrides: [
+              {
+                location_id: "LFDBM4Y1NPV7R",
+                track_inventory: false,
+              },
+              {
+                location_id: "LT0BWZMSV5PAZ",
+                track_inventory: true,
+              },
+            ],
+            track_inventory: true,
+            sellable: true,
+            stockable: true,
+            channels: ["CH_wgZwHcodjGhLl42K7jg9fxPbw9UAV6zVWHsfYRlQuYC"],
+          },
+        },
+        {
+          type: "ITEM_VARIATION",
+          id: "IGZHSESV7WF7RVTL2ORKUFL5",
+          updated_at: "2024-10-24T12:04:38.2Z",
+          created_at: "2023-12-22T20:23:11.896Z",
+          version: 1729771478200,
+          is_deleted: false,
+          catalog_v1_ids: [
+            {
+              catalog_v1_id: "A3N4JMGYBT4VUXNPS7I6T3YZ",
+              location_id: "LFDBM4Y1NPV7R",
+            },
+          ],
+          present_at_all_locations: false,
+          present_at_location_ids: ["LFDBM4Y1NPV7R"],
+          item_variation_data: {
+            item_id: "OQBPHRJF4PCX5M4JKLSNF7SA",
+            name: "16oz",
+            ordinal: 1,
+            pricing_type: "FIXED_PRICING",
+            price_money: {
+              amount: 500,
+              currency: "USD",
+            },
+            location_overrides: [
+              {
+                location_id: "LFDBM4Y1NPV7R",
+                track_inventory: false,
+              },
+              {
+                location_id: "LT0BWZMSV5PAZ",
+                track_inventory: true,
+              },
+            ],
+            track_inventory: true,
+            sellable: true,
+            stockable: true,
+            channels: ["CH_wgZwHcodjGhLl42K7jg9fxPbw9UAV6zVWHsfYRlQuYC"],
+          },
+        },
+      ],
+      product_type: "FOOD_AND_BEV",
+      skip_modifier_screen: false,
+      ecom_uri: "https://novariacoffee.square.site/product/london-fog/42",
+      ecom_available: true,
+      ecom_visibility: "VISIBLE",
+      categories: [
+        {
+          id: "QDJKYB6DOONI3BOSKSUSNXQZ",
+          ordinal: -2250425424150528,
+        },
+      ],
+      channels: ["CH_wgZwHcodjGhLl42K7jg9fxPbw9UAV6zVWHsfYRlQuYC"],
+      is_archived: false,
+      reporting_category: {
+        id: "QDJKYB6DOONI3BOSKSUSNXQZ",
+        ordinal: -2250425424150528,
+      },
+    },
+  },
+  {
+    type: "ITEM",
+    id: "EPQA772DMGIAIJU35AZEEPGX",
+    updated_at: "2025-02-28T16:34:08.742Z",
+    created_at: "2023-10-19T02:44:05.309Z",
+    version: 1740760448742,
+    is_deleted: false,
+    catalog_v1_ids: [
+      {
+        catalog_v1_id: "JYPEXEWPUZR7YUTPWLDN6JZP",
+        location_id: "LFDBM4Y1NPV7R",
+      },
+    ],
+    present_at_all_locations: false,
+    present_at_location_ids: ["LFDBM4Y1NPV7R"],
+    item_data: {
+      name: "Matcha Latte",
+      label_color: "E5BF00",
+      is_taxable: true,
+      tax_ids: ["B4GOWNZ5FF5W6OSPL7LOAYNP"],
+      modifier_list_info: [
+        {
+          modifier_list_id: "KNOBRKUMSI77KRIBHQCOUEJO",
+          min_selected_modifiers: -1,
+          max_selected_modifiers: -1,
+          enabled: true,
+          hidden_from_customer: false,
+          ordinal: 0,
+        },
+        {
+          modifier_list_id: "CCVH6QBVVNSIUZ375S7YVOOF",
+          min_selected_modifiers: -1,
+          max_selected_modifiers: -1,
+          enabled: true,
+          hidden_from_customer: false,
+          ordinal: 1,
+        },
+        {
+          modifier_list_id: "PBONGZLR3FBEVVHP63RPSI4S",
+          min_selected_modifiers: -1,
+          max_selected_modifiers: -1,
+          enabled: true,
+          hidden_from_customer: false,
+          ordinal: 4,
+        },
+        {
+          modifier_list_id: "POU7HQT7SENSWDDK3SCNXHDK",
+          min_selected_modifiers: -1,
+          max_selected_modifiers: -1,
+          enabled: false,
+          hidden_from_customer: false,
+          ordinal: 6,
+        },
+        {
+          modifier_list_id: "6WTCRAHHO4IN2BJGOFSI5THQ",
+          min_selected_modifiers: -1,
+          max_selected_modifiers: -1,
+          enabled: true,
+          hidden_from_customer: false,
+          ordinal: 1,
+        },
+      ],
+      variations: [
+        {
+          type: "ITEM_VARIATION",
+          id: "62VXPQE3IL7BHWTFK7XISCSJ",
+          updated_at: "2025-02-28T16:34:08.742Z",
+          created_at: "2023-10-19T02:44:05.309Z",
+          version: 1740760448742,
+          is_deleted: false,
+          catalog_v1_ids: [
+            {
+              catalog_v1_id: "PLVFENSM7VCFY2ZQXK2Q7OXD",
+              location_id: "LFDBM4Y1NPV7R",
+            },
+          ],
+          present_at_all_locations: false,
+          present_at_location_ids: ["LFDBM4Y1NPV7R"],
+          item_variation_data: {
+            item_id: "EPQA772DMGIAIJU35AZEEPGX",
+            name: "12oz",
+            ordinal: 0,
+            pricing_type: "FIXED_PRICING",
+            price_money: {
+              amount: 525,
+              currency: "USD",
+            },
+            location_overrides: [
+              {
+                location_id: "LFDBM4Y1NPV7R",
+                track_inventory: false,
+              },
+              {
+                location_id: "LT0BWZMSV5PAZ",
+                track_inventory: true,
+              },
+            ],
+            track_inventory: true,
+            item_option_values: [
+              {
+                item_option_id: "FJGUSHIVHXME3KUS55NLGIXJ",
+                item_option_value_id: "IL2FMIV4RHMCHY7WGALOHUWJ",
+              },
+            ],
+            sellable: true,
+            stockable: true,
+            channels: ["CH_wgZwHcodjGhLl42K7jg9fxPbw9UAV6zVWHsfYRlQuYC"],
+          },
+        },
+        {
+          type: "ITEM_VARIATION",
+          id: "GU3BHP6BUOATIZUTOW5QPY73",
+          updated_at: "2025-02-28T16:34:08.742Z",
+          created_at: "2023-10-19T02:44:05.309Z",
+          version: 1740760448742,
+          is_deleted: false,
+          catalog_v1_ids: [
+            {
+              catalog_v1_id: "29D934F7-E576-40D4-8E01-6721CD2F1906",
+              location_id: "LFDBM4Y1NPV7R",
+            },
+          ],
+          present_at_all_locations: false,
+          present_at_location_ids: ["LFDBM4Y1NPV7R"],
+          item_variation_data: {
+            item_id: "EPQA772DMGIAIJU35AZEEPGX",
+            name: "16oz",
+            ordinal: 1,
+            pricing_type: "FIXED_PRICING",
+            price_money: {
+              amount: 585,
+              currency: "USD",
+            },
+            location_overrides: [
+              {
+                location_id: "LFDBM4Y1NPV7R",
+                track_inventory: false,
+              },
+              {
+                location_id: "LT0BWZMSV5PAZ",
+                track_inventory: true,
+              },
+            ],
+            track_inventory: true,
+            item_option_values: [
+              {
+                item_option_id: "FJGUSHIVHXME3KUS55NLGIXJ",
+                item_option_value_id: "IW5PNVEKTIJ3IRXSP5SSUXQ4",
+              },
+            ],
+            sellable: true,
+            stockable: true,
+            channels: ["CH_wgZwHcodjGhLl42K7jg9fxPbw9UAV6zVWHsfYRlQuYC"],
+          },
+        },
+      ],
+      product_type: "FOOD_AND_BEV",
+      skip_modifier_screen: false,
+      item_options: [
+        {
+          item_option_id: "FJGUSHIVHXME3KUS55NLGIXJ",
+        },
+      ],
+      ecom_uri: "https://novariacoffee.square.site/product/matcha-latte/10",
+      ecom_available: true,
+      ecom_visibility: "VISIBLE",
+      categories: [
+        {
+          id: "QDJKYB6DOONI3BOSKSUSNXQZ",
+          ordinal: -2251112618917888,
+        },
+      ],
+      channels: ["CH_wgZwHcodjGhLl42K7jg9fxPbw9UAV6zVWHsfYRlQuYC"],
+      is_archived: false,
+      reporting_category: {
+        id: "QDJKYB6DOONI3BOSKSUSNXQZ",
+        ordinal: -2251112618917888,
+      },
+    },
+  },
+  {
+    type: "ITEM",
+    id: "S22PXU3U5T3UKECKTRWMVY3Y",
+    updated_at: "2024-10-01T16:19:29.201Z",
+    created_at: "2023-12-18T20:49:47.434Z",
+    version: 1727799569201,
+    is_deleted: false,
+    catalog_v1_ids: [
+      {
+        catalog_v1_id: "IGFX2BHFTF4ZJS4CD4FIPJTK",
+        location_id: "LFDBM4Y1NPV7R",
+      },
+    ],
+    present_at_all_locations: false,
+    present_at_location_ids: ["LFDBM4Y1NPV7R"],
+    item_data: {
+      name: "Mousse",
+      is_taxable: true,
+      tax_ids: ["B4GOWNZ5FF5W6OSPL7LOAYNP"],
+      variations: [
+        {
+          type: "ITEM_VARIATION",
+          id: "RF63NOL7APAEKEBFZBLPIDSW",
+          updated_at: "2023-12-18T20:49:50.148Z",
+          created_at: "2023-12-18T20:49:47.434Z",
+          version: 1702932590148,
+          is_deleted: false,
+          catalog_v1_ids: [
+            {
+              catalog_v1_id: "SEJBE7OKVNAA5ZJXM57VDSD5",
+              location_id: "LFDBM4Y1NPV7R",
+            },
+          ],
+          present_at_all_locations: false,
+          present_at_location_ids: ["LFDBM4Y1NPV7R"],
+          item_variation_data: {
+            item_id: "S22PXU3U5T3UKECKTRWMVY3Y",
+            name: "Regular",
+            ordinal: 1,
+            pricing_type: "FIXED_PRICING",
+            price_money: {
+              amount: 400,
+              currency: "USD",
+            },
+            location_overrides: [
+              {
+                location_id: "LFDBM4Y1NPV7R",
+                track_inventory: false,
+              },
+              {
+                location_id: "LT0BWZMSV5PAZ",
+                track_inventory: true,
+              },
+            ],
+            track_inventory: true,
+            sellable: true,
+            stockable: true,
+          },
+        },
+      ],
+      product_type: "FOOD_AND_BEV",
+      skip_modifier_screen: false,
+      ecom_uri: "https://767686265435139058.square.site/product/mousse/41",
+      ecom_available: true,
+      ecom_visibility: "VISIBLE",
+      categories: [
+        {
+          id: "27GG2MFWHT7ECDNN4MZB4LQ7",
+          ordinal: -2250837741010944,
+        },
+      ],
+      is_archived: false,
+      reporting_category: {
+        id: "27GG2MFWHT7ECDNN4MZB4LQ7",
+        ordinal: -2250837741010944,
+      },
+    },
+  },
+  {
+    type: "ITEM",
+    id: "M3V25HIERZSLSKUSVBOBO7JX",
+    updated_at: "2024-10-01T16:02:30.154Z",
+    created_at: "2023-11-08T14:05:16.182Z",
+    version: 1727798550154,
+    is_deleted: false,
+    catalog_v1_ids: [
+      {
+        catalog_v1_id: "ITDELUR2DS6CKCH7QOVT7B2O",
+        location_id: "LFDBM4Y1NPV7R",
+      },
+    ],
+    present_at_all_locations: false,
+    present_at_location_ids: ["LFDBM4Y1NPV7R"],
+    item_data: {
+      name: "Muffin",
+      label_color: "E5BF00",
+      is_taxable: true,
+      tax_ids: ["B4GOWNZ5FF5W6OSPL7LOAYNP"],
+      variations: [
+        {
+          type: "ITEM_VARIATION",
+          id: "EIZECDLUZRRXXMH7SVTQDYRA",
+          updated_at: "2024-08-31T12:16:02.321Z",
+          created_at: "2023-11-08T14:05:16.182Z",
+          version: 1725106562321,
+          is_deleted: false,
+          catalog_v1_ids: [
+            {
+              catalog_v1_id: "LOXOEDIMY4X3APJOLWFZC5NT",
+              location_id: "LFDBM4Y1NPV7R",
+            },
+          ],
+          present_at_all_locations: false,
+          present_at_location_ids: ["LFDBM4Y1NPV7R"],
+          item_variation_data: {
+            item_id: "M3V25HIERZSLSKUSVBOBO7JX",
+            name: "Regular",
+            ordinal: 1,
+            pricing_type: "FIXED_PRICING",
+            price_money: {
+              amount: 400,
+              currency: "USD",
+            },
+            location_overrides: [
+              {
+                location_id: "LFDBM4Y1NPV7R",
+                track_inventory: true,
+                sold_out: true,
+              },
+              {
+                location_id: "LT0BWZMSV5PAZ",
+                track_inventory: true,
+              },
+            ],
+            track_inventory: true,
+            sellable: true,
+            stockable: true,
+            channels: ["CH_wgZwHcodjGhLl42K7jg9fxPbw9UAV6zVWHsfYRlQuYC"],
+          },
+        },
+      ],
+      product_type: "FOOD_AND_BEV",
+      skip_modifier_screen: false,
+      ecom_uri: "https://novariacoffee.square.site/product/muffin/16",
+      ecom_available: true,
+      ecom_visibility: "VISIBLE",
+      categories: [
+        {
+          id: "27GG2MFWHT7ECDNN4MZB4LQ7",
+          ordinal: -2250494143627264,
+        },
+      ],
+      channels: ["CH_wgZwHcodjGhLl42K7jg9fxPbw9UAV6zVWHsfYRlQuYC"],
+      is_archived: false,
+      reporting_category: {
+        id: "27GG2MFWHT7ECDNN4MZB4LQ7",
+        ordinal: -2250494143627264,
+      },
+    },
+  },
+  {
+    type: "ITEM",
+    id: "IONPO7AKNUDON6O4ME542ZCA",
+    updated_at: "2024-10-01T16:10:24.684Z",
+    created_at: "2024-05-24T15:18:56.582Z",
+    version: 1727799024684,
+    is_deleted: false,
+    catalog_v1_ids: [
+      {
+        catalog_v1_id: "6XK3NSR7PIUYYPVSEEAMJPOY",
+        location_id: "LFDBM4Y1NPV7R",
+      },
+    ],
+    present_at_all_locations: false,
+    present_at_location_ids: ["LFDBM4Y1NPV7R"],
+    item_data: {
+      name: "Novaria's Green",
+      is_taxable: true,
+      tax_ids: ["B4GOWNZ5FF5W6OSPL7LOAYNP"],
+      modifier_list_info: [
+        {
+          modifier_list_id: "OHFWTB2AAFNOQEDCBRYIJSFE",
+          min_selected_modifiers: -1,
+          max_selected_modifiers: -1,
+          enabled: true,
+          hidden_from_customer: false,
+          ordinal: 0,
+        },
+      ],
+      variations: [
+        {
+          type: "ITEM_VARIATION",
+          id: "6GSFBPGZJWK746AHZSRUWYVS",
+          updated_at: "2024-07-01T14:50:50.007Z",
+          created_at: "2024-05-24T15:52:42.75Z",
+          version: 1719845450007,
+          is_deleted: false,
+          catalog_v1_ids: [
+            {
+              catalog_v1_id: "NP6NFNZK6JYD42SWGRC2NMHT",
+              location_id: "LFDBM4Y1NPV7R",
+            },
+          ],
+          present_at_all_locations: false,
+          present_at_location_ids: ["LFDBM4Y1NPV7R"],
+          item_variation_data: {
+            item_id: "IONPO7AKNUDON6O4ME542ZCA",
+            name: "Regular",
+            ordinal: 0,
+            pricing_type: "FIXED_PRICING",
+            price_money: {
+              amount: 1075,
+              currency: "USD",
+            },
+            location_overrides: [
+              {
+                location_id: "LFDBM4Y1NPV7R",
+                track_inventory: false,
+              },
+              {
+                location_id: "LT0BWZMSV5PAZ",
+                track_inventory: true,
+              },
+            ],
+            track_inventory: true,
+            sellable: true,
+            stockable: true,
+            channels: ["CH_wgZwHcodjGhLl42K7jg9fxPbw9UAV6zVWHsfYRlQuYC"],
+          },
+        },
+      ],
+      product_type: "FOOD_AND_BEV",
+      skip_modifier_screen: false,
+      ecom_uri: "https://novariacoffee.square.site/product/novaria-s-green/94",
+      ecom_available: true,
+      ecom_visibility: "VISIBLE",
+      categories: [
+        {
+          id: "NCAM3RK7DWQGW67XV6GNZTHH",
+          ordinal: -2251524935778304,
+        },
+      ],
+      channels: ["CH_wgZwHcodjGhLl42K7jg9fxPbw9UAV6zVWHsfYRlQuYC"],
+      is_archived: false,
+      reporting_category: {
+        id: "NCAM3RK7DWQGW67XV6GNZTHH",
+        ordinal: -2251524935778304,
+      },
+    },
+  },
+  {
+    type: "ITEM",
+    id: "LHIUFFX3QVHJS2HT25SOWUPO",
+    updated_at: "2025-02-28T16:38:20.529Z",
+    created_at: "2023-10-19T02:42:14.248Z",
+    version: 1740760700529,
+    is_deleted: false,
+    catalog_v1_ids: [
+      {
+        catalog_v1_id: "XB5CSVORT3UFK7B6NHAGNNJN",
+        location_id: "LFDBM4Y1NPV7R",
+      },
+    ],
+    present_at_all_locations: false,
+    present_at_location_ids: ["LFDBM4Y1NPV7R"],
+    item_data: {
+      name: "OJI",
+      is_taxable: true,
+      tax_ids: ["B4GOWNZ5FF5W6OSPL7LOAYNP"],
+      modifier_list_info: [
+        {
+          modifier_list_id: "CCVH6QBVVNSIUZ375S7YVOOF",
+          min_selected_modifiers: -1,
+          max_selected_modifiers: -1,
+          enabled: true,
+          hidden_from_customer: false,
+          ordinal: 0,
+        },
+        {
+          modifier_list_id: "J36EXIF3EICZGVMLXEKO4D5S",
+          min_selected_modifiers: -1,
+          max_selected_modifiers: -1,
+          enabled: true,
+          hidden_from_customer: false,
+          ordinal: 1,
+        },
+        {
+          modifier_list_id: "PBONGZLR3FBEVVHP63RPSI4S",
+          min_selected_modifiers: -1,
+          max_selected_modifiers: -1,
+          enabled: true,
+          hidden_from_customer: false,
+          ordinal: 4,
+        },
+        {
+          modifier_list_id: "POU7HQT7SENSWDDK3SCNXHDK",
+          min_selected_modifiers: -1,
+          max_selected_modifiers: -1,
+          enabled: true,
+          hidden_from_customer: false,
+          ordinal: 6,
+        },
+      ],
+      variations: [
+        {
+          type: "ITEM_VARIATION",
+          id: "G3OZKATUTYJAXQVUM7NVTE6G",
+          updated_at: "2025-02-28T16:31:36.003Z",
+          created_at: "2023-10-19T02:42:14.248Z",
+          version: 1740760296003,
+          is_deleted: false,
+          catalog_v1_ids: [
+            {
+              catalog_v1_id: "HFSBS7DQWQ45N6JLLK2VIEZY",
+              location_id: "LFDBM4Y1NPV7R",
+            },
+          ],
+          present_at_all_locations: false,
+          present_at_location_ids: ["LFDBM4Y1NPV7R"],
+          item_variation_data: {
+            item_id: "LHIUFFX3QVHJS2HT25SOWUPO",
+            name: "For here",
+            ordinal: 0,
+            pricing_type: "FIXED_PRICING",
+            price_money: {
+              amount: 525,
+              currency: "USD",
+            },
+            location_overrides: [
+              {
+                location_id: "LFDBM4Y1NPV7R",
+                track_inventory: false,
+              },
+              {
+                location_id: "LT0BWZMSV5PAZ",
+                track_inventory: true,
+              },
+            ],
+            track_inventory: true,
+            item_option_values: [
+              {
+                item_option_id: "SWQI44D7RYOBHULSU3OIEAL5",
+                item_option_value_id: "73APSJCUKUPFOAIZETPHYNDS",
+              },
+            ],
+            sellable: true,
+            stockable: true,
+            channels: ["CH_wgZwHcodjGhLl42K7jg9fxPbw9UAV6zVWHsfYRlQuYC"],
+          },
+        },
+        {
+          type: "ITEM_VARIATION",
+          id: "4BL75HIHXALTPR6NX2C7H6XQ",
+          updated_at: "2025-02-28T16:31:36.003Z",
+          created_at: "2023-10-19T02:42:14.248Z",
+          version: 1740760296003,
+          is_deleted: false,
+          catalog_v1_ids: [
+            {
+              catalog_v1_id: "AA853C38-F0E9-4E77-9223-14B2F3876689",
+              location_id: "LFDBM4Y1NPV7R",
+            },
+          ],
+          present_at_all_locations: false,
+          present_at_location_ids: ["LFDBM4Y1NPV7R"],
+          item_variation_data: {
+            item_id: "LHIUFFX3QVHJS2HT25SOWUPO",
+            name: "To Go",
+            ordinal: 1,
+            pricing_type: "FIXED_PRICING",
+            price_money: {
+              amount: 525,
+              currency: "USD",
+            },
+            location_overrides: [
+              {
+                location_id: "LFDBM4Y1NPV7R",
+                track_inventory: false,
+              },
+              {
+                location_id: "LT0BWZMSV5PAZ",
+                track_inventory: true,
+              },
+            ],
+            track_inventory: true,
+            item_option_values: [
+              {
+                item_option_id: "SWQI44D7RYOBHULSU3OIEAL5",
+                item_option_value_id: "7EFWDOAVD7FKOBHMUXZUVLWA",
+              },
+            ],
+            sellable: true,
+            stockable: true,
+            channels: ["CH_wgZwHcodjGhLl42K7jg9fxPbw9UAV6zVWHsfYRlQuYC"],
+          },
+        },
+      ],
+      product_type: "FOOD_AND_BEV",
+      skip_modifier_screen: false,
+      item_options: [
+        {
+          item_option_id: "SWQI44D7RYOBHULSU3OIEAL5",
+        },
+      ],
+      ecom_uri: "https://novariacoffee.square.site/product/oji/8",
+      ecom_available: true,
+      ecom_visibility: "VISIBLE",
+      categories: [
+        {
+          id: "QDJKYB6DOONI3BOSKSUSNXQZ",
+          ordinal: -2251250057871360,
+        },
+      ],
+      channels: ["CH_wgZwHcodjGhLl42K7jg9fxPbw9UAV6zVWHsfYRlQuYC"],
+      is_archived: false,
+      reporting_category: {
+        id: "QDJKYB6DOONI3BOSKSUSNXQZ",
+        ordinal: -2251250057871360,
+      },
+    },
+  },
+  {
+    type: "ITEM",
+    id: "GG3RR57DMNAOVYXG4VQIIXUF",
+    updated_at: "2024-09-22T18:28:11.574Z",
+    created_at: "2024-01-26T19:15:14.489Z",
+    version: 1727029691574,
+    is_deleted: false,
+    catalog_v1_ids: [
+      {
+        catalog_v1_id: "LWJH7OVOPBI6N3UN7NEFIQEQ",
+        location_id: "LFDBM4Y1NPV7R",
+      },
+    ],
+    present_at_all_locations: false,
+    present_at_location_ids: ["LFDBM4Y1NPV7R"],
+    item_data: {
+      name: "Pistachio Baklava",
+      is_taxable: true,
+      tax_ids: ["B4GOWNZ5FF5W6OSPL7LOAYNP"],
+      variations: [
+        {
+          type: "ITEM_VARIATION",
+          id: "Q4FZPZB4HS33GDXAGNK4VYKG",
+          updated_at: "2024-09-22T18:28:11.574Z",
+          created_at: "2024-01-26T19:15:14.489Z",
+          version: 1727029691574,
+          is_deleted: false,
+          catalog_v1_ids: [
+            {
+              catalog_v1_id: "CWYGC2PLNPPDPZ6FLB4UAAWD",
+              location_id: "LFDBM4Y1NPV7R",
+            },
+          ],
+          present_at_all_locations: false,
+          present_at_location_ids: ["LFDBM4Y1NPV7R"],
+          item_variation_data: {
+            item_id: "GG3RR57DMNAOVYXG4VQIIXUF",
+            name: "Regular",
+            ordinal: 1,
+            pricing_type: "FIXED_PRICING",
+            price_money: {
+              amount: 300,
+              currency: "USD",
+            },
+            location_overrides: [
+              {
+                location_id: "LFDBM4Y1NPV7R",
+                track_inventory: true,
+                sold_out: true,
+              },
+              {
+                location_id: "LT0BWZMSV5PAZ",
+                track_inventory: true,
+              },
+            ],
+            track_inventory: true,
+            sellable: true,
+            stockable: true,
+            channels: ["CH_wgZwHcodjGhLl42K7jg9fxPbw9UAV6zVWHsfYRlQuYC"],
+          },
+        },
+      ],
+      product_type: "REGULAR",
+      skip_modifier_screen: false,
+      ecom_uri:
+        "https://novariacoffee.square.site/product/pistachio-baklava/58",
+      ecom_available: true,
+      ecom_visibility: "VISIBLE",
+      categories: [
+        {
+          id: "27GG2MFWHT7ECDNN4MZB4LQ7",
+          ordinal: -2250769021534208,
+        },
+      ],
+      channels: ["CH_wgZwHcodjGhLl42K7jg9fxPbw9UAV6zVWHsfYRlQuYC"],
+      is_archived: false,
+      reporting_category: {
+        id: "27GG2MFWHT7ECDNN4MZB4LQ7",
+        ordinal: -2250769021534208,
+      },
+    },
+  },
+  {
+    type: "ITEM",
+    id: "BYAUTLCR6WOYYP3M3GS4ELYH",
+    updated_at: "2025-03-29T21:36:43.686Z",
+    created_at: "2024-02-04T17:27:21.488Z",
+    version: 1743284203686,
+    is_deleted: false,
+    catalog_v1_ids: [
+      {
+        catalog_v1_id: "NUEK6L57ZG2AR2RFLRT3YX4E",
+        location_id: "LFDBM4Y1NPV7R",
+      },
+    ],
+    present_at_all_locations: false,
+    present_at_location_ids: ["LFDBM4Y1NPV7R"],
+    item_data: {
+      name: "Pistachio rose matcha",
+      label_color: "0B8000",
+      is_taxable: true,
+      tax_ids: ["B4GOWNZ5FF5W6OSPL7LOAYNP"],
+      modifier_list_info: [
+        {
+          modifier_list_id: "KNOBRKUMSI77KRIBHQCOUEJO",
+          min_selected_modifiers: -1,
+          max_selected_modifiers: -1,
+          enabled: true,
+          hidden_from_customer: false,
+          ordinal: 0,
+        },
+        {
+          modifier_list_id: "PBONGZLR3FBEVVHP63RPSI4S",
+          min_selected_modifiers: -1,
+          max_selected_modifiers: -1,
+          enabled: true,
+          hidden_from_customer: false,
+          ordinal: 1,
+        },
+        {
+          modifier_list_id: "6WTCRAHHO4IN2BJGOFSI5THQ",
+          min_selected_modifiers: -1,
+          max_selected_modifiers: -1,
+          enabled: true,
+          hidden_from_customer: false,
+          ordinal: 2,
+        },
+      ],
+      variations: [
+        {
+          type: "ITEM_VARIATION",
+          id: "HQVXNJTPVMIEJLBXWQ6SRRIF",
+          updated_at: "2025-03-29T21:36:43.686Z",
+          created_at: "2024-02-04T17:27:21.488Z",
+          version: 1743284203686,
+          is_deleted: false,
+          catalog_v1_ids: [
+            {
+              catalog_v1_id: "2VO5Q3MOYZNVKP5WTD33DTDK",
+              location_id: "LFDBM4Y1NPV7R",
+            },
+          ],
+          present_at_all_locations: false,
+          present_at_location_ids: ["LFDBM4Y1NPV7R"],
+          item_variation_data: {
+            item_id: "BYAUTLCR6WOYYP3M3GS4ELYH",
+            name: "12oz",
+            ordinal: 0,
+            pricing_type: "FIXED_PRICING",
+            price_money: {
+              amount: 625,
+              currency: "USD",
+            },
+            location_overrides: [
+              {
+                location_id: "LFDBM4Y1NPV7R",
+                track_inventory: false,
+              },
+              {
+                location_id: "LT0BWZMSV5PAZ",
+                track_inventory: true,
+              },
+            ],
+            track_inventory: true,
+            item_option_values: [
+              {
+                item_option_id: "FJGUSHIVHXME3KUS55NLGIXJ",
+                item_option_value_id: "IL2FMIV4RHMCHY7WGALOHUWJ",
+              },
+            ],
+            sellable: true,
+            stockable: true,
+            channels: ["CH_wgZwHcodjGhLl42K7jg9fxPbw9UAV6zVWHsfYRlQuYC"],
+          },
+        },
+        {
+          type: "ITEM_VARIATION",
+          id: "WAUNM36IZKUBL7LJBVBMLQWL",
+          updated_at: "2025-03-29T21:36:43.686Z",
+          created_at: "2024-02-20T19:01:36.103Z",
+          version: 1743284203686,
+          is_deleted: false,
+          catalog_v1_ids: [
+            {
+              catalog_v1_id: "389772A6-98E4-45BB-809C-9091B330F266",
+              location_id: "LFDBM4Y1NPV7R",
+            },
+          ],
+          present_at_all_locations: false,
+          present_at_location_ids: ["LFDBM4Y1NPV7R"],
+          item_variation_data: {
+            item_id: "BYAUTLCR6WOYYP3M3GS4ELYH",
+            name: "16oz",
+            ordinal: 1,
+            pricing_type: "FIXED_PRICING",
+            price_money: {
+              amount: 700,
+              currency: "USD",
+            },
+            location_overrides: [
+              {
+                location_id: "LFDBM4Y1NPV7R",
+                track_inventory: false,
+              },
+              {
+                location_id: "LT0BWZMSV5PAZ",
+                track_inventory: true,
+              },
+            ],
+            track_inventory: true,
+            item_option_values: [
+              {
+                item_option_id: "FJGUSHIVHXME3KUS55NLGIXJ",
+                item_option_value_id: "IW5PNVEKTIJ3IRXSP5SSUXQ4",
+              },
+            ],
+            sellable: true,
+            stockable: true,
+            channels: ["CH_wgZwHcodjGhLl42K7jg9fxPbw9UAV6zVWHsfYRlQuYC"],
+          },
+        },
+      ],
+      product_type: "REGULAR",
+      skip_modifier_screen: false,
+      item_options: [
+        {
+          item_option_id: "FJGUSHIVHXME3KUS55NLGIXJ",
+        },
+      ],
+      ecom_uri:
+        "https://novariacoffee.square.site/product/pistachio-rose-matcha/66",
+      ecom_available: true,
+      ecom_visibility: "VISIBLE",
+      categories: [
+        {
+          id: "QDJKYB6DOONI3BOSKSUSNXQZ",
+          ordinal: -2250219265720320,
+        },
+      ],
+      channels: ["CH_wgZwHcodjGhLl42K7jg9fxPbw9UAV6zVWHsfYRlQuYC"],
+      is_archived: false,
+      reporting_category: {
+        id: "QDJKYB6DOONI3BOSKSUSNXQZ",
+        ordinal: -2250219265720320,
+      },
+    },
+  },
+  {
+    type: "ITEM",
+    id: "R6V77OXF25VH27DJILOVEBQZ",
+    updated_at: "2025-03-01T17:40:21.79Z",
+    created_at: "2023-11-26T20:48:35.593Z",
+    version: 1740850821790,
+    is_deleted: false,
+    catalog_v1_ids: [
+      {
+        catalog_v1_id: "FU5CBVWZ54HGC4ZJM45ZUOWJ",
+        location_id: "LFDBM4Y1NPV7R",
+      },
+    ],
+    present_at_all_locations: false,
+    present_at_location_ids: ["LFDBM4Y1NPV7R"],
+    item_data: {
+      name: "Syrian coffee",
+      label_color: "0B8000",
+      is_taxable: true,
+      tax_ids: ["B4GOWNZ5FF5W6OSPL7LOAYNP"],
+      modifier_list_info: [
+        {
+          modifier_list_id: "KNOBRKUMSI77KRIBHQCOUEJO",
+          min_selected_modifiers: -1,
+          max_selected_modifiers: -1,
+          enabled: true,
+          hidden_from_customer: false,
+          ordinal: 0,
+        },
+        {
+          modifier_list_id: "CCVH6QBVVNSIUZ375S7YVOOF",
+          min_selected_modifiers: -1,
+          max_selected_modifiers: -1,
+          enabled: true,
+          hidden_from_customer: false,
+          ordinal: 1,
+        },
+      ],
+      variations: [
+        {
+          type: "ITEM_VARIATION",
+          id: "ETPCXN3ZDO77HNTDTUZUBAVO",
+          updated_at: "2025-03-01T17:40:21.79Z",
+          created_at: "2023-11-26T20:48:35.593Z",
+          version: 1740850821790,
+          is_deleted: false,
+          catalog_v1_ids: [
+            {
+              catalog_v1_id: "CKGZFFATCT7VT5UAPELZJJSZ",
+              location_id: "LFDBM4Y1NPV7R",
+            },
+          ],
+          present_at_all_locations: false,
+          present_at_location_ids: ["LFDBM4Y1NPV7R"],
+          item_variation_data: {
+            item_id: "R6V77OXF25VH27DJILOVEBQZ",
+            name: "Regular",
+            ordinal: 1,
+            pricing_type: "FIXED_PRICING",
+            price_money: {
+              amount: 525,
+              currency: "USD",
+            },
+            location_overrides: [
+              {
+                location_id: "LFDBM4Y1NPV7R",
+                track_inventory: false,
+              },
+              {
+                location_id: "LT0BWZMSV5PAZ",
+                track_inventory: true,
+              },
+            ],
+            track_inventory: true,
+            sellable: true,
+            stockable: true,
+            channels: ["CH_wgZwHcodjGhLl42K7jg9fxPbw9UAV6zVWHsfYRlQuYC"],
+            item_variation_vendor_info_ids: ["LWWZR6Y2HF4OJ44UK5Z3Z5G3"],
+            item_variation_vendor_infos: [
+              {
+                type: "ITEM_VARIATION_VENDOR_INFO",
+                id: "LWWZR6Y2HF4OJ44UK5Z3Z5G3",
+                updated_at: "2025-03-01T17:40:21.79Z",
+                created_at: "2025-03-01T17:40:21.954Z",
+                version: 1740850821790,
+                is_deleted: false,
+                present_at_all_locations: false,
+                present_at_location_ids: ["LFDBM4Y1NPV7R"],
+                item_variation_vendor_info_data: {
+                  ordinal: 0,
+                  item_variation_id: "ETPCXN3ZDO77HNTDTUZUBAVO",
+                },
+              },
+            ],
+          },
+        },
+      ],
+      product_type: "FOOD_AND_BEV",
+      skip_modifier_screen: false,
+      ecom_uri: "https://novariacoffee.square.site/product/syrian-coffee/26",
+      ecom_available: true,
+      ecom_visibility: "VISIBLE",
+      categories: [
+        {
+          id: "QDJKYB6DOONI3BOSKSUSNXQZ",
+          ordinal: -2250837741010944,
+        },
+        {
+          id: "A2NKDXOXIJDA5VTKPG7VHWSA",
+          ordinal: -2251456216301568,
+        },
+      ],
+      channels: ["CH_wgZwHcodjGhLl42K7jg9fxPbw9UAV6zVWHsfYRlQuYC"],
+      is_archived: false,
+      reporting_category: {
+        id: "QDJKYB6DOONI3BOSKSUSNXQZ",
+        ordinal: -2250837741010944,
+      },
+    },
+  },
+  {
+    type: "ITEM",
+    id: "32USIPU4735MHY4HAG44K3OE",
+    updated_at: "2025-02-28T16:48:12.853Z",
+    created_at: "2023-10-19T02:45:33.26Z",
+    version: 1740761292853,
+    is_deleted: false,
+    catalog_v1_ids: [
+      {
+        catalog_v1_id: "IPYWWFLAVW4LG5YUWCPXPBXF",
+        location_id: "LFDBM4Y1NPV7R",
+      },
+    ],
+    present_at_all_locations: false,
+    present_at_location_ids: ["LFDBM4Y1NPV7R"],
+    item_data: {
+      name: "Tea",
+      label_color: "E5BF00",
+      is_taxable: true,
+      tax_ids: ["B4GOWNZ5FF5W6OSPL7LOAYNP"],
+      modifier_list_info: [
+        {
+          modifier_list_id: "J36EXIF3EICZGVMLXEKO4D5S",
+          min_selected_modifiers: -1,
+          max_selected_modifiers: -1,
+          enabled: true,
+          hidden_from_customer: false,
+          ordinal: 0,
+        },
+        {
+          modifier_list_id: "CCVH6QBVVNSIUZ375S7YVOOF",
+          min_selected_modifiers: -1,
+          max_selected_modifiers: -1,
+          enabled: true,
+          hidden_from_customer: false,
+          ordinal: 1,
+        },
+        {
+          modifier_list_id: "POU7HQT7SENSWDDK3SCNXHDK",
+          min_selected_modifiers: -1,
+          max_selected_modifiers: -1,
+          enabled: true,
+          hidden_from_customer: false,
+          ordinal: 4,
+        },
+      ],
+      variations: [
+        {
+          type: "ITEM_VARIATION",
+          id: "JUOUT75OFI2OEDF5FEO2GUHS",
+          updated_at: "2025-02-28T16:48:12.853Z",
+          created_at: "2023-10-19T02:45:33.26Z",
+          version: 1740761292853,
+          is_deleted: false,
+          catalog_v1_ids: [
+            {
+              catalog_v1_id: "RAUXNFRAHSMOCOT4SB5GI5K4",
+              location_id: "LFDBM4Y1NPV7R",
+            },
+          ],
+          present_at_all_locations: false,
+          present_at_location_ids: ["LFDBM4Y1NPV7R"],
+          item_variation_data: {
+            item_id: "32USIPU4735MHY4HAG44K3OE",
+            name: "12oz",
+            ordinal: 0,
+            pricing_type: "FIXED_PRICING",
+            price_money: {
+              amount: 400,
+              currency: "USD",
+            },
+            location_overrides: [
+              {
+                location_id: "LFDBM4Y1NPV7R",
+                track_inventory: false,
+              },
+              {
+                location_id: "LT0BWZMSV5PAZ",
+                track_inventory: true,
+              },
+            ],
+            track_inventory: true,
+            item_option_values: [
+              {
+                item_option_id: "FJGUSHIVHXME3KUS55NLGIXJ",
+                item_option_value_id: "IL2FMIV4RHMCHY7WGALOHUWJ",
+              },
+            ],
+            sellable: true,
+            stockable: true,
+            channels: ["CH_wgZwHcodjGhLl42K7jg9fxPbw9UAV6zVWHsfYRlQuYC"],
+          },
+        },
+        {
+          type: "ITEM_VARIATION",
+          id: "2ZN6IFA3T3BBVXO2HSRUFJCD",
+          updated_at: "2025-02-28T16:48:12.853Z",
+          created_at: "2023-10-19T02:45:33.26Z",
+          version: 1740761292853,
+          is_deleted: false,
+          catalog_v1_ids: [
+            {
+              catalog_v1_id: "983D4FA4-3E34-436C-AB36-146A8B2E190A",
+              location_id: "LFDBM4Y1NPV7R",
+            },
+          ],
+          present_at_all_locations: false,
+          present_at_location_ids: ["LFDBM4Y1NPV7R"],
+          item_variation_data: {
+            item_id: "32USIPU4735MHY4HAG44K3OE",
+            name: "16oz",
+            ordinal: 1,
+            pricing_type: "FIXED_PRICING",
+            price_money: {
+              amount: 450,
+              currency: "USD",
+            },
+            location_overrides: [
+              {
+                location_id: "LFDBM4Y1NPV7R",
+                track_inventory: false,
+              },
+              {
+                location_id: "LT0BWZMSV5PAZ",
+                track_inventory: true,
+              },
+            ],
+            track_inventory: true,
+            item_option_values: [
+              {
+                item_option_id: "FJGUSHIVHXME3KUS55NLGIXJ",
+                item_option_value_id: "IW5PNVEKTIJ3IRXSP5SSUXQ4",
+              },
+            ],
+            sellable: true,
+            stockable: true,
+            channels: ["CH_wgZwHcodjGhLl42K7jg9fxPbw9UAV6zVWHsfYRlQuYC"],
+          },
+        },
+      ],
+      product_type: "FOOD_AND_BEV",
+      skip_modifier_screen: false,
+      item_options: [
+        {
+          item_option_id: "FJGUSHIVHXME3KUS55NLGIXJ",
+        },
+      ],
+      ecom_uri: "https://novariacoffee.square.site/product/tea/12",
+      ecom_available: true,
+      ecom_visibility: "VISIBLE",
+      categories: [
+        {
+          id: "QDJKYB6DOONI3BOSKSUSNXQZ",
+          ordinal: -2250356704673792,
+        },
+      ],
+      channels: ["CH_wgZwHcodjGhLl42K7jg9fxPbw9UAV6zVWHsfYRlQuYC"],
+      is_archived: false,
+      reporting_category: {
+        id: "QDJKYB6DOONI3BOSKSUSNXQZ",
+        ordinal: -2250356704673792,
+      },
+    },
+  },
+  {
+    type: "ITEM",
+    id: "QLMFEKAVJ6S4VR47PAEGR4VM",
+    updated_at: "2024-10-01T16:19:33.325Z",
+    created_at: "2023-12-16T18:01:05.35Z",
+    version: 1727799573325,
+    is_deleted: false,
+    catalog_v1_ids: [
+      {
+        catalog_v1_id: "LTZS4J3H3HNX5JCX4IPZMVHO",
+        location_id: "LFDBM4Y1NPV7R",
+      },
+    ],
+    present_at_all_locations: false,
+    present_at_location_ids: ["LFDBM4Y1NPV7R"],
+    item_data: {
+      name: "Tiramisu Cake",
+      is_taxable: true,
+      tax_ids: ["B4GOWNZ5FF5W6OSPL7LOAYNP"],
+      variations: [
+        {
+          type: "ITEM_VARIATION",
+          id: "37MOSLDZGK5JYFT64GI3224C",
+          updated_at: "2023-12-16T18:01:08.262Z",
+          created_at: "2023-12-16T18:01:05.35Z",
+          version: 1702749668262,
+          is_deleted: false,
+          catalog_v1_ids: [
+            {
+              catalog_v1_id: "3AFRHRYTGI35UNHOAICQSHSM",
+              location_id: "LFDBM4Y1NPV7R",
+            },
+          ],
+          present_at_all_locations: false,
+          present_at_location_ids: ["LFDBM4Y1NPV7R"],
+          item_variation_data: {
+            item_id: "QLMFEKAVJ6S4VR47PAEGR4VM",
+            name: "Regular",
+            ordinal: 1,
+            pricing_type: "FIXED_PRICING",
+            price_money: {
+              amount: 550,
+              currency: "USD",
+            },
+            location_overrides: [
+              {
+                location_id: "LFDBM4Y1NPV7R",
+                track_inventory: false,
+              },
+              {
+                location_id: "LT0BWZMSV5PAZ",
+                track_inventory: true,
+              },
+            ],
+            track_inventory: true,
+            sellable: true,
+            stockable: true,
+          },
+        },
+      ],
+      product_type: "FOOD_AND_BEV",
+      skip_modifier_screen: false,
+      ecom_uri:
+        "https://767686265435139058.square.site/product/tiramisu-cake/37",
+      ecom_available: true,
+      ecom_visibility: "VISIBLE",
+      categories: [
+        {
+          id: "27GG2MFWHT7ECDNN4MZB4LQ7",
+          ordinal: -2251181338394624,
+        },
+      ],
+      is_archived: false,
+      reporting_category: {
+        id: "27GG2MFWHT7ECDNN4MZB4LQ7",
+        ordinal: -2251181338394624,
+      },
+    },
+  },
+  {
+    type: "ITEM",
+    id: "H3X6XI7BNVVUWEVAK5VEWW6A",
+    updated_at: "2024-10-01T16:19:42.243Z",
+    created_at: "2023-12-16T18:01:05.038Z",
+    version: 1727799582243,
+    is_deleted: false,
+    catalog_v1_ids: [
+      {
+        catalog_v1_id: "LZ6MJDUISLHGEC7CH2BNQZVH",
+        location_id: "LFDBM4Y1NPV7R",
+      },
+    ],
+    present_at_all_locations: false,
+    present_at_location_ids: ["LFDBM4Y1NPV7R"],
+    item_data: {
+      name: "Tiramisu Cup",
+      is_taxable: true,
+      tax_ids: ["B4GOWNZ5FF5W6OSPL7LOAYNP"],
+      variations: [
+        {
+          type: "ITEM_VARIATION",
+          id: "RUTCPILYGQDRN6QSDQJHFU3G",
+          updated_at: "2024-02-01T19:06:54.324Z",
+          created_at: "2023-12-16T18:01:05.038Z",
+          version: 1706814414324,
+          is_deleted: false,
+          catalog_v1_ids: [
+            {
+              catalog_v1_id: "YRIIHS3RUPJUPWEGEOAAL2EX",
+              location_id: "LFDBM4Y1NPV7R",
+            },
+          ],
+          present_at_all_locations: false,
+          present_at_location_ids: ["LFDBM4Y1NPV7R"],
+          item_variation_data: {
+            item_id: "H3X6XI7BNVVUWEVAK5VEWW6A",
+            name: "Regular",
+            ordinal: 1,
+            pricing_type: "FIXED_PRICING",
+            price_money: {
+              amount: 225,
+              currency: "USD",
+            },
+            location_overrides: [
+              {
+                location_id: "LFDBM4Y1NPV7R",
+                track_inventory: false,
+              },
+              {
+                location_id: "LT0BWZMSV5PAZ",
+                track_inventory: true,
+              },
+            ],
+            track_inventory: true,
+            sellable: true,
+            stockable: true,
+          },
+        },
+      ],
+      product_type: "FOOD_AND_BEV",
+      skip_modifier_screen: false,
+      ecom_uri:
+        "https://767686265435139058.square.site/product/tiramisu-cup/36",
+      ecom_available: true,
+      ecom_visibility: "VISIBLE",
+      categories: [
+        {
+          id: "27GG2MFWHT7ECDNN4MZB4LQ7",
+          ordinal: -2251250057871360,
+        },
+      ],
+      is_archived: false,
+      reporting_category: {
+        id: "27GG2MFWHT7ECDNN4MZB4LQ7",
+        ordinal: -2251250057871360,
+      },
+    },
+  },
+  {
+    type: "ITEM",
+    id: "EJUMQ4XLQLIWBA4GG5SLOILB",
+    updated_at: "2025-03-14T12:02:46.718Z",
+    created_at: "2024-05-19T14:40:46.956Z",
+    version: 1741953766718,
+    is_deleted: false,
+    catalog_v1_ids: [
+      {
+        catalog_v1_id: "R4VWFZUP3HPGOQXGRCE6JOCQ",
+        location_id: "LFDBM4Y1NPV7R",
+      },
+    ],
+    present_at_all_locations: false,
+    present_at_location_ids: ["LFDBM4Y1NPV7R"],
+    item_data: {
+      name: "Turkey & Cheese Croissant",
+      is_taxable: true,
+      tax_ids: ["B4GOWNZ5FF5W6OSPL7LOAYNP"],
+      variations: [
+        {
+          type: "ITEM_VARIATION",
+          id: "GA5WOZUB46TKBV7SDITMPIAF",
+          updated_at: "2025-03-14T12:02:46.718Z",
+          created_at: "2024-05-19T14:40:46.956Z",
+          version: 1741953766718,
+          is_deleted: false,
+          catalog_v1_ids: [
+            {
+              catalog_v1_id: "AP4IR6J6ZJI3CLYMWSOQOUBJ",
+              location_id: "LFDBM4Y1NPV7R",
+            },
+          ],
+          present_at_all_locations: false,
+          present_at_location_ids: ["LFDBM4Y1NPV7R"],
+          item_variation_data: {
+            item_id: "EJUMQ4XLQLIWBA4GG5SLOILB",
+            name: "Regular",
+            ordinal: 1,
+            pricing_type: "FIXED_PRICING",
+            price_money: {
+              amount: 650,
+              currency: "USD",
+            },
+            location_overrides: [
+              {
+                location_id: "LFDBM4Y1NPV7R",
+                track_inventory: false,
+              },
+              {
+                location_id: "LT0BWZMSV5PAZ",
+                track_inventory: true,
+              },
+            ],
+            track_inventory: true,
+            sellable: true,
+            stockable: true,
+            item_variation_vendor_info_ids: ["OYW7YWCCGW73WPTAY5OJH5SC"],
+            item_variation_vendor_infos: [
+              {
+                type: "ITEM_VARIATION_VENDOR_INFO",
+                id: "OYW7YWCCGW73WPTAY5OJH5SC",
+                updated_at: "2025-03-14T12:02:46.718Z",
+                created_at: "2025-03-14T12:02:47.001Z",
+                version: 1741953766718,
+                is_deleted: false,
+                present_at_all_locations: false,
+                present_at_location_ids: ["LFDBM4Y1NPV7R"],
+                item_variation_vendor_info_data: {
+                  ordinal: 0,
+                  item_variation_id: "GA5WOZUB46TKBV7SDITMPIAF",
+                },
+              },
+            ],
+          },
+        },
+      ],
+      product_type: "FOOD_AND_BEV",
+      skip_modifier_screen: false,
+      ecom_available: false,
+      ecom_visibility: "UNINDEXED",
+      categories: [
+        {
+          id: "2LQITKCLIBKRUJ5UUE2BVYVI",
+          ordinal: -2251593655255040,
+        },
+      ],
+      is_archived: false,
+      reporting_category: {
+        id: "2LQITKCLIBKRUJ5UUE2BVYVI",
+        ordinal: -2251593655255040,
+      },
+    },
+  },
+  {
+    type: "ITEM",
+    id: "A4CTSKUF3EXDTN747RR4RALE",
+    updated_at: "2024-10-01T16:19:42.016Z",
+    created_at: "2023-12-09T17:18:28.745Z",
+    version: 1727799582016,
+    is_deleted: false,
+    catalog_v1_ids: [
+      {
+        catalog_v1_id: "473QEN2G7QCWOMYX652AD2Q2",
+        location_id: "LFDBM4Y1NPV7R",
+      },
+    ],
+    present_at_all_locations: false,
+    present_at_location_ids: ["LFDBM4Y1NPV7R"],
+    item_data: {
+      name: "Turkey Sandwich",
+      description:
+        "Turkey Breast, Swiss cheese, tomato, lettuce, 1000 island dressing.",
+      is_taxable: true,
+      tax_ids: ["B4GOWNZ5FF5W6OSPL7LOAYNP"],
+      variations: [
+        {
+          type: "ITEM_VARIATION",
+          id: "5CZQFKVSLABZIUUX4YHL3OGP",
+          updated_at: "2023-12-09T17:18:31.885Z",
+          created_at: "2023-12-09T17:18:28.745Z",
+          version: 1702142311885,
+          is_deleted: false,
+          catalog_v1_ids: [
+            {
+              catalog_v1_id: "JOX5OU6K6H7FDXM4IGPC73FG",
+              location_id: "LFDBM4Y1NPV7R",
+            },
+          ],
+          present_at_all_locations: false,
+          present_at_location_ids: ["LFDBM4Y1NPV7R"],
+          item_variation_data: {
+            item_id: "A4CTSKUF3EXDTN747RR4RALE",
+            name: "Regular",
+            ordinal: 1,
+            pricing_type: "FIXED_PRICING",
+            price_money: {
+              amount: 825,
+              currency: "USD",
+            },
+            location_overrides: [
+              {
+                location_id: "LFDBM4Y1NPV7R",
+                track_inventory: false,
+              },
+              {
+                location_id: "LT0BWZMSV5PAZ",
+                track_inventory: true,
+              },
+            ],
+            track_inventory: true,
+            sellable: true,
+            stockable: true,
+          },
+        },
+      ],
+      product_type: "FOOD_AND_BEV",
+      skip_modifier_screen: false,
+      ecom_uri:
+        "https://767686265435139058.square.site/product/turkey-sandwich/30",
+      ecom_available: true,
+      ecom_visibility: "VISIBLE",
+      categories: [
+        {
+          id: "2LQITKCLIBKRUJ5UUE2BVYVI",
+          ordinal: -2251731094208512,
+        },
+      ],
+      description_html:
+        "<p>Turkey Breast, Swiss cheese, tomato, lettuce, 1000 island dressing.</p>",
+      description_plaintext:
+        "Turkey Breast, Swiss cheese, tomato, lettuce, 1000 island dressing.",
+      is_archived: false,
+      reporting_category: {
+        id: "2LQITKCLIBKRUJ5UUE2BVYVI",
+        ordinal: -2251731094208512,
+      },
+    },
+  },
+  {
+    type: "ITEM",
+    id: "7M2EVLRJNNZOXDEDHKJNH7DA",
+    updated_at: "2024-10-01T16:19:25.579Z",
+    created_at: "2024-05-24T15:52:43.292Z",
+    version: 1727799565579,
+    is_deleted: false,
+    catalog_v1_ids: [
+      {
+        catalog_v1_id: "OJ5FPBIY7XYLCOKTSBSFLH76",
+        location_id: "LFDBM4Y1NPV7R",
+      },
+    ],
+    present_at_all_locations: false,
+    present_at_location_ids: ["LFDBM4Y1NPV7R"],
+    item_data: {
+      name: "Velvet Sunrise",
+      is_taxable: true,
+      tax_ids: ["B4GOWNZ5FF5W6OSPL7LOAYNP"],
+      modifier_list_info: [
+        {
+          modifier_list_id: "OHFWTB2AAFNOQEDCBRYIJSFE",
+          min_selected_modifiers: -1,
+          max_selected_modifiers: -1,
+          enabled: true,
+          hidden_from_customer: false,
+          ordinal: 0,
+        },
+      ],
+      variations: [
+        {
+          type: "ITEM_VARIATION",
+          id: "L2U7LPIS5UGZBPVJSHQL5H2A",
+          updated_at: "2024-07-01T14:50:09.317Z",
+          created_at: "2024-05-24T15:52:43.292Z",
+          version: 1719845409317,
+          is_deleted: false,
+          catalog_v1_ids: [
+            {
+              catalog_v1_id: "NIZDISAB7WQCXHBICKOCP4EC",
+              location_id: "LFDBM4Y1NPV7R",
+            },
+          ],
+          present_at_all_locations: false,
+          present_at_location_ids: ["LFDBM4Y1NPV7R"],
+          item_variation_data: {
+            item_id: "7M2EVLRJNNZOXDEDHKJNH7DA",
+            name: "Regular",
+            ordinal: 1,
+            pricing_type: "FIXED_PRICING",
+            price_money: {
+              amount: 925,
+              currency: "USD",
+            },
+            location_overrides: [
+              {
+                location_id: "LFDBM4Y1NPV7R",
+                track_inventory: false,
+              },
+              {
+                location_id: "LT0BWZMSV5PAZ",
+                track_inventory: true,
+              },
+            ],
+            track_inventory: true,
+            sellable: true,
+            stockable: true,
+            channels: ["CH_wgZwHcodjGhLl42K7jg9fxPbw9UAV6zVWHsfYRlQuYC"],
+          },
+        },
+      ],
+      product_type: "FOOD_AND_BEV",
+      skip_modifier_screen: false,
+      ecom_uri: "https://novariacoffee.square.site/product/velvet-sunrise/97",
+      ecom_available: true,
+      ecom_visibility: "VISIBLE",
+      categories: [
+        {
+          id: "NCAM3RK7DWQGW67XV6GNZTHH",
+          ordinal: -2251662374731776,
+        },
+      ],
+      channels: ["CH_wgZwHcodjGhLl42K7jg9fxPbw9UAV6zVWHsfYRlQuYC"],
+      is_archived: false,
+      reporting_category: {
+        id: "NCAM3RK7DWQGW67XV6GNZTHH",
+        ordinal: -2251662374731776,
+      },
+    },
+  },
+  {
+    type: "ITEM",
+    id: "7TZPLIBEC6EPUHAKA4HT5A4K",
+    updated_at: "2024-10-20T13:49:59.637Z",
+    created_at: "2024-06-10T21:07:30.239Z",
+    version: 1729432199637,
+    is_deleted: false,
+    catalog_v1_ids: [
+      {
+        catalog_v1_id: "D5NCCZG2TGULVWKUI23YIKIZ",
+        location_id: "LFDBM4Y1NPV7R",
+      },
+    ],
+    present_at_all_locations: false,
+    present_at_location_ids: ["LFDBM4Y1NPV7R"],
+    item_data: {
+      name: "Walnut Baklava",
+      is_taxable: true,
+      tax_ids: ["B4GOWNZ5FF5W6OSPL7LOAYNP"],
+      variations: [
+        {
+          type: "ITEM_VARIATION",
+          id: "OOM5Y76NZ4PILQGBDKMTU5QI",
+          updated_at: "2024-10-20T13:49:59.637Z",
+          created_at: "2024-06-10T21:07:30.239Z",
+          version: 1729432199637,
+          is_deleted: false,
+          catalog_v1_ids: [
+            {
+              catalog_v1_id: "BSJS2FJ6AMPZ7D7VIUAY6RUQ",
+              location_id: "LFDBM4Y1NPV7R",
+            },
+          ],
+          present_at_all_locations: false,
+          present_at_location_ids: ["LFDBM4Y1NPV7R"],
+          item_variation_data: {
+            item_id: "7TZPLIBEC6EPUHAKA4HT5A4K",
+            name: "Regular",
+            ordinal: 1,
+            pricing_type: "FIXED_PRICING",
+            price_money: {
+              amount: 300,
+              currency: "USD",
+            },
+            location_overrides: [
+              {
+                location_id: "LFDBM4Y1NPV7R",
+                track_inventory: false,
+              },
+              {
+                location_id: "LT0BWZMSV5PAZ",
+                track_inventory: true,
+              },
+            ],
+            track_inventory: true,
+            sellable: true,
+            stockable: true,
+            channels: ["CH_wgZwHcodjGhLl42K7jg9fxPbw9UAV6zVWHsfYRlQuYC"],
+          },
+        },
+      ],
+      product_type: "FOOD_AND_BEV",
+      skip_modifier_screen: false,
+      ecom_uri: "",
+      ecom_available: false,
+      ecom_visibility: "UNINDEXED",
+      categories: [
+        {
+          id: "27GG2MFWHT7ECDNN4MZB4LQ7",
+          ordinal: -2250631582580736,
+        },
+      ],
+      channels: ["CH_wgZwHcodjGhLl42K7jg9fxPbw9UAV6zVWHsfYRlQuYC"],
+      is_archived: false,
+      reporting_category: {
+        id: "27GG2MFWHT7ECDNN4MZB4LQ7",
+        ordinal: -2250631582580736,
+      },
+    },
+  },
+  {
+    type: "ITEM",
+    id: "VRQIADX6SNMZ5AP5NNN53NWC",
+    updated_at: "2024-10-01T16:01:25.903Z",
+    created_at: "2023-11-11T21:30:06.565Z",
+    version: 1727798485903,
+    is_deleted: false,
+    catalog_v1_ids: [
+      {
+        catalog_v1_id: "XCW4S5MYK6M5L4F3ZSHO5G7W",
+        location_id: "LFDBM4Y1NPV7R",
+      },
+    ],
+    present_at_all_locations: false,
+    present_at_location_ids: ["LFDBM4Y1NPV7R"],
+    item_data: {
+      name: "Za’atar Croissant",
+      label_color: "4AB200",
+      is_taxable: true,
+      tax_ids: ["B4GOWNZ5FF5W6OSPL7LOAYNP"],
+      variations: [
+        {
+          type: "ITEM_VARIATION",
+          id: "EV7NMZDTXRPOKVPFUQ6BZDMA",
+          updated_at: "2024-09-22T15:42:07.391Z",
+          created_at: "2023-11-11T21:30:06.565Z",
+          version: 1727019727391,
+          is_deleted: false,
+          catalog_v1_ids: [
+            {
+              catalog_v1_id: "RRPVSA5J5NAJ5SJQBAT6AFFP",
+              location_id: "LFDBM4Y1NPV7R",
+            },
+          ],
+          present_at_all_locations: false,
+          present_at_location_ids: ["LFDBM4Y1NPV7R"],
+          item_variation_data: {
+            item_id: "VRQIADX6SNMZ5AP5NNN53NWC",
+            name: "Regular",
+            ordinal: 1,
+            pricing_type: "FIXED_PRICING",
+            price_money: {
+              amount: 600,
+              currency: "USD",
+            },
+            location_overrides: [
+              {
+                location_id: "LFDBM4Y1NPV7R",
+                track_inventory: true,
+                sold_out: true,
+              },
+              {
+                location_id: "LT0BWZMSV5PAZ",
+                track_inventory: true,
+              },
+            ],
+            track_inventory: true,
+            sellable: true,
+            stockable: true,
+            channels: ["CH_wgZwHcodjGhLl42K7jg9fxPbw9UAV6zVWHsfYRlQuYC"],
+          },
+        },
+      ],
+      product_type: "FOOD_AND_BEV",
+      skip_modifier_screen: false,
+      ecom_uri:
+        "https://novariacoffee.square.site/product/za-atar-croissant/21",
+      ecom_available: true,
+      ecom_visibility: "VISIBLE",
+      categories: [
+        {
+          id: "27GG2MFWHT7ECDNN4MZB4LQ7",
+          ordinal: -2251524935778304,
+        },
+      ],
+      channels: ["CH_wgZwHcodjGhLl42K7jg9fxPbw9UAV6zVWHsfYRlQuYC"],
+      is_archived: false,
+      reporting_category: {
+        id: "27GG2MFWHT7ECDNN4MZB4LQ7",
+        ordinal: -2251524935778304,
+      },
+    },
+  },
+  {
+    type: "ITEM",
+    id: "Z2CWUK7ZBNMB544R6FLCUG5J",
+    updated_at: "2024-10-01T16:19:42.138Z",
+    created_at: "2023-11-11T21:36:41.047Z",
+    version: 1727799582138,
+    is_deleted: false,
+    catalog_v1_ids: [
+      {
+        catalog_v1_id: "HSZVW7BLLPO3Y2LFILPDGVCR",
+        location_id: "LFDBM4Y1NPV7R",
+      },
+    ],
+    present_at_all_locations: false,
+    present_at_location_ids: ["LFDBM4Y1NPV7R"],
+    item_data: {
+      name: "Za’atar Samoon",
+      is_taxable: true,
+      tax_ids: ["B4GOWNZ5FF5W6OSPL7LOAYNP"],
+      variations: [
+        {
+          type: "ITEM_VARIATION",
+          id: "3VEYTNVETPEY5SQQRYUHM43T",
+          updated_at: "2023-11-11T21:36:43.203Z",
+          created_at: "2023-11-11T21:36:41.047Z",
+          version: 1699738603203,
+          is_deleted: false,
+          catalog_v1_ids: [
+            {
+              catalog_v1_id: "TWS54UH46TK4MRTART7UBXFO",
+              location_id: "LFDBM4Y1NPV7R",
+            },
+          ],
+          present_at_all_locations: false,
+          present_at_location_ids: ["LFDBM4Y1NPV7R"],
+          item_variation_data: {
+            item_id: "Z2CWUK7ZBNMB544R6FLCUG5J",
+            name: "Regular",
+            ordinal: 1,
+            pricing_type: "FIXED_PRICING",
+            price_money: {
+              amount: 750,
+              currency: "USD",
+            },
+            location_overrides: [
+              {
+                location_id: "LFDBM4Y1NPV7R",
+                track_inventory: false,
+              },
+              {
+                location_id: "LT0BWZMSV5PAZ",
+                track_inventory: true,
+              },
+            ],
+            track_inventory: true,
+            sellable: true,
+            stockable: true,
+          },
+        },
+      ],
+      product_type: "FOOD_AND_BEV",
+      skip_modifier_screen: false,
+      ecom_available: false,
+      ecom_visibility: "UNINDEXED",
+      categories: [
+        {
+          id: "27GG2MFWHT7ECDNN4MZB4LQ7",
+          ordinal: -2251456216301568,
+        },
+      ],
+      is_archived: false,
+      reporting_category: {
+        id: "27GG2MFWHT7ECDNN4MZB4LQ7",
+        ordinal: -2251456216301568,
+      },
+    },
+  },
+];
+
+export const Catalogcategories: SquareCatalogCategory[] = [
+  {
+    type: 'CATEGORY',
     id: "QDJKYB6DOONI3BOSKSUSNXQZ",
+    updated_at: "2024-06-05T19:33:53.765Z",
+    created_at: "2023-10-16T01:55:16.16Z",
+    version: 1717616033765,
+    is_deleted: false,
+    present_at_all_locations: true,
     category_data: {
       name: "Drinks",
+      location_overrides: [
+        {
+          location_id: "LFDBM4Y1NPV7R",
+          ordinal: 0,
+        },
+      ],
       category_type: "REGULAR_CATEGORY",
+      parent_category: {
+        ordinal: -2251731094208512,
+      },
       is_top_level: true,
-      online_visibility: true
-    }
+      channels: ["CH_wgZwHcodjGhLl42K7jg9fxPbw9UAV6zVWHsfYRlQuYC"],
+      online_visibility: true,
+      ecom_seo_data: {
+        page_title: "",
+        page_description: "",
+        permalink: "",
+      },
+    },
   },
   {
-    type: "CATEGORY", 
-    id: "TIHZ65Z2EHOL7LCJY4S35PTV",
-    category_data: {
-      name: "Coffee",
-      category_type: "REGULAR_CATEGORY",
-      is_top_level: true,
-      online_visibility: true
-    }
-  },
-  {
-    type: "CATEGORY",
+    type: 'CATEGORY',
     id: "27GG2MFWHT7ECDNN4MZB4LQ7",
+    updated_at: "2025-04-02T12:06:14.314Z",
+    created_at: "2023-11-08T14:03:57.9Z",
+    version: 1743595574314,
+    is_deleted: false,
+    catalog_v1_ids: [
+      {
+        catalog_v1_id: "63VHHCTJXT7Z33QMOBYWI4GE",
+        location_id: "LFDBM4Y1NPV7R",
+      },
+    ],
+    present_at_all_locations: true,
     category_data: {
-      name: "Pastry",
+      name: "Pastries",
+      location_overrides: [
+        {
+          location_id: "LFDBM4Y1NPV7R",
+          ordinal: 0,
+        },
+      ],
       category_type: "REGULAR_CATEGORY",
+      parent_category: {
+        ordinal: -2251662374731776,
+      },
       is_top_level: true,
-      online_visibility: true
-    }
+      channels: ["CH_wgZwHcodjGhLl42K7jg9fxPbw9UAV6zVWHsfYRlQuYC"],
+      online_visibility: true,
+      ecom_seo_data: {
+        page_title: "",
+        page_description: "",
+        permalink: "",
+      },
+    },
   },
   {
-    type: "CATEGORY",
+    type: 'CATEGORY',
     id: "2LQITKCLIBKRUJ5UUE2BVYVI",
+    updated_at: "2024-09-06T07:37:18.652Z",
+    created_at: "2023-12-09T17:18:28.745Z",
+    version: 1725608238652,
+    is_deleted: false,
+    catalog_v1_ids: [
+      {
+        catalog_v1_id: "WRHV644QRJPQJBSLUAK3ECB4",
+        location_id: "LFDBM4Y1NPV7R",
+      },
+    ],
+    present_at_all_locations: true,
     category_data: {
       name: "Food",
+      location_overrides: [
+        {
+          location_id: "LFDBM4Y1NPV7R",
+          ordinal: 0,
+        },
+      ],
       category_type: "REGULAR_CATEGORY",
-      is_top_level: true,
-      online_visibility: true
-    }
-  },
-  {
-    type: "CATEGORY",
-    id: "KOJ4CQOSXH34GYDHRHZSDZ5Y",
-    category_data: {
-      name: "Amal's Bakery",
-      abbreviation: "Am",
-      category_type: "REGULAR_CATEGORY",
-      is_top_level: false,
       parent_category: {
-        id: "27GG2MFWHT7ECDNN4MZB4LQ7"
+        ordinal: -2251593655255040,
       },
-      online_visibility: true
-    }
-  },
-  {
-    type: "CATEGORY",
-    id: "Q7V4HT7LF232U52QPQRL3IGZ",
-    category_data: {
-      name: "Baked True North",
-      abbreviation: "Ba",
-      category_type: "REGULAR_CATEGORY",
       is_top_level: true,
-      online_visibility: true
-    }
+      online_visibility: true,
+    },
   },
   {
-    type: "CATEGORY",
-    id: "NINCQZXLFZCBIJ73ZXX2NJLY",
-    category_data: {
-      name: "Pita land",
-      abbreviation: "Pi",
-      category_type: "REGULAR_CATEGORY",
-      is_top_level: true,
-      online_visibility: true
-    }
-  },
-  {
-    type: "CATEGORY",
+    type: 'CATEGORY',
     id: "NCAM3RK7DWQGW67XV6GNZTHH",
+    updated_at: "2024-06-05T19:29:38.306Z",
+    created_at: "2024-05-24T15:52:42.999Z",
+    version: 1717615778306,
+    is_deleted: false,
+    catalog_v1_ids: [
+      {
+        catalog_v1_id: "9F0F34A7-35A5-4502-8A35-5E251978352C",
+        location_id: "LFDBM4Y1NPV7R",
+      },
+    ],
+    present_at_all_locations: true,
     category_data: {
       name: "Smoothie",
       abbreviation: "Sm",
+      location_overrides: [
+        {
+          location_id: "LFDBM4Y1NPV7R",
+          ordinal: 0,
+        },
+      ],
       category_type: "REGULAR_CATEGORY",
+      parent_category: {
+        ordinal: -2251181338394624,
+      },
       is_top_level: true,
-      online_visibility: true
-    }
+      channels: ["CH_wgZwHcodjGhLl42K7jg9fxPbw9UAV6zVWHsfYRlQuYC"],
+      online_visibility: true,
+      ecom_seo_data: {
+        page_title: "",
+        page_description: "",
+        permalink: "",
+      },
+    },
   },
-  {
-    type: "CATEGORY",
-    id: "A2NKDXOXIJDA5VTKPG7VHWSA",
-    category_data: {
-      name: "Specialty Drinks",
-      abbreviation: "Sp",
-      category_type: "REGULAR_CATEGORY",
-      is_top_level: true,
-      online_visibility: true
-    }
-  },
-  {
-    type: "CATEGORY",
-    id: "2MFPQYPHP4THFRUN2XKCKPDH",
-    category_data: {
-      name: "Grab and go",
-      abbreviation: "Gr",
-      category_type: "REGULAR_CATEGORY",
-      is_top_level: true,
-      online_visibility: true
-    }
-  }
 ];

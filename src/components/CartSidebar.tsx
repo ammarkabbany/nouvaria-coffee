@@ -25,7 +25,6 @@ const CartSidebar = ({
     updateQuantity,
     clearCart,
     getSubtotal,
-    getTax,
     getTotal
   } = useCartStore();
 
@@ -59,8 +58,21 @@ const CartSidebar = ({
               <AnimatePresence>
                 {items.map((item) => (
                   <CartItem
-                    key={item.id}
-                    item={item}
+                    key={item.uid}
+                    item={{
+                      ...item,
+                      base_price_money: {
+                        ...item.base_price_money,
+                        amount: Number(item.base_price_money.amount * item.quantity),
+                      },
+                      quantity: item.quantity,
+                      catalog_object_id: item.catalog_object_id,
+                      item_type: item.item_type,
+                      note: item.note,
+                      variation_name: item.variation_name,
+                      name: item.name,
+                      uid: item.uid,
+                    }}
                     onUpdateQuantity={updateQuantity}
                     onRemoveItem={removeItem}
                   />
@@ -75,7 +87,6 @@ const CartSidebar = ({
         {items.length > 0 && (
           <CartSummary
             subtotal={getSubtotal()}
-            tax={getTax()}
             total={getTotal()}
             onCheckout={onCheckout}
           />

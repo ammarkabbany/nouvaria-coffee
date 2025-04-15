@@ -6,6 +6,7 @@ import { Input } from "@/components/ui/input";
 import { Facebook, Instagram, Twitter } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
+import { env } from "@/env";
 
 interface FooterProps {
   companyName?: string;
@@ -70,18 +71,26 @@ const Footer = ({
               </li>
               <li>
                 <Link
-                  href="/contact"
+                  href={env.NEXT_PUBLIC_MENU_LINK}
                   className="text-muted-foreground hover:text-primary transition-colors"
                 >
-                  Contact
+                  Menu
                 </Link>
               </li>
               <li>
                 <Link
-                  href="/faq"
+                  href="/services"
                   className="text-muted-foreground hover:text-primary transition-colors"
                 >
-                  FAQ
+                  Services
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/contact"
+                  className="text-muted-foreground hover:text-primary transition-colors"
+                >
+                  Contact
                 </Link>
               </li>
             </ul>

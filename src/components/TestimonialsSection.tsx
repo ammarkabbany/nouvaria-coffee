@@ -1,33 +1,52 @@
-import { Star } from 'lucide-react'
-import React from 'react'
+"use client";
+import { Star } from 'lucide-react';
+import React from 'react';
+import { motion } from "framer-motion";
+import { staggerContainer, scaleIn } from "@/lib/animations";
 
 const TestimonialsSection = () => {
   return (
     <section className="py-16 bg-coffee-100 syrian-pattern">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl font-bold mb-12 text-coffee-800">What Our Customers Say</h2>
-          <div className="grid md:grid-cols-3 gap-8">
-            {testimonials.map((testimonial, index) => (
-              <div
-                key={index}
-                className="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-all duration-300 ease-in-out hover:-translate-y-1"
-                style={{ animationDelay: `${index * 0.2}s` }}
-              >
-                <div className="flex justify-center mb-4">
-                  {[...Array(5)].map((_, i) => (
-                    <Star key={i} className="h-5 w-5 fill-spice-500 text-spice-500" />
-                  ))}
-                </div>
-                <p className="italic mb-4 text-coffee-700">"{testimonial.quote}"</p>
-                <p className="font-semibold text-coffee-800">{testimonial.name}</p>
-                <p className="text-coffee-500 text-sm">{testimonial.location}</p>
+      <div className="container mx-auto px-4 text-center">
+        <motion.h2
+          className="text-3xl font-bold mb-12 text-coffee-800"
+          variants={scaleIn}
+          initial="initial"
+          whileInView="animate"
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+        >
+          What Our Customers Say
+        </motion.h2>
+        <motion.div
+          className="grid md:grid-cols-3 gap-8"
+          variants={staggerContainer}
+          initial="initial"
+          whileInView="animate"
+          viewport={{ once: true }}
+        >
+          {testimonials.map((testimonial, index) => (
+            <motion.div
+              key={index}
+              variants={scaleIn}
+              transition={{ duration: 0.4 }}
+              className="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-all duration-300 ease-in-out hover:-translate-y-1"
+            >
+              <div className="flex justify-center mb-4">
+                {[...Array(5)].map((_, i) => (
+                  <Star key={i} className="h-5 w-5 fill-spice-500 text-spice-500" />
+                ))}
               </div>
-            ))}
-          </div>
-        </div>
-      </section>
-  )
-}
+              <p className="italic mb-4 text-coffee-700">"{testimonial.quote}"</p>
+              <p className="font-semibold text-coffee-800">{testimonial.name}</p>
+              <p className="text-coffee-500 text-sm">{testimonial.location}</p>
+            </motion.div>
+          ))}
+        </motion.div>
+      </div>
+    </section>
+  );
+};
 
 const testimonials = [
   {
@@ -48,6 +67,6 @@ const testimonials = [
     name: "Emma Rodriguez",
     location: "Pittsburgh, PA",
   },
-]
+];
 
-export default TestimonialsSection
+export default TestimonialsSection;

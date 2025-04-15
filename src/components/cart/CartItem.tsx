@@ -1,15 +1,10 @@
 import { motion } from "framer-motion";
 import { Minus, Plus, Trash2 } from "lucide-react";
 import { Button } from "../ui/button";
+import { CartItem as CartItemType } from "@/store/cart-store";
 
 interface CartItemProps {
-  item: {
-    id: string;
-    name: string;
-    price: number;
-    variation_name: string;
-    quantity: number;
-  };
+  item: CartItemType;
   onUpdateQuantity: (id: string, quantity: number) => void;
   onRemoveItem: (id: string) => void;
 }
@@ -35,7 +30,7 @@ export const CartItem = ({ item, onUpdateQuantity, onRemoveItem }: CartItemProps
       <div className="flex-1">
         <div className="flex justify-between">
           <h3 className="font-medium">{item.name}</h3>
-          <p className="font-medium">${(item.price * item.quantity).toFixed(2)}</p>
+          <p className="font-medium">${(item.base_price_money.amount).toFixed(2)}</p>
         </div>
         <p className="text-sm text-muted-foreground mb-2">{item.variation_name}</p>
 
@@ -45,7 +40,7 @@ export const CartItem = ({ item, onUpdateQuantity, onRemoveItem }: CartItemProps
               variant="ghost"
               size="icon"
               className="h-8 w-8 rounded-none bg-muted/50 hover:bg-muted"
-              onClick={() => item.quantity > 1 && onUpdateQuantity(item.id, item.quantity - 1)}
+              onClick={() => item.quantity > 1 && onUpdateQuantity(item.uid, item.quantity - 1)}
               disabled={item.quantity <= 1}
             >
               <Minus className="h-3 w-3" />
@@ -55,7 +50,7 @@ export const CartItem = ({ item, onUpdateQuantity, onRemoveItem }: CartItemProps
               variant="ghost"
               size="icon"
               className="h-8 w-8 rounded-none bg-muted/50 hover:bg-muted"
-              onClick={() => onUpdateQuantity(item.id, item.quantity + 1)}
+              onClick={() => onUpdateQuantity(item.uid, item.quantity + 1)}
             >
               <Plus className="h-3 w-3" />
             </Button>
@@ -65,7 +60,7 @@ export const CartItem = ({ item, onUpdateQuantity, onRemoveItem }: CartItemProps
             variant="ghost"
             size="icon"
             className="h-8 w-8 text-muted-foreground hover:text-destructive hover:bg-destructive/10 transition-colors"
-            onClick={() => onRemoveItem(item.id)}
+            onClick={() => onRemoveItem(item.uid)}
           >
             <Trash2 className="h-4 w-4" />
           </Button>

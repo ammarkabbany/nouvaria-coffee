@@ -33,14 +33,6 @@ const Menu = ({ data, categories }: MenuProps) => {
               );
               
             })}
-            <a
-                  href={`#Other`}
-                  key={"Other"}
-                  className="px-4 py-2 bg-primary text-white rounded-full hover:bg-primary-hover transition-colors"
-                >
-                  {"Other".charAt(0).toUpperCase() +
-                    "Other".slice(1)}
-                </a>
           </nav>
         </div>
 
@@ -75,22 +67,6 @@ const Menu = ({ data, categories }: MenuProps) => {
             </section>
           );
         })}
-
-        {/* Other section */}
-        <section id={"Other"} className="mb-16">
-          <div className="flex items-center mb-6">
-            <h2 className="text-3xl font-bold text-coffee-800">Other</h2>
-            <div className="h-[2px] bg-coffee-800 flex-grow ml-4"></div>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {data && data
-              .filter((i) => !i.item_data?.categories || i.item_data?.categories.length === 0)
-              .map((object, index) => (
-                <RedefinedMenuCard catalogObject={object} key={index} />
-              ))}
-          </div>
-        </section>
       </div>
     </div>
   );

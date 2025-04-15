@@ -13,6 +13,7 @@ export const env = createEnv({
     ACCESS_TOKEN: z.string(),
     SQUARE_VERSION: z.string(),
     SQUARE_ENVIRONMENT: z.enum(["PRODUCTION", "SANDBOX"]).optional(), // optional for local dev
+    LOCATION_ID: z.string()
   },
   /*
    * Environment variables available on the client (and server).
@@ -20,6 +21,7 @@ export const env = createEnv({
    * 💡 You'll get type errors if these are not prefixed with NEXT_PUBLIC_.
    */
   client: {
+    NEXT_PUBLIC_MENU_LINK: z.string().url(),
   },
   /*
    * Due to how Next.js bundles environment variables on Edge and Client,
@@ -33,5 +35,7 @@ export const env = createEnv({
     ACCESS_TOKEN: process.env.ACCESS_TOKEN,
     SQUARE_VERSION: process.env.SQUARE_VERSION,
     SQUARE_ENVIRONMENT: process.env.SQUARE_ENVIRONMENT,
+    LOCATION_ID: process.env.LOCATION_ID,
+    NEXT_PUBLIC_MENU_LINK: process.env.NEXT_PUBLIC_MENU_LINK,
   },
 });

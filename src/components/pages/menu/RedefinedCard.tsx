@@ -32,11 +32,17 @@ const RedefinedMenuCard = ({ catalogObject: item }: CardProps) => {
       return;
     }
     addItem({
-      id: `${item.id}_${selectedVariation.id}`,
+      uid: `${item.id}_${selectedVariation.id}`,
       name: item.item_data.name,
-      price: selectedVariation.item_variation_data.price_money.amount / 100,
+      base_price_money: {
+        amount: selectedVariation.item_variation_data.price_money.amount / 100,
+        currency: selectedVariation.item_variation_data.price_money?.currency
+      },
       variation_name: selectedVariation.item_variation_data.name,
-      quantity: 1
+      quantity: 1,
+      catalog_object_id: selectedVariation.id,
+      item_type: 'ITEM',
+      note: ""
     })
     setIsPending(true)
     setTimeout(() => {
