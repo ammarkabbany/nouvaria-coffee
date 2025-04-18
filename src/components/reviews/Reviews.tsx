@@ -4,6 +4,7 @@ import { Star, Quote } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { ReviewsData } from "./ReviewsData";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "../ui/carousel";
+import Image from "next/image";
 
 export default function Reviews() {
 
@@ -35,9 +36,11 @@ export default function Reviews() {
                       <Quote className="absolute text-coffee-200 h-24 w-24 -top-4 -left-4 opacity-20" />
 
                       <div className="flex items-center mb-4">
-                        <div className="w-12 h-12 rounded-full overflow-hidden mr-4 border-2 border-coffee-800">
+                        <div className="w-12 h-12 rounded-full overflow-hidden mr-4 border-2 border-coffee-800 ">
                           {review.avatar ? (
-                            <img
+                            <Image
+                              width={48}
+                              height={48}
                               src={review.avatar}
                               alt={`${review.name}'s avatar`}
                               className="w-full h-full object-cover"

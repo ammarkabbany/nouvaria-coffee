@@ -3,7 +3,7 @@
 import "./src/env.js";
 const config = {
   images: {
-    domains: ["images.unsplash.com", 'novariacoffee.square.site'],
+    domains: ["images.unsplash.com", 'novariacoffee.square.site', 'lh3.googleusercontent.com'],
   }
 };
 
