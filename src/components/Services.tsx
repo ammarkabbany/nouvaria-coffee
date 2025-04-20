@@ -8,7 +8,7 @@ import { Card, CardContent } from "./ui/card";
 
 const Services = () => {
   return (
-    <section className="py-16 bg-coffee-100 syrian-pattern">
+    <section className="py-16 bg-coffee-50 syrian-pattern">
       <div className="container mx-auto px-4">
         <motion.div
           className="text-center mb-12"
@@ -33,7 +33,7 @@ const Services = () => {
           viewport={{ once: true }}
         >
           <motion.div variants={slideUp} transition={{ duration: 0.4 }}>
-            <Card className="border-none h-[250px] shadow-md hover:shadow-xl transition-all duration-300 ease-in-out hover:-translate-y-1 bg-white/90">
+            <Card className="border-none h-[300px] xl:h-[250px] shadow-md hover:shadow-xl transition-all duration-300 ease-in-out hover:-translate-y-1 bg-white/90">
               <CardContent className="p-6 text-center">
                 <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-coffee-600 flex items-center justify-center">
                   <Coffee className="h-8 w-8 text-white" />
@@ -47,7 +47,7 @@ const Services = () => {
           </motion.div>
 
           <motion.div variants={slideUp} transition={{ duration: 0.4 }}>
-            <Card className="border-none h-[250px] shadow-md hover:shadow-xl transition-all duration-300 ease-in-out hover:-translate-y-1 bg-white/90">
+            <Card className="border-none h-[300px] xl:h-[250px] shadow-md hover:shadow-xl transition-all duration-300 ease-in-out hover:-translate-y-1 bg-white/90">
               <CardContent className="p-6 text-center">
                 <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-coffee-600 flex items-center justify-center">
                   <Utensils className="h-8 w-8 text-white" />
@@ -62,7 +62,7 @@ const Services = () => {
           </motion.div>
 
           <motion.div variants={slideUp} transition={{ duration: 0.4 }}>
-            <Card className="border-none h-[250px] shadow-md hover:shadow-xl transition-all duration-300 ease-in-out hover:-translate-y-1 bg-white/90">
+            <Card className="border-none h-[300px] xl:h-[250px] shadow-md hover:shadow-xl transition-all duration-300 ease-in-out hover:-translate-y-1 bg-white/90">
               <CardContent className="p-6 text-center">
                 <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-coffee-600 flex items-center justify-center">
                   <Calendar className="h-8 w-8 text-white" />
@@ -76,7 +76,7 @@ const Services = () => {
           </motion.div>
 
           <motion.div variants={slideUp} transition={{ duration: 0.4 }}>
-            <Card className="border-none h-[250px] shadow-md hover:shadow-xl transition-all duration-300 ease-in-out hover:-translate-y-1 bg-white/90">
+            <Card className="border-none h-[300px] xl:h-[250px] shadow-md hover:shadow-xl transition-all duration-300 ease-in-out hover:-translate-y-1 bg-white/90">
               <CardContent className="p-6 text-center">
                 <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-coffee-600 flex items-center justify-center">
                   <Store className="h-8 w-8 text-white" />

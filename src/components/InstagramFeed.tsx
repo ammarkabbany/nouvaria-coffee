@@ -127,7 +127,7 @@ const InstagramFeed = () => {
             asChild
             className="bg-gradient-to-r from-coffee-600 to-spice-600 hover:from-coffee-700 hover:to-spice-700 text-white shadow-lg hover:shadow-xl transition-all duration-300"
           >
-            <Link href="https://instagram.com" target="_blank" rel="noopener noreferrer">
+            <Link href="https://instagram.com/novaria_coffee" target="_blank" rel="noopener noreferrer">
               <Instagram className="h-5 w-5 mr-2" />
               @novaria_coffee
             </Link>
