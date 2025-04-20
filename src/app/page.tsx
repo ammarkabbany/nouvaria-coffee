@@ -8,7 +8,7 @@ import Services from "@/components/Services";
 import InstagramFeed from "@/components/InstagramFeed";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
-import TestimonialsSection from "@/components/TestimonialsSection";
+import Reviews from "@/components/reviews/Reviews";
 
 export default function Home() {
 
@@ -38,8 +38,8 @@ export default function Home() {
       {/* About */}
       <About />
 
-      {/* Testimonials */}
-      <TestimonialsSection />
+      {/* Reviews*/}
+      < Reviews />
 
       {/* InstagramFeed */}
       <InstagramFeed />
