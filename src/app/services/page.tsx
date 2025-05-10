@@ -1,15 +1,29 @@
+"use client"
 import Image from "next/image"
-import Link from "next/link"
-import { Utensils, Calendar, Store, ArrowRight, Check } from 'lucide-react'
+import { Utensils, Calendar, Store, Check } from 'lucide-react'
 
-import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
-import ServiceInquiryForm from "@/components/forms/service-inquiry-form"
 import Header from "@/components/layout/Header"
 import Footer from "@/components/layout/Footer"
+import * as React from 'react';
+import { useRouter, useSearchParams } from "next/navigation"
 
 export default function ServicesPage() {
+  const params = useSearchParams();
+  const tabParam = params.get("tab");
+  const router = useRouter();
+  const defaultTab = tabParam || "catering"; // Default to "catering" if no tab is specified
+  const [activeTab, setActiveTab] = React.useState(defaultTab)
+  const handleTabChange = (value: string) => {
+    setActiveTab(value)
+    router.push(`/services?tab=${value}`, {scroll: false}) // Update the URL with the selected tab
+  }
+
+  React.useEffect(() => {
+    setActiveTab(defaultTab)
+  }, [defaultTab])
+
   return (
     <div className="min-h-screen">
       {/* Header */}
@@ -18,10 +32,13 @@ export default function ServicesPage() {
       <div className="relative h-[40vh] md:h-[50vh] w-full overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-black/70 to-black/40 z-10" />
         <Image
-          src="/placeholder.svg?height=800&width=1600"
+          src="/services-hero-image.jpg"
           alt="Novaria Coffee Services"
           fill
           className="object-cover"
+          style={{
+            objectPosition: "bottom",
+          }}
           priority
         />
         <div className="relative z-20 container mx-auto px-4 h-full flex flex-col justify-center">
@@ -58,15 +75,15 @@ export default function ServicesPage() {
                   baklava. Delight your guests with the rich flavors that bring the warmth of Syrian culture to any
                   gathering.
                 </p>
-                <Button
+                {/* <Button
                   asChild
                   variant="outline"
                   className="border-coffee-600 text-coffee-600 hover:bg-coffee-50 hover:text-coffee-700"
                 >
-                  <Link href="#inquiry-form" className="flex items-center">
+                  <Link href="?tab=catering#details" className="flex items-center">
                     Learn More <ArrowRight className="ml-2 h-4 w-4" />
                   </Link>
-                </Button>
+                </Button> */}
               </CardContent>
             </Card>
 
@@ -80,15 +97,15 @@ export default function ServicesPage() {
                   Looking for a unique venue for your next event? We can host your gathering right here at our shop! With
                   a welcoming atmosphere and friendly service, we're ready to make your event memorable.
                 </p>
-                <Button
+                {/* <Button
                   asChild
                   variant="outline"
                   className="border-coffee-600 text-coffee-600 hover:bg-coffee-50 hover:text-coffee-700"
                 >
-                  <Link href="#inquiry-form" className="flex items-center">
+                  <Link href="?tab=event-hosting#details" className="flex items-center">
                     Learn More <ArrowRight className="ml-2 h-4 w-4" />
                   </Link>
-                </Button>
+                </Button> */}
               </CardContent>
             </Card>
 
@@ -102,15 +119,15 @@ export default function ServicesPage() {
                   We provide high-quality coffee beans sourced from the finest farms. Whether you're a small café or
                   looking to expand your offerings, we have the perfect blends to meet your needs.
                 </p>
-                <Button
+                {/* <Button
                   asChild
                   variant="outline"
                   className="border-coffee-600 text-coffee-600 hover:bg-coffee-50 hover:text-coffee-700"
                 >
-                  <Link href="#inquiry-form" className="flex items-center">
+                  <Link href="?tab=wholesale#details" className="flex items-center">
                     Learn More <ArrowRight className="ml-2 h-4 w-4" />
                   </Link>
-                </Button>
+                </Button> */}
               </CardContent>
             </Card>
           </div>
@@ -118,9 +135,9 @@ export default function ServicesPage() {
       </section>
 
       {/* Detailed Services */}
-      <section className="py-16 bg-white">
+      <section id="details" className="py-16 bg-white">
         <div className="container mx-auto px-4">
-          <Tabs defaultValue="catering" className="w-full">
+          <Tabs className="w-full" defaultValue={activeTab} onValueChange={handleTabChange}>
             <div className="flex justify-center mb-8">
               <TabsList className="bg-coffee-50 p-1 shadow-md">
                 <TabsTrigger
@@ -212,20 +229,21 @@ export default function ServicesPage() {
                     </div>
                   </div>
 
-                  <Button
+                  {/* <Button
                     asChild
                     className="bg-coffee-600 hover:bg-coffee-700 text-white shadow-md hover:shadow-lg transition-all duration-300"
                   >
                     <Link href="#inquiry-form">Request Catering Quote</Link>
-                  </Button>
+                  </Button> */}
                 </div>
 
-                <div className="relative h-[400px] rounded-lg overflow-hidden shadow-xl">
+                <div className="relative h-[600px] rounded-lg overflow-hidden shadow-xl">
                   <Image
-                    src="/placeholder.svg?height=800&width=600"
+                    src="/services-hero-image.jpg"
                     alt="Novaria Coffee Catering Service"
                     fill
-                    className="object-cover"
+                    priority
+                    className="object-cover brightness-90"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-coffee-900/50 to-transparent"></div>
                 </div>
@@ -295,7 +313,7 @@ export default function ServicesPage() {
                     </div>
                   </div>
 
-                  <div className="bg-coffee-50 p-4 rounded-lg mb-6">
+                  {/* <div className="bg-coffee-50 p-4 rounded-lg mb-6">
                     <h4 className="font-semibold text-coffee-800 mb-2">Venue Capacity</h4>
                     <ul className="space-y-1 text-coffee-700">
                       <li className="flex justify-between">
@@ -311,22 +329,23 @@ export default function ServicesPage() {
                         <span>Available</span>
                       </li>
                     </ul>
-                  </div>
+                  </div> */}
 
-                  <Button
+                  {/* <Button
                     asChild
                     className="bg-coffee-600 hover:bg-coffee-700 text-white shadow-md hover:shadow-lg transition-all duration-300"
                   >
                     <Link href="#inquiry-form">Check Availability</Link>
-                  </Button>
+                  </Button> */}
                 </div>
 
-                <div className="order-1 md:order-2 relative h-[400px] rounded-lg overflow-hidden shadow-xl">
+                <div className="order-1 md:order-2 relative h-[600px] rounded-lg overflow-hidden shadow-xl">
                   <Image
-                    src="/placeholder.svg?height=800&width=600"
+                    src="/test.jpg"
                     alt="Novaria Coffee Shop Interior for Events"
                     fill
-                    className="object-cover"
+                    priority
+                    className="object-cover brightness-90"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-coffee-900/50 to-transparent"></div>
                 </div>
@@ -337,7 +356,7 @@ export default function ServicesPage() {
             <TabsContent value="wholesale" className="animate-fadeIn">
               <div className="grid md:grid-cols-2 gap-12 items-center max-w-5xl mx-auto">
                 <div>
-                  <h2 className="text-3xl font-bold text-coffee-800 mb-4">Wholesale Partnerships</h2>
+                  <h2 className="text-3xl font-bold text-coffee-800 mb-4">Wholesale</h2>
                   <p className="text-coffee-600 mb-6">
                     Elevate your coffee offerings with our premium Syrian coffee blends and specialty products. We
                     partner with cafés, restaurants, specialty food stores, and offices to provide high-quality coffee
@@ -396,28 +415,29 @@ export default function ServicesPage() {
                     </div>
                   </div>
 
-                  <h3 className="text-xl font-semibold text-coffee-700 mb-3">Wholesale Benefits</h3>
+                  {/* <h3 className="text-xl font-semibold text-coffee-700 mb-3">Wholesale Benefits</h3>
                   <ul className="list-disc list-inside text-coffee-600 mb-6 space-y-1">
                     <li>Competitive wholesale pricing</li>
                     <li>Flexible ordering quantities</li>
                     <li>Staff training on Syrian coffee preparation</li>
                     <li>Marketing support and materials</li>
                     <li>Consistent, reliable delivery</li>
-                  </ul>
+                  </ul> */}
 
-                  <Button
+                  {/* <Button
                     asChild
                     className="bg-coffee-600 hover:bg-coffee-700 text-white shadow-md hover:shadow-lg transition-all duration-300"
                   >
                     <Link href="#inquiry-form">Become a Wholesale Partner</Link>
-                  </Button>
+                  </Button> */}
                 </div>
 
-                <div className="relative h-[400px] rounded-lg overflow-hidden shadow-xl">
+                <div className="relative h-[600px] rounded-lg overflow-hidden shadow-xl">
                   <Image
-                    src="/placeholder.svg?height=800&width=600"
+                    src="/temp-wholesale-img.jpg"
                     alt="Novaria Coffee Wholesale Products"
                     fill
+                    priority
                     className="object-cover"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-coffee-900/50 to-transparent"></div>
@@ -429,7 +449,7 @@ export default function ServicesPage() {
       </section>
 
       {/* Testimonials */}
-      <section className="py-16 bg-coffee-100 syrian-pattern">
+      {/* <section className="py-16 bg-coffee-100 syrian-pattern">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl font-bold mb-12 text-coffee-800">What Our Partners Say</h2>
           <div className="grid md:grid-cols-3 gap-8">
@@ -455,10 +475,10 @@ export default function ServicesPage() {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Inquiry Form */}
-      <section id="inquiry-form" className="py-16 bg-white">
+      {/* <section id="inquiry-form" className="py-16 bg-white">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto">
             <div className="text-center mb-10">
@@ -472,7 +492,7 @@ export default function ServicesPage() {
             <ServiceInquiryForm />
           </div>
         </div>
-      </section>
+      </section> */}
       <Footer />
     </div>
   )

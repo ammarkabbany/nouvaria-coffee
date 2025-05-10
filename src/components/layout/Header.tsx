@@ -21,7 +21,7 @@ interface HeaderProps {
   // const {getTotalItems} = useCartStore()
 
   const navItems = [
-    { label: "Shop", href: "/shop" },
+    // { label: "Shop", href: "/shop" },
     { label: "Menu", href: env.NEXT_PUBLIC_MENU_LINK },
     { label: "Services", href: "/services" },
     { label: "Contact", href: "/contact" },

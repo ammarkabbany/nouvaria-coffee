@@ -8,47 +8,49 @@ import Link from "next/link";
 import { Button } from "./ui/button";
 import { staggerContainer, scaleIn, slideUp } from "@/lib/animations";
 
+const InstaUrl = "https://instagram.com/novaria_coffee"
+
 const InstagramFeed = () => {
   const instagramPosts = [
     {
       id: 1,
-      image: "/i-image-1.jpeg",
-      likes: 124,
-      comments: 42,
-      caption: "Start your morning right ☕",
-      url: ""
+      image: "/i-image-1.jpg",
+      likes: 28,
+      comments: 7,
+      caption: "For this special occasion, we have special offers for you.",
+      url: `${InstaUrl}/p/DJcajbmOfXj/`
     },
     {
       id: 2,
       image: "/i-image-2.jpg",
-      likes: 98,
-      comments: 18,
-      caption: "Fresh baklava just out of the oven 🍯",
-      url: ""
+      likes: 45,
+      comments: 6,
+      caption: "I think an Iced Americano would fix your problems!! ☕️",
+      url: `${InstaUrl}/p/DJCiXnquQBL/`
     },
     {
       id: 3,
-      image: "/i-image-3.jpg",
-      likes: 156,
-      comments: 32,
-      caption: "Syrian coffee brewing traditions ✨",
-      url: ""
+      image: "/i-image-3.heic",
+      likes: 44,
+      comments: 0,
+      caption: "Come say hello! 🎊",
+      url: `${InstaUrl}/p/DIo24yCue1J/`
     },
     {
       id: 4,
-      image: "/coffee-with-nouvaria-card.jpg",
-      likes: 203,
-      comments: 16,
-      caption: "Weekend vibes at Nouvaria ❤️",
-      url: ""
+      image: "/i-image-4.jpg",
+      likes: 45,
+      comments: 0,
+      caption: "Thanks to all of you for your constant support! 😃☕️",
+      url: `${InstaUrl}/p/DH_KG2RO6GD/`
     },
     {
       id: 5,
-      image: "/i-image-4.jpg",
-      likes: 151,
-      comments: 4,
-      caption: "Tasty Coffee ☕",
-      url: ""
+      image: "/i-image-5.jpg",
+      likes: 155,
+      comments: 88,
+      caption: "",
+      url: `${InstaUrl}/p/DHWMIwsRU52`
     },
   ];
 
@@ -127,7 +129,7 @@ const InstagramFeed = () => {
             asChild
             className="bg-gradient-to-r from-coffee-600 to-spice-600 hover:from-coffee-700 hover:to-spice-700 text-white shadow-lg hover:shadow-xl transition-all duration-300"
           >
-            <Link href="https://instagram.com/novaria_coffee" target="_blank" rel="noopener noreferrer">
+            <Link href={InstaUrl} target="_blank" rel="noopener noreferrer">
               <Instagram className="h-5 w-5 mr-2" />
               @novaria_coffee
             </Link>

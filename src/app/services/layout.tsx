@@ -1,5 +1,6 @@
 import type React from "react"
 import type { Metadata } from "next"
+import { Suspense } from "react"
 
 export const metadata: Metadata = {
   title: "Services | Novaria Coffee",
@@ -12,6 +13,6 @@ export default function ServicesLayout({
 }: Readonly<{
   children: React.ReactNode
 }>) {
-  return <>{children}</>
+  return <Suspense>{children}</Suspense>
 }
 

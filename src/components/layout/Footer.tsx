@@ -14,7 +14,7 @@ interface FooterProps {
 }
 
 const Footer = ({
-  companyName = "NOVARIA",
+  companyName = "Novaria Coffee",
   companyDescription = "Fresh Coffee, Exceptional Hospitality.",
 }: FooterProps) => {
   return (
@@ -63,14 +63,6 @@ const Footer = ({
             <ul className="space-y-2">
               <li>
                 <Link
-                  href="/shop"
-                  className="text-muted-foreground hover:text-primary transition-colors"
-                >
-                  Shop
-                </Link>
-              </li>
-              <li>
-                <Link
                   href={env.NEXT_PUBLIC_MENU_LINK}
                   className="text-muted-foreground hover:text-primary transition-colors"
                 >
@@ -102,7 +94,7 @@ const Footer = ({
             <ul className="space-y-2">
               <li>
                 <Link
-                  href="/shipping"
+                  href="/services?tab=catering#details"
                   className="text-muted-foreground hover:text-primary transition-colors"
                 >
                   Catering
@@ -110,7 +102,7 @@ const Footer = ({
               </li>
               <li>
                 <Link
-                  href="/privacy"
+                  href="/services?tab=event-hosting#details"
                   className="text-muted-foreground hover:text-primary transition-colors"
                 >
                   Event Hosting
@@ -118,7 +110,7 @@ const Footer = ({
               </li>
               <li>
                 <Link
-                  href="/terms"
+                  href="/services?tab=wholesale#details"
                   className="text-muted-foreground hover:text-primary transition-colors"
                 >
                   Wholesale
