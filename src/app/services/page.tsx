@@ -138,7 +138,7 @@ export default function ServicesPage() {
       <section id="details" className="py-16 bg-white">
         <div className="container mx-auto px-4">
           <Tabs className="w-full" defaultValue={activeTab} onValueChange={handleTabChange}>
-            <div className="flex justify-center mb-8">
+            <div className="flex flex-col w-fit mx-auto space-y-1 justify-center mb-8">
               <TabsList className="bg-coffee-50 p-1 shadow-md">
                 <TabsTrigger
                   value="catering"
@@ -154,6 +154,15 @@ export default function ServicesPage() {
                   <Calendar className="h-4 w-4 mr-2" />
                   Event Hosting
                 </TabsTrigger>
+                <TabsTrigger
+                  value="wholesale"
+                  className="data-[state=active]:bg-coffee-600 data-[state=active]:text-white hidden sm:inline-flex"
+                >
+                  <Store className="h-4 w-4 mr-2" />
+                  Wholesale
+                </TabsTrigger>
+              </TabsList>
+              <TabsList className="bg-coffee-50 p-1 shadow-md sm:hidden">
                 <TabsTrigger
                   value="wholesale"
                   className="data-[state=active]:bg-coffee-600 data-[state=active]:text-white"
@@ -185,7 +194,7 @@ export default function ServicesPage() {
                         <h4 className="font-semibold text-coffee-800">Traditional Coffee Service</h4>
                         <p className="text-coffee-600 text-sm">
                           Authentic Syrian coffee prepared on-site in traditional copper pots (rakweh), served in small
-                          cups with a glass of water and a sweet treat.
+                          cups a sweet treat.
                         </p>
                       </div>
                     </div>
@@ -197,7 +206,7 @@ export default function ServicesPage() {
                       <div>
                         <h4 className="font-semibold text-coffee-800">Pastry Platters</h4>
                         <p className="text-coffee-600 text-sm">
-                          Assortments of homemade Syrian pastries including baklava, maamoul, and kunafa, beautifully
+                          Assortments of homemade Syrian pastries including baklava, and maamoul, beautifully
                           arranged and ready to serve.
                         </p>
                       </div>
@@ -212,18 +221,6 @@ export default function ServicesPage() {
                         <p className="text-coffee-600 text-sm">
                           A complete coffee and tea bar with our signature drinks, including specialty lattes, cold
                           beverages, and traditional teas.
-                        </p>
-                      </div>
-                    </div>
-
-                    <div className="flex items-start">
-                      <div className="mt-1 mr-3 bg-coffee-600 rounded-full p-1">
-                        <Check className="h-4 w-4 text-white" />
-                      </div>
-                      <div>
-                        <h4 className="font-semibold text-coffee-800">Custom Packages</h4>
-                        <p className="text-coffee-600 text-sm">
-                          We can create custom catering packages tailored to your specific event needs and budget.
                         </p>
                       </div>
                     </div>
@@ -253,7 +250,7 @@ export default function ServicesPage() {
             {/* Event Hosting Tab */}
             <TabsContent value="event-hosting" className="animate-fadeIn">
               <div className="grid md:grid-cols-2 gap-12 items-center max-w-5xl mx-auto">
-                <div className="order-2 md:order-1">
+                <div className="">
                   <h2 className="text-3xl font-bold text-coffee-800 mb-4">Event Hosting</h2>
                   <p className="text-coffee-600 mb-6">
                     Host your next gathering in our warm, inviting space in Pittsburgh's Strip District. Our café
@@ -366,17 +363,6 @@ export default function ServicesPage() {
                   <h3 className="text-xl font-semibold text-coffee-700 mb-3">Our Wholesale Products</h3>
 
                   <div className="space-y-4 mb-6">
-                    <div className="flex items-start">
-                      <div className="mt-1 mr-3 bg-coffee-600 rounded-full p-1">
-                        <Check className="h-4 w-4 text-white" />
-                      </div>
-                      <div>
-                        <h4 className="font-semibold text-coffee-800">Syrian Coffee Blends</h4>
-                        <p className="text-coffee-600 text-sm">
-                          Our signature coffee blends with traditional Syrian spices, available in various grind sizes.
-                        </p>
-                      </div>
-                    </div>
 
                     <div className="flex items-start">
                       <div className="mt-1 mr-3 bg-coffee-600 rounded-full p-1">
